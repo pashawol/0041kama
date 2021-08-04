@@ -7,7 +7,7 @@ mixin sCategories(data)
 			.row
 				mixin category-item(i, t, a)
 					.col-6.col-md-4.col-lg-3
-						+b.category-item
+						+b.category-item(href='#')
 							+e.img-wrap
 								+pic(`${i}`, '', 0)
 							+e.caption
