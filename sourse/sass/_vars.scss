@@ -282,8 +282,8 @@ $border-color: $gray-300 !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius: .25rem !default;
-$border-radius-sm: .2rem !default;
+$border-radius: 5px;
+$border-radius-sm: 3px;
 $border-radius-lg: .3rem !default;
 $border-radius-pill: 50rem !default;
 // scss-docs-end border-radius-variables
@@ -385,7 +385,8 @@ $font-sizes: (1: $h1-font-size,
   6: $h6-font-size) !default;
 // scss-docs-end font-sizes
 // scss-docs-start headings-variables
-$headings-margin-bottom: $spacer / 2 !default;
+$headings-margin-bottom: 0;
+// $headings-margin-bottom: $spacer / 2 !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
 $headings-font-weight: 500 !default;
