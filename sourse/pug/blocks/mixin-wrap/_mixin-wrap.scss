@@ -1,32 +1,26 @@
- 
-	  
-.soc{
+.soc {
 	@include roww(6px, m);
 	display: flex;
-	&__item{
-		text-decoration: none !important; 
+	&__item {
+		text-decoration: none !important;
 		vertical-align: middle;
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+		&:hover {
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
 			// opacity: .6 ;
 		}
-		
 	}
-	.icon{
+	.icon {
 		font-size: rem(30);
 	}
-	 
-
 }
- 
 
-.counter{
+.counter {
 	counter-reset: num;
 	&__item {
-		position: relative; 
+		position: relative;
 		&::before {
 			content: counter(num);
 			counter-increment: num;
@@ -73,7 +67,6 @@
 		margin-right: auto;
 		img {
 			@include a-cent1;
-			// width: 100%;
 			max-width: 100%;
 			height: auto;
 			max-height: 100%;
@@ -85,26 +78,60 @@
 		align-items: center;
 		justify-content: center;
 		font-weight: 600;
-		margin-bottom: 10px;
-		font-size: 17px;
-		@include media-breakpoint-up(md) {
-			font-size: 14px;
-		}
-		@include media-breakpoint-up(xxl) {
-			font-size: rem(16);
-			margin-bottom: rem(15);
-		}
+		font-size: rem(16);
+		margin-bottom: rem(15);
 	}
 	&__amount {
 		display: block;
-		font-size: 16px;
-		line-height: (15 / 12);
-		@include media-breakpoint-up(md) {
-			font-size: 12px;
+		line-height: (17 / 14);
+		font-size: rem(14);
+	}
+}
+
+.agreement {
+	.form-check {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0;
+		padding-left: 0;
+		.form-check-input {
+			float: none;
+			width: rem(24);
+			height: rem(24);
+			min-width: rem(24);
+			margin-top: 0;
+			margin-left: 0;
+			margin-right: 10px;
+			background-size: 65%;
+			background-position: 58% 51%;
 		}
-		@include media-breakpoint-up(xxl) {
-			line-height: (17 / 14);
+		.form-check-label {
 			font-size: rem(14);
+			// font-size: 16px;
+			line-height: 150%;
+			// @include media-breakpoint-up(sm) {
+			// 	font-size: 12px;
+			// 	line-height: (15 / 12);
+			// }
+			// @include media-breakpoint-up(xxl) {
+			// 	font-size: 14px;
+			// 	line-height: (17 / 14);
+			// }
+		}
+	}
+}
+
+.tel-n-social {
+	display: flex;
+	align-items: center;
+	.strong {
+		color: $body-color;
+		font-weight: bold;
+		font-size: rem(20);
+		line-height: (24 / 20);
+		margin-right: rem(20);
+		&:hover {
+			color: #226ebb;
 		}
 	}
 }

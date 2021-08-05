@@ -1,38 +1,93 @@
 // start .sForm
 .sForm {
-	--sPT: #{rem(60)};
-	--sPB: #{rem(60)};
+	--sPT: 80px;
+	--sPB: 80px;
 	background-color: $light;
-	// --img-size: 440px;
-	// --img-size: 400px;
+	@include media-breakpoint-up(lg) {
+		--sPT: 70px;
+		--sPB: 70px;
+	}
+	@include media-breakpoint-up(xl) {
+		--sPT: 35px;
+		--sPB: 35px;
+	}
+	@include media-breakpoint-up(xxl) {
+		--sPT: 60px;
+		--sPB: 60px;
+	}
 	h2 {
+		text-align: center;
 		font-weight: bold;
-		margin-bottom: rem(20);
+		font-size: rem(40);
+		line-height: 150%;
+		margin-bottom: 20px;
+		max-width: 540px;
+		@include media-breakpoint-up(sm) {
+			max-width: 100%;
+		}
+		@include media-breakpoint-up(lg) {
+			text-align: left;
+		}
+		@include media-breakpoint-up(xxl) {
+		}
 	}
 	&__subtitle {
+		text-align: center;
 		font-weight: 500;
-		font-size: rem(18);
-		line-height: 200%;
 		color: #778089;
 		margin-bottom: rem(40);
+		font-size: rem(18);
+		line-height: 150%;
+		@include media-breakpoint-up(sm) {
+			line-height: 200%;
+		}
+		@include media-breakpoint-up(lg) {
+			text-align: left;
+		}
 	}
 	.form-wrap {
 		.row {
-			--bs-gutter-x: #{rem(12)};
+			justify-content: center;
+			--bs-gutter-x: #{rem(20)};
 			@include media-breakpoint-up(md) {
 				--bs-gutter-x: #{rem(24)};
 			}
 			@include media-breakpoint-up(lg) {
+				justify-content: flex-start;
 				--bs-gutter-x: #{rem(16)};
 			}
 			@include media-breakpoint-up(xl) {
 				--bs-gutter-x: #{rem(20)};
 			}
 			--bs-gutter-y: var(--bs-gutter-x);
-			max-width: 580px;
 		}
 		&__btn {
 			width: 100%;
+			max-width: 450px;
+			@include media-breakpoint-up(md) {
+				width: 288px;
+			}
+			@include media-breakpoint-up(lg) {
+				width: 224px;
+			}
+			@include media-breakpoint-up(xxl) {
+				width: 270px;
+			}
+		}
+		.form-group {
+			width: 100%;
+			max-width: 450px;
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-up(md) {
+				width: 288px;
+			}
+			@include media-breakpoint-up(lg) {
+				width: 224px;
+			}
+			@include media-breakpoint-up(xxl) {
+				width: 270px;
+			}
 		}
 	}
 	&__img-wrap {
@@ -42,9 +97,35 @@
 	}
 	.agreement {
 		margin-top: rem(40);
-		margin-bottom: rem(40);
+		margin-bottom: rem(60);
+		@include media-breakpoint-up(md) {
+			margin-top: rem(20);
+			margin-bottom: rem(40);
+		}
+		@include media-breakpoint-up(xxl) {
+			margin-top: rem(40);
+			margin-bottom: rem(40);
+		}
+		.custom-input {
+			max-width: 450px;
+			margin-left: auto;
+			margin-right: auto;
+			@include media-breakpoint-up(md) {
+				max-width: 100%;
+				justify-content: center;
+			}
+			@include media-breakpoint-up(lg) {
+				justify-content: flex-start;
+			}
+		}
 	}
-	
+	.tel-n-social {
+		justify-content: center;
+		@include media-breakpoint-up(lg) {
+			justify-content: flex-start;
+		}
+	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -85,35 +166,6 @@
 	}
 } // end.sForm
 
-.agreement {
-	.form-check {
-		display: flex;
-		align-items: center;
-		margin-bottom: 0;
-		padding-left: 0;
-		.form-check-input {
-			float: none;
-			width: rem(24);
-			height: rem(24);
-			min-width: rem(24);
-			margin-top: 0;
-			margin-left: 0;
-			margin-right: 10px;
-			background-size: 65%;
-			background-position: 58% 51%;
-		}
-		.form-check-label {
-			font-size: rem(14);
-			line-height: (17 / 14);
-		}
-	}
-}
 
-.tel-n-social {
-	display: flex;
-	align-items: center;
-	.strong {
-		@extend .h5;
-		margin-right: rem(20);
-	}
-}
+
+

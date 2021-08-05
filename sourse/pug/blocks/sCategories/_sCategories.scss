@@ -19,6 +19,10 @@
 	.section-title {
 		h1 {
 			font-weight: bold;
+			// @include media-breakpoint-down(sm) {
+			// 	font-size: 48px;
+			// 	line-height: (59 / 48);
+			// }
 		}
 	}
 
@@ -37,5 +41,3 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sCategories
-
-
