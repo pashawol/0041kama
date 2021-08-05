@@ -3,7 +3,12 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-
+	background-color: #F3F4F6;
+	.section-title {
+		h2 {
+			font-weight: bold;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
