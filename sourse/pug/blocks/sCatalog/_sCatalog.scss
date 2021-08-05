@@ -21,9 +21,19 @@
 		}
 		--bs-gutter-y: var(--bs-gutter-x);	
 	}
-	@include media-breakpoint-up(xl) {}
+	--sPT:6.25rem;
+	--sPb:6.25rem;
+	padding-top: var(--sPT);
+	padding-bottom: var(--sPb);
+	@include media-breakpoint-up(xxl) {
+		--sPT:6.25rem;
+		--sPb:6.25rem;
+	}
 	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(md) {
+		--sPT:80px;
+		--sPb:80px;
+	}
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
