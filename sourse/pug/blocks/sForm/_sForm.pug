@@ -1,31 +1,20 @@
-mixin sForm(img)
+mixin sForm()
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
 			.row.align-items-center
-				.col.d-flex.flex-column
-					h2 Не знаете как подобрать запчасть?
-					+e.subtitle Оставьте заявку и наши менеджеры помогут вам с выбором
+				.col
+					h2 Не&nbsp;знаете как подобрать запчасть?
+					+e.subtitle Оставьте заявку и&nbsp;наши менеджеры помогут вам с&nbsp;выбором
 					+form-wrap()
 						.row
-							.col-md-6
+							.col-12.col-md-auto.text-center.text-md-left
 								+input(`Ваш телефон`, 'tel')
-							.col-md-6
+							.col-12.col-md-auto.text-center.text-md-left
 								+e.btn.btn.btn-primary Отправить заявку
-						+b.agreement
-							+in-c()(checked)
-								+e.SPAN.text.form-check-label Я согласен на обработку моих персональных данных в соответствии с #[a(href='#') Условиями]
-						+b.tel-n-social
-							.strong 8 (800) 700-85-72
-							+b.soc
-								+item-sos
-									img(src="img/svg/telegtam.svg", alt="")
-								+item-sos
-									img(src="img/svg/viber.svg", alt="")
-								+item-sos
-									img(src="img/svg/whatsapp.svg", alt="")
-				if img
-					.col-4.d-none.d-lg-block
-						+e.img-wrap
-							+pic(`engine.png`, '', 0)
+						+agreement
+						+tel-n-social
+				.col-4.d-none.d-lg-block
+					+e.img-wrap
+						+pic(`engine.png`, '', 0)
 	// end sForm
