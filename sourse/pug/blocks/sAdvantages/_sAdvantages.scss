@@ -3,7 +3,7 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
-	background-color: #F3F4F6;
+	background-color: $light;
 	.section-title {
 		h2 {
 			font-weight: bold;
@@ -39,8 +39,14 @@
 			word-wrap:normal;
 		}
 	}
+	&__img-wrap{
+		.res-i{
+			width:rem(70);
+			margin-bottom: rem(20);
+		}
+	}
 }
-.res-i{
-	width:rem(70);
-	margin-bottom: rem(20);
-}
+// .res-i{
+// 	width:rem(70);
+// 	margin-bottom: rem(20);
+// }

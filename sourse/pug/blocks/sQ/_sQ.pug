@@ -2,8 +2,17 @@ mixin sQ(data)
 	// start sQ
 	+b.SECTION.sQ.section#sQ&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sQ
-				
-			.row
+			+e.wrapper
+				h2 У&nbsp;вас есть вопросы?
+				+e.subtitle Наш эксперт профессионально ответит на&nbsp;все Ваши вопросы
+				+form-wrap()
+					.row
+						.col-12.col-md-4
+							+input(`Ваш телефон`, 'tel')
+						.col-12.col-md-4
+							+input(`Ваш телефон`, 'tel')
+						.col-12.col-md-4
+							+e.btn.btn.btn-primary Отправить заявку
+					+agreement
+					+tel-n-social
 	// end sQ
