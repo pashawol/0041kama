@@ -303,12 +303,12 @@ function eventHandler() {
 	// JSCCommon.modalCall();
 	// JSCCommon.tabscostume('.tabs--js');
 	// JSCCommon.mobileMenu();
-	// JSCCommon.inputMask();
-	// JSCCommon.sendForm();
+	JSCCommon.inputMask(); // JSCCommon.sendForm();
 	// JSCCommon.heightwindow();
 	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 	// JSCCommon.animateScroll();
 	// JSCCommon.CustomInputFile(); 
+
 	var x = window.location.host;
 	let screenName;
 	screenName = document.body.dataset.bg;

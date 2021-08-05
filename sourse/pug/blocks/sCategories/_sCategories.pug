@@ -5,14 +5,6 @@ mixin sCategories(data)
 			+b.section-title.text-center
 				h1 Каталог товаров
 			.row
-				mixin category-item(i, t, a)
-					.col-6.col-md-4.col-lg-3
-						+b.category-item(href='#')
-							+e.img-wrap
-								+pic(`${i}`, '', 0)
-							+e.caption
-								+e.title!= t
-								+e.amount.text-secondary 198 товаров
 				+category-item(`categories-1.png`, `Двигатели`)
 				+category-item(`categories-2.png`, `Сборочные комплекты двигателя`)
 				+category-item(`categories-1.png`, `Блоки цилиндров`)
