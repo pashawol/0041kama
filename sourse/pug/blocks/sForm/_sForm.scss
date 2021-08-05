@@ -48,18 +48,20 @@
 	.form-wrap {
 		.row {
 			justify-content: center;
-			--bs-gutter-x: #{rem(20)};
-			@include media-breakpoint-up(md) {
-				--bs-gutter-x: #{rem(24)};
-			}
-			@include media-breakpoint-up(lg) {
-				justify-content: flex-start;
-				--bs-gutter-x: #{rem(16)};
-			}
-			@include media-breakpoint-up(xl) {
+			@include media-breakpoint-down(md) {
 				--bs-gutter-x: #{rem(20)};
 			}
-			--bs-gutter-y: var(--bs-gutter-x);
+			// @include media-breakpoint-up(md) {
+			// 	--bs-gutter-x: #{rem(24)};
+			// }
+			@include media-breakpoint-up(lg) {
+				justify-content: flex-start;
+				// --bs-gutter-x: #{rem(16)};
+			}
+			@include media-breakpoint-up(xl) {
+				// --bs-gutter-x: #{rem(20)};
+			}
+			// --bs-gutter-y: var(--bs-gutter-x);
 		}
 		&__btn {
 			width: 100%;
@@ -165,7 +167,3 @@
 	@include media-breakpoint-down(xs) {
 	}
 } // end.sForm
-
-
-
-

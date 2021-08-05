@@ -10,16 +10,16 @@
 		}
 	}
 	.row{
-		--bs-gutter-x: #{rem(12)};
-		@include media-breakpoint-up(md) {
-			--bs-gutter-x: #{rem(24)};
-		}
-		@include media-breakpoint-up(lg) {
-			--bs-gutter-x: #{rem(16)};
-		}
-		@include media-breakpoint-up(xl) {
-			--bs-gutter-x: #{rem(20)};
-		}
+		// --bs-gutter-x: #{rem(12)};
+		// @include media-breakpoint-up(md) {
+		// 	--bs-gutter-x: #{rem(24)};
+		// }
+		// @include media-breakpoint-up(lg) {
+		// 	--bs-gutter-x: #{rem(16)};
+		// }
+		// @include media-breakpoint-up(xl) {
+		// 	--bs-gutter-x: #{rem(20)};
+		// }
 		--bs-gutter-y: #{rem(60)};	
 		justify-content: center;
 	}
