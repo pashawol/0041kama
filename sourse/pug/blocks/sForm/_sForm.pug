@@ -1,9 +1,9 @@
-mixin sForm()
+mixin sForm(img)
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
 			.row.align-items-center
-				.col
+				.col.d-flex.flex-column
 					h2 Не знаете как подобрать запчасть?
 					+e.subtitle Оставьте заявку и наши менеджеры помогут вам с выбором
 					+form-wrap()
@@ -24,8 +24,8 @@ mixin sForm()
 									img(src="img/svg/viber.svg", alt="")
 								+item-sos
 									img(src="img/svg/whatsapp.svg", alt="")
-
-				.col-4.d-none.d-lg-block
-					+e.img-wrap
-						+pic(`engine.png`, '', 0)
+				if img
+					.col-4.d-none.d-lg-block
+						+e.img-wrap
+							+pic(`engine.png`, '', 0)
 	// end sForm

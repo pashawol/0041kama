@@ -44,14 +44,7 @@
 		margin-top: rem(40);
 		margin-bottom: rem(40);
 	}
-	.tel-n-social {
-		display: flex;
-		align-items: center;
-		.strong {
-			@extend .h5;
-			margin-right: rem(20);
-		}
-	}
+	
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -113,5 +106,14 @@
 			font-size: rem(14);
 			line-height: (17 / 14);
 		}
+	}
+}
+
+.tel-n-social {
+	display: flex;
+	align-items: center;
+	.strong {
+		@extend .h5;
+		margin-right: rem(20);
 	}
 }
