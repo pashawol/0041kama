@@ -21,19 +21,6 @@
 		}
 		--bs-gutter-y: var(--bs-gutter-x);	
 	}
-	--sPT:6.25rem;
-	--sPb:6.25rem;
-	padding-top: var(--sPT);
-	padding-bottom: var(--sPb);
-	@include media-breakpoint-up(xxl) {
-		--sPT:6.25rem;
-		--sPb:6.25rem;
-	}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {
-		--sPT:80px;
-		--sPb:80px;
-	}
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
@@ -93,14 +80,6 @@
 	&__title{
 		font-weight:600;
 		margin-bottom: 16px;
-		font-size: 20px;
-		@include media-breakpoint-up(xxl) {
-			font-size: 16px;
-		}
-		@include media-breakpoint-up(md) {
-			font-size: 14px;
-			margin-bottom: 10px;
-		}
 	}
 	&__price{
 		font-weight:700;
