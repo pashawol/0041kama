@@ -3,7 +3,21 @@ mixin sCatalog(data)
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sCatalog
-				
+				h2 Популярные товары	
 			.row
+				mixin card-item(bg,t)
+					.col-6.col-md-4.col-lg-3
+						+b.card-item.bg-wrap(href='#')
+							+pic(`catalog-${bg}.png`,"bg",0).picture-bg
+							+e.caption
+								+e.title!= (t || "Сборочный комплект двигателя 740.31 ЯЗДА Р0 (740.31-1000600-08)")
+								+e.price.h5='385 000 ₽'
+				+card-item('1')
+				+card-item('2')
+				+card-item('3','Двигатель 740.11 (740.11- 1000400)')
+				+card-item('1')
+				+card-item('3','Двигатель 740.11 (740.11- 1000400)')
+				+card-item('1')
+				+card-item('1')
+				+card-item('4')
 	// end sCatalog
