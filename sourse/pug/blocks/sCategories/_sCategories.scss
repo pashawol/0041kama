@@ -49,6 +49,10 @@
 	min-height: 368px;
 	padding: rem(18);
 	color: $body-color;
+	@include media-breakpoint-up(sm) {
+		min-height: 310px;
+		padding: rem(16);
+	}
 	@include media-breakpoint-up(md) {
 		min-height: 299px;
 		padding: rem(16);
