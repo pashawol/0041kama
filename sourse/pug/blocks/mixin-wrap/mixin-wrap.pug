@@ -21,3 +21,12 @@ mixin ie11()
 	//- modernizer and for ie11
 	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
+mixin category-item(i, t)
+	.col-6.col-md-4.col-lg-3
+		+b.category-item(href='#')
+			+e.img-wrap
+				+pic(`${i}`, '', 0)
+			+e.caption
+				+e.title!= t
+				+e.amount.text-secondary 198 товаров
