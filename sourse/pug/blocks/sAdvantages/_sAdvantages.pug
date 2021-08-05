@@ -5,9 +5,20 @@ mixin sAdvantages(data)
 			+b.section-title.text-center
 				h2 Почему работать с нами удобно и выгодно
 			.row
-				mixin adv-pic()
+				mixin adv-pic(svg,t,str)
 					.col-6.col-md-4.col-lg-3
-						+b.adv-item
-							
-			+adv-pic
+						+b.adv-item.d-flex.flex-column.align-items-center
+							+icon(svg)
+							if str == 1
+								+e.title.adv-item__title--mbottom!=t
+							else
+								+e.title!=t
+				+adv-pic('car-engine','Запчасти в наличии',1)
+				+adv-pic('tag','Оптовые линзы',1)
+				+adv-pic('wallet','Доставка без предоплаты',1)
+				+adv-pic('box','Отгрузка в течение 1 дня',1)
+				+adv-pic('shipped','Доставка по РФ от 2 дней')
+				+adv-pic('coins','Наличный и безналичный<br>расчет с НДС')
+				+adv-pic('paper',"Грамотное оформление<br>всей документации")
+				+adv-pic('engineer','Высококвалифицированный персонал')
 	// end sAdvantages
