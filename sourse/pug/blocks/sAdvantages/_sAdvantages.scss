@@ -20,54 +20,27 @@
 		@include media-breakpoint-up(xl) {
 			--bs-gutter-x: #{rem(20)};
 		}
+		--bs-gutter-y: #{rem(60)};	
 		justify-content: center;
-	}
-	--sPT:6.25rem;
-	--sPb:6.25rem;
-	padding-top: var(--sPT);
-	padding-bottom: var(--sPb);
-	@include media-breakpoint-up(xxl) {
-		--sPT:6.25rem;
-		--sPb:6.25rem;
-	}
-	@include media-breakpoint-up(md) {
-		--sPT:80px;
-		--sPb:80px;
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(md) {
-		padding-bottom: 20px;
 	}
 } // end.sAdvantages
 
 .adv-item{
-	svg{
-		color:$primary;
-		font-size: rem(70);
-		margin-bottom: 20px;
-	}
+	text-align: center;
 	&__title{
-		text-align: center;
-		font-size: 20px;
-		max-width: 95%;
 		word-wrap:break-word;
-		margin-bottom: 60px;
-		@include media-breakpoint-up(xxl) {
-			font-size: 16px;
-		}
 		@include media-breakpoint-up(md) {
-			font-size: 14px;
 			word-wrap:normal;
-			margin-bottom: 0;
-		}
-		&--mbottom{
-			@include media-breakpoint-up(md) {
-				margin-bottom: 60px;
-			}
-			margin-bottom: 60px;
 		}
 	}
+}
+.res-i{
+	width:rem(70);
+	margin-bottom: rem(20);
 }

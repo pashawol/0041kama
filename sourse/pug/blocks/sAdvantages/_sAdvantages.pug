@@ -3,22 +3,20 @@ mixin sAdvantages(data)
 	+b.SECTION.sAdvantages.section#sAdvantages&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 Почему работать с нами удобно и выгодно
+				h2 Почему работать с&nbsp;нами удобно и&nbsp;выгодно
 			.row
-				mixin adv-pic(svg,t,str)
+				mixin adv-item(s,t)
 					.col-6.col-md-4.col-lg-3
-						+b.adv-item.d-flex.flex-column.align-items-center
-							+icon(svg)
-							if str == 1
-								+e.title.adv-item__title--mbottom!=t
-							else
-								+e.title!=t
-				+adv-pic('car-engine','Запчасти в наличии',1)
-				+adv-pic('tag','Оптовые линзы',1)
-				+adv-pic('wallet','Доставка без предоплаты',1)
-				+adv-pic('box','Отгрузка в течение 1 дня',1)
-				+adv-pic('shipped','Доставка по РФ от 2 дней')
-				+adv-pic('coins','Наличный и безналичный<br>расчет с НДС')
-				+adv-pic('paper',"Грамотное оформление<br>всей документации")
-				+adv-pic('engineer','Высококвалифицированный персонал')
+						+b.adv-item
+							+e.img-wrap
+								img.res-i(src=`img/svg/advantages-${s}.svg`, loading='lazy' alt="")
+							+e.title!=t
+				+adv-item('1',`Запчасти в&nbsp;наличии`)
+				+adv-item('2','Оптовые цены')
+				+adv-item('3','Доставка без предоплаты')
+				+adv-item('4','Отгрузка в течение 1 дня')
+				+adv-item('5',`Доставка по&nbsp;РФ от&nbsp;2&nbsp;дней`)
+				+adv-item('6','Наличный и безналичный<br>расчет с НДС')
+				+adv-item('7',"Грамотное оформление<br>всей документации")
+				+adv-item('8','Профессиональный персонал')
 	// end sAdvantages
