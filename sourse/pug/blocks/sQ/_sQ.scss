@@ -3,6 +3,34 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	.form-wrap{
+		@include media-breakpoint-down(md) {
+			max-width:448px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+		.form-check{
+		justify-content: center;
+	}
+	.custom-input{
+		max-width:rem(634);
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: rem(40);
+		.form-check-label{
+			font-size: rem(16);
+			@include media-breakpoint-up(xxl) {
+				font-size: rem(14);
+			}
+			@include media-breakpoint-up(md) {
+				font-size: rem(12);
+			}
+		}
+	}
+	.tel-n-social{
+		justify-content: center;
+	}
 	&__wrapper{
 		max-width: rem(850);
 		margin-left: auto;
@@ -11,15 +39,14 @@
 	h2{
 		text-align: center;
 		font-weight: 700;
-		margin-bottom: rem(20);
+		margin-bottom: rem(24.5);
 	}
 	&__subtitle{
 		text-align: center;
 		font-weight: 500;
 		color: #778089;
 		font-size: rem(18);
-		margin-bottom: rem(40);
-		line-height: 150%;
+		margin-bottom: rem(44.5);
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -29,3 +56,14 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sQ
+.row{
+	margin-bottom: rem(40);
+	@include media-breakpoint-down(md) {
+		--bs-gutter-y: #{rem(20)};
+	}
+}
+.form-wrap{
+	&__btn{
+		width:100%;
+	}
+}
