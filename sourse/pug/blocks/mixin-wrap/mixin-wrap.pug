@@ -37,9 +37,9 @@ mixin agreement
 			+e.SPAN.text.form-check-label Я&nbsp;согласен на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;#[a(href='#') Условиями]
 
 
-mixin tel-n-social
+mixin tel-n-social(l, t)
 	+b.tel-n-social
-		a.strong(href="tel:+78007008572") 8 (800) 700-85-72
+		a.strong(href=`${l}`)!= t
 		+b.soc
 			+item-sos
 				img(src="img/svg/telegtam.svg" alt="")
