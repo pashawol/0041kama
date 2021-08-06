@@ -1,9 +1,46 @@
 mixin footer()
 	+b.FOOTER.footer
 		.container
-			.row
-				.col
-					
-				.col
-				.col
-				.col-auto
+			+e.body
+				.row
+					.col-xl-3
+						+e.logo
+						+e.UL.legal
+							li ОГРН 1171690042347
+							li ИНН 1650348340
+							li КПП 165001001
+					.col-xl-3
+						+e.NAV.menu
+							ul
+								li 
+									a(href='#') Главная
+								li 
+									a(href='#') Каталог товаров
+								li 
+									a(href='#') Доставка и&nbsp;оплата
+								li 
+									a(href='#') О&nbsp;компании
+								li 
+									a(href='#') Контакты
+					.col-xl-3
+						+e.adress г. Набережные Челны, пр-т КАМАЗа, 22/3
+						+e.UL.shedule
+							li Пн-пт: с&nbsp;8:00 до&nbsp;17:00 мск
+							li Сб: с&nbsp;8:00 до&nbsp;12:00 мск
+							li Вс: выходной
+					.col-xl-3
+						+e.UL.contacts
+							li Пн-пт: с&nbsp;8:00 до&nbsp;17:00 мск
+							li Сб: с&nbsp;8:00 до&nbsp;12:00 мск
+							li Вс: выходной
+			+e.info
+				.row
+					.col-xl-4
+
+					.col-xl-4
+
+					.col-xl-4
+			+e.warning
+
+
+				
