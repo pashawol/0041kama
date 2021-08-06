@@ -7,10 +7,10 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sAdvantages/_sAdvantages.pug
 include ../blocks/sQ/_sQ.pug
-
+include ../blocks/sDelivery/_sDelivery.pug
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= 'main.jpg'
+	- let  bg= '02-catalog.jpg'
 
 block title
 	- let  title= 'Двигатели КАМАЗ'
@@ -36,6 +36,7 @@ block pagecontent
 
 
 	+sForm()
+	+sDelivery()
 	+sAdvantages()
 	+sQ()
 	//- +sContact()

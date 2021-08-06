@@ -1,0 +1,17 @@
+mixin sDelivery()
+	// start sDelivery
+	+b.SECTION.sDelivery.section#sDelivery&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2!=`Доставляем двигатели по&nbsp;РФ ведущими&nbsp;транспортными компаниями`
+				+e.subtitle Подбираем оптимальную транспортную компанию для Вашего направления по&nbsp;критериям цена/качество
+			.row
+				mixin dev-item(i)
+					+e.col.col-xl-auto.col-md-3.col-12
+						+pic(`delivery-${i}.png`,'',0)
+				+dev-item('1')
+				+dev-item('2')
+				+dev-item('3')
+				+dev-item('4')
+				+dev-item('5')
+	// end sDelivery
