@@ -47,3 +47,14 @@ mixin tel-n-social(l, t)
 				img(src="img/svg/viber.svg" alt="")
 			+item-sos
 				img(src="img/svg/whatsapp.svg" alt="")
+
+mixin page-head(t, ...items)
+	+b.page-head
+		.container
+			+breadcrumb('Главная', ...items)
+			.row
+				.col
+					h1= t
+				if block
+					.col-auto
+						block
