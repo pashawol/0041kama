@@ -3,7 +3,16 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+	.row{
+		margin-bottom: rem(40);
+		@include media-breakpoint-down(md) {
+			--bs-gutter-y: #{rem(20)};
+		}
+	}
 	.form-wrap{
+		&__btn{
+			width:100%;
+		}
 		@include media-breakpoint-down(md) {
 			max-width:448px;
 			margin-left: auto;
@@ -56,14 +65,3 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sQ
-.row{
-	margin-bottom: rem(40);
-	@include media-breakpoint-down(md) {
-		--bs-gutter-y: #{rem(20)};
-	}
-}
-.form-wrap{
-	&__btn{
-		width:100%;
-	}
-}
