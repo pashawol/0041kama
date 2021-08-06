@@ -27,12 +27,10 @@ block pagecontent
 		.row
 			.col-3
 				.list-group
-					a.list-group-item.list-group-item-action.active(href='#' aria-current='true')
-						| The current link item
-					a.list-group-item.list-group-item-action(href='#') A second link item
-					a.list-group-item.list-group-item-action(href='#') A third link item
-					a.list-group-item.list-group-item-action(href='#') A fourth link item
-					a.list-group-item.list-group-item-action.disabled(href='#' tabindex='-1' aria-disabled='true') A disabled link item
+					mixin item(i, t)
+						a.list-group-item.list-group-item-action(href='#')
+							+pic(`${i}`, '', 0)
+							span!= t
 			.col-9
 				+page-head(title, 'Каталог товаров', 'Двигатели')
 
