@@ -75,21 +75,21 @@ mixin page-head(btns,t, ...items)
 				if btns
 					.col-auto
 						block
-
+//list-group-item.list-group-item-action(href='#')
 mixin page-body(btns,t, ...items)
 	.container.container--main
 		.row.row--main
 			.col-3
 				.list-block
 					.list-group
-						mixin item(i, t)
-							a.list-group-item.list-group-item-action(href='#')
+						mixin item(i, t, a)
+							a(class!= ('list-group-item list-group-item-action '+ a || 'list-group-item list-group-item-action' ))
 								+pic(`categories-${i}.png`, '', 0)
 								span!= t
-						+item(1,'Двигатели')
+						+item(1,'Двигатели','active')
 						+item(2,`Сборочные комплекты&nbsp;двигателя`)
 						+item(1,'Блоки цилиндров')
-						+item(1,'Валы коленчатые')
+						+item(1,'Валы коленчатые', 'active')
 						+item(1,'Цилиндропоршневая группа')
 						+item(1,'Запчасти двигателей')
 						+item(1,'Топливная система')

@@ -163,6 +163,12 @@
 			position: relative;
 			left: -2px;
 		}
+		&-item{
+			border: 1px solid $light2;
+			&-action{
+				border: 1px solid $light2;
+			}
+		}
 		a{
 			display: flex;
 			align-items: center;
