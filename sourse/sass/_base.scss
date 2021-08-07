@@ -1,5 +1,5 @@
 .pixel-perfect {
-	top: -2372px;
+	top: -150px;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
@@ -483,4 +483,10 @@ h2 {
 			--bs-gutter-x: #{rem(20)};
 		}
 		--bs-gutter-y: var(--bs-gutter-x);
+	}
+
+.container .container
+	{
+		padding-left: 0;
+		padding-right: 0;
 	}

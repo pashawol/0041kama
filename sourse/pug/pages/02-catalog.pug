@@ -21,21 +21,10 @@ block pagecontent
 	//- 	+topLine()
 	//- 	+top-nav()
 	//- +headerBlock()
-	//- +sCategories()
-	//- +sCatalog()
-	.container
-		.row
-			.col-3
-				.list-group
-					mixin item(i, t)
-						a.list-group-item.list-group-item-action(href='#')
-							+pic(`${i}`, '', 0)
-							span!= t
-			.col-9
-				+page-head(title, 'Каталог товаров', 'Двигатели')
 
-
-	+sForm()
+	+page-body('',title, 'Каталог товаров', 'Двигатели')
+		+sCatalog2()
+	+sForm(`Не&nbsp;нашли нужную модель?`)
 	+sDelivery()
 	+sAdvantages()
 	+sQ()

@@ -1,10 +1,10 @@
-mixin sForm()
+mixin sForm(t)
 	// start sForm
 	+b.SECTION.sForm.section#sForm&attributes(attributes)
 		.container
 			.row.align-items-center
 				.col
-					h2 Не&nbsp;знаете как подобрать запчасть?
+					h2!=t
 					+e.subtitle Оставьте заявку и&nbsp;наши менеджеры помогут вам с&nbsp;выбором
 					+form-wrap()
 						.row

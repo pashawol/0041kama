@@ -48,13 +48,56 @@ mixin tel-n-social(l, t)
 			+item-sos
 				img(src="img/svg/whatsapp.svg" alt="")
 
-mixin page-head(t, ...items)
+mixin cb(type)
+	+e.LABEL.label-modal
+		input(type="checkbox" name="btn").btn-check.btn-check-modal
+		span.btn.btn-info.btn-info-modal.btn-sm=type
+
+mixin CheckButtons(label)
+	+e.input-wrap.form-group
+		.row
+			+cb('Евро-1')
+			+cb('Евро-2')
+			+cb('Евро-3')
+			+cb('Евро-4')
+			+cb('Евро-5')
+			block
+
+mixin page-head(btns,t, ...items)
 	+b.page-head
 		.container
 			+breadcrumb('Главная', ...items)
 			.row
 				.col
 					h1= t
-				if block
+					+form-wrap
+						+CheckButtons()
+				if btns
 					.col-auto
 						block
+
+mixin page-body(btns,t, ...items)
+	.container.container--main
+		.row.row--main
+			.col-3
+				.list-block
+					.list-group
+						mixin item(i, t)
+							a.list-group-item.list-group-item-action(href='#')
+								+pic(`categories-${i}.png`, '', 0)
+								span!= t
+						+item(1,'Двигатели')
+						+item(2,`Сборочные комплекты&nbsp;двигателя`)
+						+item(1,'Блоки цилиндров')
+						+item(1,'Валы коленчатые')
+						+item(1,'Цилиндропоршневая группа')
+						+item(1,'Запчасти двигателей')
+						+item(1,'Топливная система')
+						+item(1,'Двигатели Cummins')
+						+item(3,'Long/Short Block Cummins')
+						+item(4,'Коробки передач')
+						+item(1,'Главные передачи')
+						+item(1,'Коробки<br />раздаточные')
+			.col-9.col--ph
+				+page-head(btns,t, ...items)
+				block
