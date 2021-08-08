@@ -1,0 +1,99 @@
+// start .sCard
+.sCard {
+	--sPT: #{rem(20)};
+	--sPB: #{rem(20)};
+	// --sTPB: ;
+	.container {
+		& > .row {
+			--bs-gutter-x: #{rem(40)};
+		}
+	}
+	&__slider--js {
+		width: 510px;
+	}
+	&__slider-thumbs--js {
+		width: 510px;
+		margin-top: 10px;
+		.swiper-slide {
+			opacity: 0.6;
+			&.swiper-slide-thumb-active {
+				opacity: 1;
+			}
+		}
+	}
+
+	&__slide {
+		@include block;
+		@include mt;
+		@extend .picture-bg;
+		border-radius: $border-radius;
+		overflow: hidden;
+		background-color: $light;
+		img {
+			@extend .object-fit-js;
+		}
+	}
+	&__table {
+		margin-bottom: rem(53);
+		.row {
+			--bs-gutter-y: 0;
+		}
+		span {
+			display: block;
+			font-size: rem(14);
+			line-height: 150%;
+		}
+	}
+	&__row-item {
+		padding: rem(5) 0;
+		border-top: 1px dashed $light2;
+		border-bottom: 1px dashed $light2;
+		&:first-child {
+			border-top: none;
+			padding-top: 0;
+		}
+		&:last-child {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+	}
+	&__btn {
+		width: 100%;
+		margin-bottom: rem(33);
+		.icon {
+			font-size: rem(20);
+			margin-right: rem(12);
+		}
+	}
+	&__price {
+		font-weight: bold;
+		font-size: rem(32);
+		line-height: (39 / 32);
+		font-weight: bold;
+		margin-bottom: rem(20);
+	}
+	&__contact {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.text-secondary {
+			margin-right: rem(20);
+			font-weight: 500;
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCard
+

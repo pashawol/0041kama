@@ -1,0 +1,34 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sQ/_sQ.pug
+include ../blocks/sDelivery/_sDelivery.pug
+include ../blocks/sCard/_sCard.pug
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '02-catalog.jpg'
+
+block title
+	- let  title= 'Двигатель 740.11 (740.11-1000400)'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	//- +header()
+	//- 	+topLine()
+	//- 	+top-nav()
+	//- +headerBlock()
+	//- +sContact()
+
+	+page-body('', title, 'Каталог товаров', 'Двигатели', 'Двигатель 740.11 (740.11-1000400)')
+		+sCard()
+	+sForm(`Не&nbsp;нашли нужную модель?`)
+	+sDelivery()
+	+sAdvantages()
+	+sQ()
+	+footer()
+
