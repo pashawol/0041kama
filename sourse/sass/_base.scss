@@ -466,13 +466,13 @@ iframe {
 .btn-primary {
 	color: $white;
 	font-weight: 600;
-	&:hover,&:active, &:focus{
+	&:hover, &:active, &:focus{
 		color: $white;
 	}
 }
 .btn-outline-primary {
 	font-weight: 600;
-	&:hover,&:active, &:focus {
+	&:hover, &:active, &:focus {
 		color: $white;
 	}
 }
