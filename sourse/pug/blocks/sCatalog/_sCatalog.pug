@@ -30,13 +30,15 @@ mixin sCatalog(data)
 				+card-item('3','Двигатель 740.11 (740.11- 1000400)')
 				+card-item('1')
 				+card-item('1')
-				+card-item('4','Двигатель 740.11 (740.11- 1000400)')
+				+card-item('3','Двигатель 740.11 (740.11- 1000400)')
 	// end sCatalog
 
 mixin sCatalog2(data)
 	// start sCatalog
 	+b.SECTION.sCatalog2.section#sCatalog2&attributes(attributes)
 		.container
+			+form-wrap
+				+CheckButtons()
 			.row
 				+card-item2('2','col-md-4 col-6')
 				+card-item2('3','col-md-4 col-6','Двигатель 740.11 (740.11- 1000400)')

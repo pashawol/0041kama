@@ -127,10 +127,37 @@
 	}
 }
 .sCatalog2{
-	padding-top: 40px;
+	padding-top: 30px;
 			// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+		.form-wrap{
+			&__label-modal{
+				width: auto !important;
+				margin-bottom: rem(40);
+				padding-left: 10px;
+				padding-right: 0;
+				.btn-info-modal{
+					z-index: 2;
+					padding-top: 10px;
+					width: 100px;
+					height: 40px;
+					background-color: $light;
+					border-color: $light;
+					border-radius: 60px;
+					color:$body-color;
+					@include media-breakpoint-up(md) {
+						width:rem(100);
+						height:rem(40);
+					}
+					&:active,&:hover{
+						background-color: $primary !important;
+						border-color: $primary !important;
+						color: white !important;
+					}
+				}
+			}	
+		}
 	&__btn{
 		@extend .btn; 
 		background-color: $light;

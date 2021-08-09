@@ -1,0 +1,27 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sQ/_sQ.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '04-search.jpg'
+
+block title
+	- let  title= 'Результаты поиска'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	//- +header()
+	//- 	+topLine()
+	//- 	+top-nav()
+	//- +headerBlock()
+	+page-body04('',title, 'Результаты поиска')
+	//- +sContact()
+	+footer()
+
