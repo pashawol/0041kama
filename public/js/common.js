@@ -370,6 +370,7 @@ function eventHandler() {
 	var sCardSliderThumbs = new Swiper(".sCard__slider-thumbs--js", {
 		spaceBetween: 10,
 		slidesPerView: 5,
+		watchOverflow: true,
 		// freeMode: true,
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
@@ -379,6 +380,7 @@ function eventHandler() {
 	});
 	var sCardSlider = new Swiper(".sCard__slider--js", {
 		spaceBetween: 10,
+		watchOverflow: true,
 		lazy: {
 			loadPrevNext: true
 		},
