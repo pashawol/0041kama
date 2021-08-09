@@ -1,11 +1,13 @@
 // start .sCard
 .sCard {
-	--sPT: #{rem(20)};
+	--sPT: #{rem(30)};
 	--sPB: #{rem(20)};
 	// --sTPB: ;
 	.container {
 		& > .row {
 			--bs-gutter-x: #{rem(40)};
+			--bs-gutter-y: 0;
+
 		}
 	}
 	&__slider--js {
