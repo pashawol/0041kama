@@ -10,10 +10,10 @@ include ../blocks/sQ/_sQ.pug
 
 block variables
 	- let  mainPage= 'main-page' 
-	- let  bg= '04-search.jpg'
+	- let  bg= '05-shop-cart.jpg'
 
 block title
-	- let  title= 'Результаты поиска'
+	- let  title= 'Корзина'
 	title= title
 block pagecontent 
 	//- +mob-mnu()
@@ -21,7 +21,9 @@ block pagecontent
 	//- 	+topLine()
 	//- 	+top-nav()
 	//- +headerBlock()
-	+page-body04('btns',title, 'Результаты поиска')
+	+page-body05('btns',title, 'Корзина')
+		+shop-content()
+		+shop-form
 	//- +sContact()
 	+footer()
 
