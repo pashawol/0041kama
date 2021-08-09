@@ -90,7 +90,7 @@ mixin page-body(btns,t, ...items)
 						+item(1,'Двигатели','active')
 						+item(2,`Сборочные комплекты&nbsp;двигателя`)
 						+item(1,'Блоки цилиндров')
-						+item(1,'Валы коленчатые', 'active')
+						+item(1,'Валы коленчатые')
 						+item(1,'Цилиндропоршневая группа')
 						+item(1,'Запчасти двигателей')
 						+item(1,'Топливная система')
@@ -101,4 +101,41 @@ mixin page-body(btns,t, ...items)
 						+item(1,'Коробки<br />раздаточные')
 			.col-9.col--ph
 				+page-head(btns,t, ...items)
+				block
+
+mixin page-head03(btns,t, ...items)
+	+b.page-head
+		.container
+			+breadcrumb('Главная', ...items)
+			.row
+				.col
+					h1= t
+				if btns
+					.col-auto
+						block
+
+mixin page-body03(btns,t, ...items)
+	.container.container--main
+		.row.row--main
+			.col-3
+				.list-block
+					.list-group
+						mixin item(i, t, a)
+							a(class!= ('list-group-item list-group-item-action '+ a || 'list-group-item list-group-item-action' ))
+								+pic(`categories-${i}.png`, '', 0)
+								span!= t
+						+item(1,'Двигатели','active')
+						+item(2,`Сборочные комплекты&nbsp;двигателя`)
+						+item(1,'Блоки цилиндров')
+						+item(1,'Валы коленчатые')
+						+item(1,'Цилиндропоршневая группа')
+						+item(1,'Запчасти двигателей')
+						+item(1,'Топливная система')
+						+item(1,'Двигатели Cummins')
+						+item(3,'Long/Short Block Cummins')
+						+item(3,'Коробки передач')
+						+item(1,'Главные передачи')
+						+item(1,'Коробки<br />раздаточные')
+			.col-9.col--ph
+				+page-head03(btns,t, ...items)
 				block

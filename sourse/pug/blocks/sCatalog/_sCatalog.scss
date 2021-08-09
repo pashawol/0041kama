@@ -8,6 +8,11 @@
 			font-weight: bold;
 		}
 	}
+	picture{
+		img{
+			height: 80% !important;
+		}
+	}
 	@include media-breakpoint-up(sm) {}
 	@include media-breakpoint-between(md, xl) {}
 	@include media-breakpoint-only(xl) {}
@@ -17,12 +22,26 @@
 		// --sPT: ;
 		// --sPB: ;
 		// --sTPB: ;
+		picture{
+			img{
+				height: 80% !important;
+			}
+		}
 	.card-item{
 		&__title{
 			margin-bottom: 16px;
 			@include media-breakpoint-up(md) {
 				margin-bottom: 10px;
 			}
+		}
+		&::after{
+			content:"";
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			background-image: linear-gradient(360deg, #323A42 20%, rgba(50, 58, 66, 0.5) 50%, rgba(50, 58, 66, 0) 100%);
 		}
 	}
 	.section-title {
@@ -37,24 +56,6 @@
 } // end.sCatalog
 
 .card-item{
-	// &__bg{
-	// 	height:364px;
-	// 	display:flex;
-	// 	flex-direction: column;
-  //   justify-content: flex-end;
-	// 	padding-bottom: rem(20);
-	// 	border-radius: 5px;
-	// 	object-fit: cover;
-	// }
-	// &__caption{
-	// 	color:white;
-	// 	width:100%;
-	// 	display:flex;
-	// 	flex-direction: column;
-	// 	align-items: center;
-	// 	padding-left: rem(20);
-	// 	padding-right: rem(20);
-	// }
 	position: relative;
 	color:white;
 	background: #323A42;
@@ -72,8 +73,8 @@
 		left: 0;
 		bottom: 0;
 		width: 100%;
-		height: 30%;
-		background-image: linear-gradient(360deg, #323A42 18.5%, rgba(50, 58, 66, 0.5) 20.52%, rgba(50, 58, 66, 0) 100%);
+		height: 100%;
+		background-image: linear-gradient(360deg, #323A42 20%, rgba(50, 58, 66, 0.5) 50%, rgba(50, 58, 66, 0) 100%);
 	}
 	@include block(310,364);
 	&__caption{
@@ -84,7 +85,7 @@
 		width: 100%;
 		padding-left: rem(20);
 		padding-right: rem(20);
-		padding-bottom: rem(20);
+		padding-bottom: rem(16);
 	}
 	&__title{
 		font-weight:600;
