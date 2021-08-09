@@ -124,23 +124,44 @@ mixin page-body04(btns,t, ...items)
 	+b.SECTION.page-body04.section#page-body04&attributes(attributes)
 		.container
 			.row.row--search
-				.col-lg-9.col-12.col--search
+				.col-xl-9.col-12.col--search
 					+page-head(btns,t, ...items)
 					+e.input-search
 						+input()#search
 							button(type="button")
 					+e.caption-search
-						+e.title!=`Вы искали:&nbsp`
+						+e.title!=`Вы искали:&nbsp;`
 							span двигатель
 						+e.count Найдено на сайте: 82
 					+e.result
-						.row
-							span Двигатель 740.31 (740.31-1000400)
-							button(type="button")
-								+icon('arrow')
-						.row
-							span Двигатель 740.11 (740.11-1000400)
-							button(type="button")
-								+icon('arrow')
-					
-				.col-lg-3.col-12
+						mixin str-search(t)
+							.row
+								span!=t
+								button(type="button")
+									+icon('arrow')
+						+str-search('Двигатель 740.31 (740.31-1000400)')
+						+str-search('Двигатель 740.11 (740.11-1000400)')
+						+str-search('Двигатель 740.31 (740.31-1000400)')
+						+str-search('Двигатель 740.11 (740.11-1000400)')
+						+str-search('Двигатель 740.31 (740.31-1000400)')
+						+str-search('Двигатель 740.11 (740.11-1000400)')
+						+str-search('Двигатель 740.31 (740.31-1000400)')
+						+str-search('Двигатель 740.11 (740.11-1000400)')
+					+e.btn
+						+icon('refresh')
+						span Показать еще
+				.col-xl-3.col-12.col--help
+					+e.help
+						+icon('question')
+						h4 Нужна помощь?
+						+e.caption-help
+							.span-first Не&nbsp;можете найти необходимую информацию или&nbsp;товар?
+							.span-second Вы&nbsp;всегда можете обратиться&nbsp;к нам по контактам&nbsp;указанным ниже. Мы&nbsp;будем рады помочь!
+							+e.contact
+								div.div-first
+									.span-call Звонок бесплатный
+									a.strong(href=`tel:+78007008572`) 8 (800) 700-85-72
+								div
+									.span-mail По всем вопросам
+									a.strong(href=`mailto:zapchasty-kama@yandex.ru`)='zapchasty-kama@yandex.ru'
+						button.btn.btn-primary(type="button") Оставить заявку
