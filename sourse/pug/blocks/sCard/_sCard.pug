@@ -1,0 +1,68 @@
+mixin sCard(data)
+	// start sCard
+	+b.SECTION.sCard.section#sCard&attributes(attributes)
+		.container
+			.row
+				.col-auto
+					+e.slider--js.swiper-container
+						.swiper-wrapper
+							mixin slide2(i)
+								+e.slide.swiper-slide
+									img(src=`img/@2x/card-${i}.jpg` alt='' data-fancybox)
+							+slide2(1)
+							+slide2(2)
+							+slide2(3)
+							+slide2(4)
+							+slide2(3)
+							+slide2(2)
+							+slide2(4)
+					+e.slider-thumbs--js.swiper-container
+						.swiper-wrapper
+							mixin slide(i)
+								+e.slide.swiper-slide
+									img(src=`img/@1x/card-${i}.jpg` alt='')
+							+slide(1)
+							+slide(2)
+							+slide(3)
+							+slide(4)
+							+slide(3)
+							+slide(2)
+							+slide(4)
+							
+				.col
+					+e.table
+						mixin row-item(t, v)
+							+e.row-item
+								.row
+									.col-6
+										span!= t
+									.col-6
+										span!= v
+						+row-item(`Модель двигателя:`, `740.11 (740.11-1000400)`)
+						+row-item(`Экологический класс:`, `Евро 1`)
+						+row-item(`Мощность двигателя:`, `240 л/с`)
+						+row-item(`Топливная аппаратура:`, `ЯЗДА 337.1111005-42.08`)
+						+row-item(`Турбокомпрессоры:`, `ТКР 7H1`)
+						+row-item(`Экологический класс:`, `Евро 1`)
+						+row-item(`Комплектность двигателя:`, `ТНВД, турбокомпрессоры, воздушный компрессор, насос ГУР, генератор, кулиса КПП`)
+						+row-item(`Применяемость с КПП:`, `14, 142, 15, 152`)
+						+row-item(`Привод вентилятора:`, `Гидромуфта`)
+					+e.price Цена: от 110 000 ₽
+					+e.buttons
+						.row
+							.col-6
+								+e.btn.btn.btn-primary Оставить заявку
+							.col-6
+								+e.btn.btn.btn-outline-primary 
+									+icon('basket')
+									span В корзину
+					+e.contact
+						.text-secondary Свяжитесь с&nbsp;нами в&nbsp;мессенджерах и&nbsp;мы&nbsp;проконсультируем вас:
+						+b.soc
+							+item-sos
+								img(src="img/svg/telegtam.svg" alt="")
+							+item-sos
+								img(src="img/svg/viber.svg" alt="")
+							+item-sos
+								img(src="img/svg/whatsapp.svg" alt="")
+	// end sCard
