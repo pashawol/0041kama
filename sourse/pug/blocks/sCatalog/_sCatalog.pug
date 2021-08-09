@@ -1,21 +1,3 @@
-mixin card-item(bg,t)
-	.col-6.col-md-4.col-lg-3
-		+b.card-item.bg-wrap(href='#')
-			+pic(`catalog-${bg}.png`,"bg",0).picture-bg
-			+e.caption
-				+e.title!= (t || "Сборочный комплект двигателя 740.31 ЯЗДА Р0 (740.31-1000600-08)")
-				+e.price.h5='385 000 ₽'
-				+e.btn Подробнее
-
-mixin card-item2(bg,c,t)
-	div(class=(c || "col-6 col-md-4 col-lg-3"))
-		+b.card-item.bg-wrap(href='#')
-			+pic(`catalog-${bg}.png`,"bg",0).picture-bg
-			+e.caption
-				+e.title!= (t || "Сборочный комплект двигателя 740.31 ЯЗДА Р0 (740.31-1000600-08)")
-				+e.price.h5='385 000 ₽'
-				+e.btn Подробнее
-
 mixin sCatalog(data)
 	// start sCatalog
 	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)

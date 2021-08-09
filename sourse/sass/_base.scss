@@ -297,6 +297,7 @@ ul {
 	}
 
 	.icon {
+		@include a-cent1;
 		font-size: rem(12);
 	}
 

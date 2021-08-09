@@ -1,0 +1,64 @@
+// start .sSimilar
+.sSimilar {
+	--sPT: #{rem(20)};
+	// --sPB: #{rem(20)};
+	--sTPB: #{rem(20)};
+	.section-title {
+		position: relative;
+	}
+	.section-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		h4 {
+			font-weight: bold;
+			line-height: (24 / 29);
+		}
+		&__arrows {
+			display: flex;
+		}
+	}
+	.card-item {
+		&:hover {
+			box-shadow: none;
+		}
+	}
+	.swiper-button-hand {
+		position: relative;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		&-prev {
+			margin-right: rem(12);
+		}
+	}
+
+	.swiper-pagination {
+		margin-top: rem(14);
+	}
+
+	.swiper-pagination-bullet {
+		width: rem(10);
+		height: rem(10);
+		background-color: $light;
+		&-active,
+		&:hover {
+			background-color: var(--bs-primary);
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sSimilar

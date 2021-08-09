@@ -7,14 +7,17 @@
 		& > .row {
 			--bs-gutter-x: #{rem(40)};
 			--bs-gutter-y: 0;
-
 		}
 	}
+	&__col {
+		flex: 0 0 55%;
+		width: 55%;
+	}
 	&__slider--js {
-		width: 510px;
+		width: 100%;
 	}
 	&__slider-thumbs--js {
-		width: 510px;
+		width: 100%;
 		margin-top: 10px;
 		.swiper-slide {
 			opacity: 0.6;
@@ -99,4 +102,3 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sCard
-

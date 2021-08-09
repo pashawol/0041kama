@@ -1,0 +1,22 @@
+mixin sSimilar(data)
+	// start sSimilar
+	+b.SECTION.sSimilar.section#sSimilar&attributes(attributes)
+		.container
+			+b.section-title
+				h4 Похожие товары
+				+e.arrows
+					+arrow
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					// Slides
+					+e.slide.swiper-slide 
+						+card-item2('1',' ','Сборочный комплект двигателя 740.31 ЯЗДА Р0 (740.31-1000600-08)')
+					+e.slide.swiper-slide 
+						+card-item2('2',' ','Двигатель 740.11 (740.11- 1000400)')
+					+e.slide.swiper-slide 
+						+card-item2('3',' ','Сборочный комплект двигателя 740.31 ЯЗДА Р0 (740.31-1000600-08)')
+					+e.slide.swiper-slide 
+						+card-item2('1',' ','Двигатель 740.11 (740.11- 1000400)')
+				.swiper-pagination
+			
+	// end sSimilar

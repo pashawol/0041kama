@@ -10,6 +10,7 @@ include ../blocks/sQ/_sQ.pug
 include ../blocks/sDelivery/_sDelivery.pug
 include ../blocks/sCard/_sCard.pug
 include ../blocks/sContactInfo/_sContactInfo.pug
+include ../blocks/sSimilar/_sSimilar.pug
 block variables
 	- let  mainPage= 'main-page' 
 	- let  bg= '02-catalog.jpg'
@@ -28,6 +29,7 @@ block pagecontent
 	+page-body('', title, 'Каталог товаров', 'Двигатели', 'Двигатель 740.11 (740.11-1000400)')
 		+sCard()
 		+sContactInfo()
+		+sSimilar()
 	+sForm(`Не&nbsp;нашли нужную модель?`)
 	+sDelivery()
 	+sAdvantages()
