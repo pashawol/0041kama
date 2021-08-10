@@ -165,3 +165,83 @@ mixin page-body04(btns,t, ...items)
 									.span-mail По всем вопросам
 									a.strong(href=`mailto:zapchasty-kama@yandex.ru`)='zapchasty-kama@yandex.ru'
 						button.btn.btn-primary(type="button") Оставить заявку
+
+mixin page-body05(btns,t, ...items)
+	.container.container--main
+		.row.row--main
+			.col-3
+				.list-block
+					.list-group
+						mixin item(i, t, a)
+							a(class!= ('list-group-item list-group-item-action '+ a || 'list-group-item list-group-item-action' ))
+								+pic(`categories-${i}.png`, '', 0)
+								span!= t
+						+item(1,'Двигатели','')
+						+item(2,`Сборочные комплекты&nbsp;двигателя`, ``)
+						+item(1,'Блоки цилиндров', ``)
+						+item(1,'Валы коленчатые', ``)
+						+item(1,'Цилиндропоршневая группа', ``)
+						+item(1,'Запчасти двигателей', ``)
+						+item(1,'Топливная система', ``)
+						+item(1,'Двигатели Cummins', ``)
+						+item(3,'Long/Short Block Cummins', ``)
+						+item(4,'Коробки передач', ``)
+						+item(1,'Главные передачи', ``)
+						+item(1,'Коробки<br />раздаточные', ``)
+			.col-9.col--ph
+				+page-head(btns,t, ...items)
+					+shop-btns()
+				block
+
+mixin shop-btns()
+	+b.shop-btns
+		.print-btns
+			+e.BUTTON.print(type="button")
+			span Распечатать
+		.pdf-btns
+			+e.BUTTON.pdf(type="button")
+			span Скачать PDF
+
+mixin tr-product()
+	tr.tr-product
+		+e.TD.td-pic
+			a(href="#")
+				+pic('catalog-3.png','bg',0)
+		+e.TD.td-caption
+			.title Двигатель 740.11 (740.11-1000400)
+			.price Цена: 540 000 ₽
+		+e.TD.td-count
+			.row
+				button.minus(type="button")
+				span 1
+				button.plus(type="button")
+		+e.TD.td-close
+			+e.div-close
+				+icon('close')
+
+mixin shop-content()
+	+b.shop-content
+		table
+			+tr-product
+			+tr-product
+			+tr-product
+		.final-price() Итого: 540 000 ₽
+
+mixin shop-form(t)
+	+b.shop-form
+		h2 Оформление заказа
+		+e.caption Заполните форму, и&nbsp;наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей заказа.
+		+form-wrap()
+			.row
+				.col-12.col-md-4
+					+input('Ваше имя')
+				.col-12.col-md-4
+					+input(`Ваш телефон`, 'tel')
+				.col-12.col-md-4
+					+input(`Ваш e-mail`, 'email')
+				.col-12
+					+input(`Ваш комментарий к заказу`, 'textarea')
+				.col-md-auto.col-12
+					+e.btn.btn.btn-primary Оформить заказ
+				.col-md.col-12
+					+agreement

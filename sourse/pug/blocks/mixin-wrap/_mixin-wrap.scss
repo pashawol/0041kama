@@ -496,3 +496,253 @@
 		}
 	}
 }
+
+.shop-btns{
+	display: flex;
+	margin-top: rem(18);
+	div{
+		display: flex;
+	}
+	button{
+		border-width: 0px;
+	}
+	span{
+		margin-left: rem(10);
+		font-weight: 500;
+	}
+	&__print{
+		background-image: url(../img/svg/print.svg);
+		background-size: contain;
+		background-color: white;
+		width:rem(25);
+		height:rem(25);
+	}
+	&__pdf{
+		background-image: url(../img/svg/pdf.svg);
+		background-size: contain;
+		background-color: white;
+		width:rem(25);
+		height:rem(25);
+	}
+	.print-btns{
+		display: none;
+		@include media-breakpoint-up(lg){
+			display: flex;
+		}
+		span{
+			margin-right: rem(20);
+		}
+	}
+}
+
+.shop-content{
+	--img-size:124px;
+	@include media-breakpoint-up(md){
+			--img-size:70px;
+	}
+	@include media-breakpoint-down(md){
+		padding-top: rem(20);
+	}
+	margin-top: rem(20);
+	width:100%;
+	border:1px solid $light2;
+	border-radius: 5px;
+	padding-left: rem(18);
+	padding-right: rem(18);
+	table{
+		width: 100%;
+		tr{
+
+			@include media-breakpoint-down(md){
+				border-bottom: 1px dashed $light;
+				position: relative;
+				display: flex;
+				flex-wrap: wrap;
+				padding-left: calc(var(--img-size)+20px);
+				padding-top: rem(20);
+				padding-bottom: rem(20);
+				min-height: calc(var(--img-size)+#{rem(40)});
+				justify-content: space-between;
+			}
+		}
+		td{
+			@include media-breakpoint-up(md){
+				border-bottom: 1px dashed $light;
+				padding-top: rem(20);
+				padding-bottom: rem(20);
+			}
+			@include media-breakpoint-down(md){
+				display: block;
+			}
+		}
+	}
+	&__td-pic{
+		width:var(--img-size);
+		
+		@include media-breakpoint-down(md){
+			position: absolute;
+			left: 0;
+			top: rem(20);
+		}
+		picture{
+			img{
+				width:var(--img-size);
+				height:var(--img-size);
+				border-radius: 5px;
+			}
+		}
+	}
+	&__td-caption{
+		padding-left: rem(19);
+		@include media-breakpoint-down(md){
+			width: 100%;
+			padding-left: 0;
+		}
+		.title{
+			font-weight: 600;
+		}
+	}
+	&__td-count{
+		.row{
+			@include media-breakpoint-up(md){
+				justify-content: center;
+			}
+		}
+		span{
+			width: auto;
+			margin-right: rem(6);
+		}
+		button{
+			border-width: 0px;
+			width:30px;
+			height: 30px;
+			background-color: white;
+			background-size: contain;
+			@include media-breakpoint-up(sm){
+				width: 24px;
+				height: 24px;
+			}
+		}
+		.minus{
+			background-image: url('../img/svg/minus.svg');
+			margin-right: rem(6);
+		}
+		.plus{
+			background-image: url('../img/svg/plus.svg');
+		}
+	}
+	&__td-close{
+		@include media-breakpoint-up(md){
+			width:rem(34);
+		}
+		text-align: right;
+		svg{
+			color:#CACFD6;
+			@include media-breakpoint-up(sm){
+				font-size: 20px;
+			}
+			font-size: 25px;
+		}
+	}
+	.tr-price{
+		text-align: end;
+	}
+	.final-price{
+		font-weight: 600;
+		width:100%;
+	}
+	.td-final-price{
+		width:400px;
+	}
+	.final-price{
+		text-align: end;
+		font-size: 24px;
+		padding-top:rem(40);
+		padding-bottom: rem(40);
+		@include media-breakpoint-up(md){
+			padding-top:rem(18);
+			padding-bottom: rem(12);
+			font-size: rem(16);
+		}
+	}
+}
+.shop-form{
+	margin-top: 20px;
+	padding: 38px;
+	background-color: $light;
+	margin-bottom: rem(120);
+	h2{
+		font-size: rem(32);
+		font-weight: 700;
+		text-align: center;
+		@include media-breakpoint-up(md){
+			text-align: left;
+		}
+	}
+	input{
+		text-align: center;
+		@include media-breakpoint-up(md){
+			text-align: left;
+		}
+		@include media-breakpoint-down(md){
+			margin-top: 10px;
+		}
+	}
+	&__caption{
+		color:#778089;
+		margin-top: 24px;
+		font-weight: 500;
+		font-size: 20px;
+		text-align: center;
+		@include media-breakpoint-up(md){
+			font-size: rem(16);
+			text-align: left;
+		}
+	}
+	.form-wrap{
+		margin-top: 40px;
+		@include media-breakpoint-up(md){
+			margin-top: 30px;
+		}
+		textarea{
+			min-height: 120px;
+			text-align: center;
+			vertical-align: middle;
+			@include media-breakpoint-up(md){
+				min-height: rem(100);
+				text-align: left;
+			}
+			@include media-breakpoint-down(md){
+				margin-top: 10px;
+			}
+		}
+		&__btn{
+			width:100%;
+			@include media-breakpoint-up(md){
+				width:rem(283);
+			}
+			@include media-breakpoint-down(md){
+				margin-top: 10px;
+			}
+		}
+		.agreement{
+			font-size: rem(14);
+			line-height: 125%;
+			@include media-breakpoint-up(md){
+				max-width: rem(380);
+				margin-top: rem(7);
+			}
+			@include media-breakpoint-down(md){
+				margin-top: 30px;
+			}
+			input{
+				width: 24px;
+				height: 24px;
+				@include media-breakpoint-up(md){
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+	}
+}
