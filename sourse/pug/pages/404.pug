@@ -1,0 +1,21 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sQ/_sQ.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '404.jpg'
+
+block title
+	- let  title= 'Страница не найдена'
+	title= title
+block pagecontent 
+	+page404
+
+
