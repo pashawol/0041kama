@@ -40,4 +40,20 @@ mixin modal()
 				ul
 					li Набережные Челны
 	// #modal-search-result
+
+	+b.modal-win.short-modal(id="modal-gratitude" class=" " style="display: none" )
+		+form-wrap
+			h2 Спасибо за обращение!
+			+e.caption Наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей заказа
+			+e.btn.btn.btn-primary Закрыть
+	// #modal-gratitude
+
+	+b.modal-win.short-modal.in-cart(id="modal-in-cart" class=" " style="display: none" )
+		+form-wrap
+			h2 Товар добавлен в&nbsp;корзину
+			+e.caption Двигатель 740.11 (740.11-1000400)
+			.btns
+				+e.btn.btn.btn-primary Оформить заказ
+				+e.btn.btn.btn-outline-primary Продолжить покупки
+	// #modal-in-cart
 	// end modals
