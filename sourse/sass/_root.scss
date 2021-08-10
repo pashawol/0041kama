@@ -16,15 +16,15 @@
 		--sPB: #{rem(100)};
 	}
 
-	--swiperArrowSize: #{rem(68)};
+	--swiperArrowSize: #{rem(50)};
 	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 2);
-	--swiperBorderColorDef: var(--bs-primary);
+	--swiperBorderColorDef: var(--bs-light);
 	--swiperColorDef: var(--bs-primary);
-	--swiperBgDef: #ffffff;
+	--swiperBgDef: var(--bs-light);
 
-	--swiperBorderColorDefHover: var(--bs-primary);
+	--swiperBorderColorDefHover: var(--bs-light2);
 	--swiperColorDefHover: var(--bs-primary);
-	--swiperBgDefHover: #ffffff;
+	--swiperBgDefHover: var(--bs-light2);
 
 	--fancybox-bg: rgba(24, 24, 27, 0.77);
 

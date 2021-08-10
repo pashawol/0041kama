@@ -3,33 +3,42 @@ mixin sCard(data)
 	+b.SECTION.sCard.section#sCard&attributes(attributes)
 		.container
 			.row
-				.col-auto
-					+e.slider--js.swiper-container
-						.swiper-wrapper
-							mixin slide2(i)
-								+e.slide.swiper-slide
-									img(src=`img/@2x/card-${i}.jpg` alt='' data-fancybox)
-							+slide2(1)
-							+slide2(2)
-							+slide2(3)
-							+slide2(4)
-							+slide2(3)
-							+slide2(2)
-							+slide2(4)
-					+e.slider-thumbs--js.swiper-container
-						.swiper-wrapper
-							mixin slide(i)
-								+e.slide.swiper-slide
-									img(src=`img/@1x/card-${i}.jpg` alt='')
-							+slide(1)
-							+slide(2)
-							+slide(3)
-							+slide(4)
-							+slide(3)
-							+slide(2)
-							+slide(4)
-							
-				.col
+				+e.col.col-12.col-md-6.col-auto
+					+e.slider-wrap
+						+e.slider--js.swiper-container
+							.swiper-wrapper
+								mixin slide2(i)
+									+e.slide.swiper-slide
+										img(src=`img/@2x/card-${i}.jpg` alt='' data-fancybox)
+								+slide2(1)
+								+slide2(2)
+								+slide2(3)
+								+slide2(4)
+								+slide2(3)
+								+slide2(2)
+								+slide2(4)
+						+e.slider-thumbs--js.swiper-container
+							.swiper-wrapper
+								mixin slide(i)
+									+e.slide.swiper-slide
+										img(src=`img/@1x/card-${i}.jpg` alt='')
+								+slide(1)
+								+slide(2)
+								+slide(3)
+								+slide(4)
+								+slide(3)
+								+slide(2)
+								+slide(4)
+					+e.contact--lg-only
+						.text-secondary Свяжитесь с&nbsp;нами в&nbsp;мессенджерах и&nbsp;мы&nbsp;проконсультируем вас:
+						+b.soc
+							+item-sos
+								img(src="img/svg/telegtam.svg" alt="")
+							+item-sos
+								img(src="img/svg/viber.svg" alt="")
+							+item-sos
+								img(src="img/svg/whatsapp.svg" alt="")
+				.col-12.col-md-6.col-lg
 					+e.table
 						mixin row-item(t, v)
 							+e.row-item
@@ -47,12 +56,13 @@ mixin sCard(data)
 						+row-item(`Комплектность двигателя:`, `ТНВД, турбокомпрессоры, воздушный компрессор, насос ГУР, генератор, кулиса КПП`)
 						+row-item(`Применяемость с КПП:`, `14, 142, 15, 152`)
 						+row-item(`Привод вентилятора:`, `Гидромуфта`)
+					+e.BUTTON.btn-more.d-xl-none Показать еще
 					+e.price Цена: от 110 000 ₽
 					+e.buttons
 						.row
-							.col-6
+							.col-6.col-lg-12.col-xl-6
 								+e.btn.btn.btn-primary Оставить заявку
-							.col-6
+							.col-6.col-lg-12.col-xl-6
 								+e.btn.btn.btn-outline-primary 
 									+icon('basket')
 									| В корзину

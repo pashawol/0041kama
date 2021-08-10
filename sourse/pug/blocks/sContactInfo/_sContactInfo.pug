@@ -3,5 +3,19 @@ mixin sContactInfo(data)
 	+b.sContactInfo.section#sContactInfo&attributes(attributes)
 		.container
 			.row
-				.col-6
+				mixin item(i, t, ...items)
+					.col-6.col-xl-3
+						+e.item
+							+e.img-wrap
+								img(src=`img/svg/contact-info-${i}.svg`, loading='lazy' alt="")
+							+e.caption
+								+e.title!=t
+								ul
+									each item in items
+										li!= item
+				+item('1',`Телефоны для заказа`, `8 (800) 700-85-72`, `8 (960) 079-95-44`)
+				+item('2',`Электронная почта`, `zapchasty-kama@yandex.ru`)
+				+item('3',`Адрес`, `г. Набережные Челны, пр&minus;т&nbsp;КАМАЗа, 22/3`)
+				+item('4',`Режим работы`, `Пн-пт: с 8:00 до 17:00 мск <br> Сб: с 8:00 до 12:00 мск <br> Вс: выходной`)
+				
 	// end sContactInfo

@@ -356,9 +356,41 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+	const sSimilarSlider = new Swiper('.sSimilar__slider--js', {
+		...defaultSl,
+		slidesPerView: 2,
+		spaceBetween: 12,
+
+		// slidesPerView: 'auto',
+		// freeMode: true,
+		loopFillGroupWithBlank: true,
+		touchRatio: 0.5,
+		slideToClickedSlide: true,
+		// freeModeMomentum: true,
+		navigation: {
+			nextEl: '.section-title__arrows .swiper-button-next',
+			prevEl: '.section-title__arrows .swiper-button-prev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 24
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 16
+			},
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 20
+			}
+		}
+
+	});
 
 	var sCardSliderThumbs = new Swiper(".sCard__slider-thumbs--js", {
 		spaceBetween: 10,
+		direction: "vertical",
 		slidesPerView: 5,
 		watchOverflow: true,
 		// freeMode: true,
@@ -366,6 +398,11 @@ function eventHandler() {
 		watchSlidesProgress: true,
 		lazy: {
 			loadPrevNext: true,
+		},
+		breakpoints: {
+			768: {
+				direction: "horizontal"
+			},
 		}
 	});
 	var sCardSlider = new Swiper(".sCard__slider--js", {
@@ -379,8 +416,11 @@ function eventHandler() {
 		}
 	});
 
-	// modal window
-
+	$(".sCard__btn-more").click(function () {
+		let th = $(this);
+		th.hide();
+		$(".sCard__row-item").slideDown();
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
