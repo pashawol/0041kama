@@ -416,11 +416,22 @@ function eventHandler() {
 		}
 	});
 
-	$(".sCard__btn-more").click(function () {
+	$(".sCard .btn-more").click(function () {
 		let th = $(this);
 		th.hide();
 		$(".sCard__row-item").slideDown();
 	});
+
+	$(function(){
+		$(".sReadMore__text").readall({
+			showheight: null,
+			showrows: 8,
+			btnTextShowmore: 'Показать еще', 
+			btnClassShowmore: 'btn-more',
+			btnClassShowless: 'd-none'
+		});
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

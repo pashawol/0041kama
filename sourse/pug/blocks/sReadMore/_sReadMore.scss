@@ -1,0 +1,43 @@
+// start .sReadMore
+.sReadMore {
+	--sPT: #{rem(20)};
+	--sPB: #{rem(20)};
+	--sTPB: #{rem(20)};
+	.section-title {
+		h4 {
+			font-weight: bold;
+			line-height: (24 / 29);
+		}
+	}
+	&__text {
+		font-size: rem(14);
+		p {
+			margin-bottom: 20;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.readall-wrapper {
+		text-align: left;
+	}
+	.btn-more {
+		padding: 0;
+		margin-top: rem(12);
+
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sReadMore
