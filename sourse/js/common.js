@@ -390,6 +390,7 @@ function eventHandler() {
 
 	var sCardSliderThumbs = new Swiper(".sCard__slider-thumbs--js", {
 		spaceBetween: 10,
+		direction: "vertical",
 		slidesPerView: 5,
 		watchOverflow: true,
 		// freeMode: true,
@@ -397,6 +398,11 @@ function eventHandler() {
 		watchSlidesProgress: true,
 		lazy: {
 			loadPrevNext: true,
+		},
+		breakpoints: {
+			768: {
+				direction: "horizontal"
+			},
 		}
 	});
 	var sCardSlider = new Swiper(".sCard__slider--js", {
@@ -410,8 +416,11 @@ function eventHandler() {
 		}
 	});
 
-	// modal window
-
+	$(".sCard__btn-more").click(function () {
+		let th = $(this);
+		th.hide();
+		$(".sCard__row-item").slideDown();
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
