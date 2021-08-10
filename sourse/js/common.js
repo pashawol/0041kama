@@ -282,7 +282,7 @@ const $ = jQuery;
 
 function eventHandler() {
 	// JSCCommon.ifie();
-	// JSCCommon.modalCall();
+	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('.tabs--js');
 	// JSCCommon.mobileMenu();
 	JSCCommon.inputMask();

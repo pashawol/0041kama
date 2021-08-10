@@ -1,0 +1,23 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/modal/_modal.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= 'city-choose.jpg'
+
+block title
+	- let  title= 'Модальные окна'
+	title= title
+block pagecontent 
+	.section.container
+		mixin btn(t,a)
+			button.btn.btn-primary.m-2(data-fancybox data-src= a)= t
+		+btn("Выбор города",'modal-search-list')
+		+btn("Выбор города 2",'modal-search-result')
