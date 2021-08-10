@@ -462,18 +462,20 @@ iframe {
 	background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='15' viewBox='0 0 24 24'><path fill='#{$primary}' d='M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z'/></svg>");
 }
 
-
-
 .btn-primary {
 	color: $white;
 	font-weight: 600;
-	&:hover, &:active, &:focus{
+	&:hover,
+	&:active,
+	&:focus {
 		color: $white;
 	}
 }
 .btn-outline-primary {
 	font-weight: 600;
-	&:hover, &:active, &:focus {
+	&:hover,
+	&:active,
+	&:focus {
 		color: $white;
 	}
 }
@@ -485,21 +487,25 @@ h2 {
 }
 
 .row {
-		--bs-gutter-x: #{rem(12)};
-		@include media-breakpoint-up(md) {
-			--bs-gutter-x: #{rem(24)};
-		}
-		@include media-breakpoint-up(lg) {
-			--bs-gutter-x: #{rem(16)};
-		}
-		@include media-breakpoint-up(xl) {
-			--bs-gutter-x: #{rem(20)};
-		}
-		--bs-gutter-y: var(--bs-gutter-x);
+	--bs-gutter-x: #{rem(12)};
+	@include media-breakpoint-up(md) {
+		--bs-gutter-x: #{rem(24)};
 	}
+	@include media-breakpoint-up(lg) {
+		--bs-gutter-x: #{rem(16)};
+	}
+	@include media-breakpoint-up(xl) {
+		--bs-gutter-x: #{rem(20)};
+	}
+	--bs-gutter-y: var(--bs-gutter-x);
+}
 
-.container .container
-	{
-		padding-left: 0;
-		padding-right: 0;
-	}
+.container .container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.readall-hide:after {
+  // background: linear-gradient(to bottom,rgba(255,255,255,.1),#fff 90%);
+	content: none;
+}

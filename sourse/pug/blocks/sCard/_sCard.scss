@@ -42,7 +42,7 @@
 		margin-left: var(--bs-gutter-x);
 		max-height: 453px;
 		@include media-breakpoint-up(sm) {
-		max-height: 431px;
+			max-height: 431px;
 		}
 		@include media-breakpoint-up(md) {
 			margin-left: 0;
@@ -119,20 +119,7 @@
 			}
 		}
 	}
-	&__btn-more {
-		@include mt;
-		border: none;
-		outline: none;
-		padding: rem(6) 0;
-		margin-bottom: rem(10);
-		background-color: transparent;
-		color: $primary;
-		border-radius: $border-radius;
-		font-size: rem(14);
-		&:hover {
-			color: shift-color($primary, 20%);
-		}
-	}
+
 	&__buttons {
 		margin-bottom: rem(33);
 		@include media-breakpoint-only(lg) {
@@ -176,6 +163,12 @@
 			}
 		}
 	}
+
+	.btn-more {
+		padding: rem(6) 0;
+		margin-bottom: rem(10);
+	}
+
 	@include media-breakpoint-up(xl) {
 	}
 	@include media-breakpoint-up(lg) {
@@ -191,3 +184,16 @@
 	@include media-breakpoint-down(xl) {
 	}
 } // end.sCard
+
+.btn-more {
+	@include mt;
+	border: none;
+	outline: none;
+	background-color: transparent;
+	color: $primary;
+	border-radius: $border-radius;
+	font-size: rem(14);
+	&:hover {
+		color: shift-color($primary, 20%);
+	}
+}
