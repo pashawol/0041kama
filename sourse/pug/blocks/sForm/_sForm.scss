@@ -95,6 +95,11 @@
 	&__img-wrap {
 		picture {
 			margin-left: calc(-1 * var(--bs-gutter-x));
+			img {
+				@include media-breakpoint-up(xxl) {
+					max-width: none;
+				}
+			}
 		}
 	}
 	.agreement {

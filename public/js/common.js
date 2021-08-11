@@ -424,8 +424,8 @@ function eventHandler() {
 	});
 	$(".sCard .btn-more").click(function () {
 		let th = $(this);
-		th.hide();
 		$(".sCard__row-item").slideDown();
+		th.hide();
 	});
 	$(function () {
 		$(".sReadMore__text").readall({
