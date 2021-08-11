@@ -3,7 +3,7 @@ mixin sContactInfo(data)
 	+b.sContactInfo.section#sContactInfo&attributes(attributes)
 		.container
 			.row
-				mixin item(i, t, ...items)
+				mixin item(i, t)
 					.col-6.col-xl-3
 						+e.item
 							+e.img-wrap
@@ -11,11 +11,18 @@ mixin sContactInfo(data)
 							+e.caption
 								+e.title!=t
 								ul
-									each item in items
-										li!= item
-				+item('1',`Телефоны для заказа`, `8 (800) 700-85-72`, `8 (960) 079-95-44`)
-				+item('2',`Электронная почта`, `zapchasty-kama@yandex.ru`)
-				+item('3',`Адрес`, `г. Набережные Челны, пр&minus;т&nbsp;КАМАЗа, 22/3`)
-				+item('4',`Режим работы`, `Пн-пт: с 8:00 до 17:00 мск <br> Сб: с 8:00 до 12:00 мск <br> Вс: выходной`)
+									block
+								//- ul
+								//- 	each item in items
+								//- 		li!= item
+				+item('1',`Телефоны для заказа`)
+					li #[a(href='tel:+78007008572') 8 (800) 700-85-72]
+					li #[a(href='tel:+79600799544') 8 (960) 079-95-44]
+				+item('2',`Электронная почта`)
+					li #[a(href='mailto:zapchasty-kama@yandex.ru') zapchasty-kama@yandex.ru]
+				+item('3',`Адрес`)
+					li г. Набережные Челны, пр&minus;т&nbsp;КАМАЗа, 22/3
+				+item('4',`Режим работы`)
+					li Пн-пт: с 8:00 до 17:00 мск <br> Сб: с 8:00 до 12:00 мск <br> Вс: выходной
 				
 	// end sContactInfo
