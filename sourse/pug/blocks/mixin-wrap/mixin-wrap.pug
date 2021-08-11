@@ -135,10 +135,11 @@ mixin page-body04(btns,t, ...items)
 						+e.count Найдено на сайте: 82
 					+e.result
 						mixin str-search(t)
-							.row
-								span!=t
-								button(type="button")
-									+icon('arrow')
+							a(href="#")
+								.row
+									span!=t
+									button(type="button")
+										+icon('arrow')
 						+str-search('Двигатель 740.31 (740.31-1000400)')
 						+str-search('Двигатель 740.11 (740.11-1000400)')
 						+str-search('Двигатель 740.31 (740.31-1000400)')
@@ -147,7 +148,7 @@ mixin page-body04(btns,t, ...items)
 						+str-search('Двигатель 740.11 (740.11-1000400)')
 						+str-search('Двигатель 740.31 (740.31-1000400)')
 						+str-search('Двигатель 740.11 (740.11-1000400)')
-					+e.btn
+					+e.btn.btn-light
 						+icon('refresh')
 						span Показать еще
 				.col-xl-3.col-12.col--help
@@ -160,7 +161,7 @@ mixin page-body04(btns,t, ...items)
 							+e.contact
 								div.div-first
 									.span-call Звонок бесплатный
-									a.strong(href=`tel:+78007008572`) 8 (800) 700-85-72
+									a.strong(href=`tel:+78007008572`) 8(800)700-85-72
 								div
 									.span-mail По всем вопросам
 									a.strong(href=`mailto:zapchasty-kama@yandex.ru`)='zapchasty-kama@yandex.ru'
@@ -195,10 +196,10 @@ mixin page-body05(btns,t, ...items)
 
 mixin shop-btns()
 	+b.shop-btns
-		.print-btns
-			+e.BUTTON.print(type="button")
-			span Распечатать
-		.pdf-btns
+		a.print-btns(href="#")
+				+e.BUTTON.print(type="button")
+				span Распечатать
+		a.pdf-btns(href="#")
 			+e.BUTTON.pdf(type="button")
 			span Скачать PDF
 
@@ -212,9 +213,9 @@ mixin tr-product()
 			.price Цена: 540 000 ₽
 		+e.TD.td-count
 			.row
-				button.minus(type="button")
-				span 1
-				button.plus(type="button")
+				+e.btn--minus(type="button")
+				input(type="text" value="1")
+				+e.btn--plus(type="button")
 		+e.TD.td-close
 			+e.div-close
 				+icon('close')
