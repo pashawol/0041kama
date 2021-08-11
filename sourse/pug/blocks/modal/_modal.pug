@@ -56,4 +56,14 @@ mixin modal()
 				+e.btn.btn.btn-primary Оформить заказ
 				+e.btn.btn.btn-outline-primary Продолжить покупки
 	// #modal-in-cart
+
+	+b.modal-win.request(id="modal-request" class=" " style="display: none" )
+		+form-wrap
+			h2 Оставить заявку
+			+e.caption Заполните форму, и&nbsp;наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей заказа
+			.form-input
+				+input('Ваше имя')
+				+input('Ваш телефон','tel')
+				+e.btn.btn.btn-primary Отправить заявку
+			+agreement()
 	// end modals

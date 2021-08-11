@@ -21,6 +21,7 @@
 								<button class="btn btn-primary m-2" data-fancybox data-src="modal-search-result">Выбор города 2</button>
 								<button class="btn btn-primary m-2" data-fancybox data-src="modal-gratitude">Благодарка</button>
 								<button class="btn btn-primary m-2" data-fancybox data-src="modal-in-cart">В корзину</button>
+								<button class="btn btn-primary m-2" data-fancybox data-src="modal-request">Заявка</button>
 			</div>
 		</div>
 		<!--  start modals-->
@@ -113,6 +114,29 @@
 			</div>
 		</div>
 		<!-- #modal-in-cart-->
+		<div class="modal-win request" id="modal-request" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<h2>Оставить заявку</h2>
+					<div class="form-wrap__caption">Заполните форму, и&nbsp;наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей заказа
+					</div>
+					<div class="form-input">
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="text" type="text" placeholder="Ваше имя"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" name="tel" type="tel" placeholder="Ваш телефон"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__btn btn btn-primary">Отправить заявку
+						</div>
+					</div>
+					<div class="agreement">
+						<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__text form-check-label">Я&nbsp;согласен на&nbsp;обработку моих персональных данных в&nbsp;соответствии с&nbsp;<a href="#">Условиями</a></span>
+						</label>
+					</div>
+				</form>
+			</div>
+		</div>
 		<!-- end modals-->
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

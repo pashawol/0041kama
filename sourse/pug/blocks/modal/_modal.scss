@@ -384,3 +384,66 @@ a {
 		}
 	}
 }
+
+.request{
+	padding: 40px;
+	width:460px;
+	@include media-breakpoint-down(md){
+		padding-left: 64px;
+		padding-right: 64px;
+		padding-top: 294px;
+		padding-bottom: 294px;
+		width: 100%;
+		max-width: none;
+		height: 100%;
+	}
+	h2{
+		@include media-breakpoint-down(md){
+			font-size: 32px;
+		}
+		font-weight: 700;
+		text-align: center;
+		font-size: rem(32);
+	}
+	.is-close{
+		position: absolute;
+		top:11px !important;
+		right:11px !important;
+		color: #CACFD6 !important;
+		border-width: 0px !important;
+		box-shadow: none !important;
+		svg{
+			filter: none;
+			width:24px;
+			height: 24px;
+		}
+	}
+	.form-wrap{
+		&__caption{
+			text-align: center;
+			font-weight: 500;
+			color: #778089;
+			padding-top: 24px;
+			@include media-breakpoint-up(md){
+				padding-top: 12px;
+			}
+			
+		}
+		&__btn{
+			width:100%
+		}
+	}
+	.form-input{
+		padding-top: 40px;
+		padding-bottom: 40px;
+		@include media-breakpoint-between(md,xxl){
+			padding-top: 24px;
+			padding-bottom: 24px;
+		}
+		input{
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+	}
+}
