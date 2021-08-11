@@ -543,3 +543,10 @@ h2 {
   // background: linear-gradient(to bottom,rgba(255,255,255,.1),#fff 90%);
 	content: none;
 }
+
+
+.btn {
+	&:focus {
+		box-shadow: none;
+	}
+}
