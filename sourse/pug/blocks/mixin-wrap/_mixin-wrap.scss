@@ -349,18 +349,21 @@
 		position: relative;
 	}
 	&__input-wrap{
+		input{
+			padding-right: rem(48);
+		}
 		button{
 			position: absolute;
 			background-image: url(../img/svg/search.svg);
 			width: rem(19.8);
-			height:rem(20);
+			height:rem(19.8);
 			top:rem(15.4);
 			right: rem(20);
 			border-width: 0;
 			background-color: white;
 			background-size: contain;
-
 		}
+
 	}
 	&__caption-search{
 		margin-top: rem(16);
