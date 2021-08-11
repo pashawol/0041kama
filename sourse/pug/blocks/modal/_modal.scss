@@ -219,7 +219,9 @@ a {
 			@include media-breakpoint-up(md){
 				max-width: 380px;
 			}
-
+			input{
+				padding-right: rem(50);
+			}
 		}
 		&__scroll-list{
 			overflow: auto;
