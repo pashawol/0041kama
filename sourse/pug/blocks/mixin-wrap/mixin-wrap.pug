@@ -57,7 +57,8 @@ mixin agreement
 
 mixin tel-n-social(l, t)
 	+b.tel-n-social
-		a.strong(href=`${l}`)!= t
+		if l
+			a.strong(href=`${l}`)!= t
 		+b.soc
 			+item-sos
 				img(src="img/svg/telegtam.svg" alt="")
@@ -256,4 +257,12 @@ mixin page404(t)
 			h1 Страница не найдена
 			+e.caption Неправильно набран адрес, или такой страницы не&nbsp;существует.
 			.row.row-btn
-				+e.btn.btn.btn-primary Вернуться на главную
+				+e.btn.btn.btn-primary(href="#") Вернуться на главную
+
+
+mixin search()
+	+b.search-block
+		form
+			button 
+				+icon("search")
+			input(type="text" placeholder="Поиск по артикулу и названию")

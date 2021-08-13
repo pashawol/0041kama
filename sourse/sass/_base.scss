@@ -9,7 +9,7 @@
 	height: 100%;
 	background-position: center 0;
 	opacity: 0;
-	//opacity: 0.7;
+	// opacity: 0.7;
 }
 
 body,
@@ -548,5 +548,12 @@ h2 {
 .btn {
 	&:focus {
 		box-shadow: none;
+	}
+}
+
+.btn-light{
+	&:hover{
+		background-color: #dfdfdf;
+		border-color: #dfdfdf;
 	}
 }

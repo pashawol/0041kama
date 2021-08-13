@@ -1,8 +1,54 @@
 
 	// start .header
 	.header {
-		 
-	@include media-breakpoint-up(xl) {}
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(19);
+			padding-bottom: 0;
+		}
+		padding-top: rem(15);
+		padding-bottom: rem(15);
+			border-bottom: 1px solid #E5E8EC;
+
+		.row{
+			align-items: center;
+			.row{
+				justify-content: flex-end;
+			}
+			@include media-breakpoint-up(xxl) {
+			--bs-gutter-x: 	40px;
+		}
+		--bs-gutter-y: 	0px;
+		}
+		&__link-email{
+			color: #778089 !important;
+		}
+		&__link-tel{
+			color: #323A42 !important	;
+			font-weight: 600;
+			display: inline-block;
+			@include media-breakpoint-up(xl) {
+				margin-bottom: 0;
+			}
+			margin-bottom: rem(10);
+		}
+		&__link-email,
+		&__link-tel{
+			&:hover{
+				@include media-breakpoint-up(lg) {
+
+					color: $primary !important;
+				}
+			}
+		}
+		&__col{
+			@include media-breakpoint-up(xl) {
+				max-width: none
+			}
+			@include media-breakpoint-up(lg) {
+				max-width: rem(380)
+			}
+
+		}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
 	@include media-breakpoint-up(sm) {}
@@ -27,3 +73,40 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.header
+
+.city-link{
+	@extend .btn;
+	@extend .btn-light;
+	font-size: rem(14);
+	padding: rem(10.5) rem(16);
+	.icon{
+		color: $primary;
+		font-size: rem(10);
+		margin-right: rem(10);
+	}
+}
+
+.basket-btn{
+	position: relative;
+	color: $body-color;
+	display: flex;
+	.icon{
+		font-size: rem(20);
+
+	}
+	&__count{
+		width: rem(15);
+		height: rem(15);
+		border-radius: 50%;
+		background-color: $primary;
+		color: #fff;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: rem(10);
+		// position: absolute;
+		// l100%
+		position: relative;
+		top: rem(-10);
+	}
+}

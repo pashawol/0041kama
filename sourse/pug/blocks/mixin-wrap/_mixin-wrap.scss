@@ -833,3 +833,32 @@
 		}
 	}
 }
+
+
+.search-block{
+	form{
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+	button{
+		flex:  0 0 auto;
+		@extend .btn;
+		padding: 0;
+		// padding-left: rem(10);
+		padding-right: rem(10);
+		.icon{
+			fill:transparent;
+			stroke-width: 2px;
+			stroke: currentColor;
+			font-size: rem(18);
+		}
+	}
+	input{
+		outline: none !important;
+		border: none;
+		display: block;
+		min-width: rem(265);
+		font-size: rem(16);
+	}	
+}

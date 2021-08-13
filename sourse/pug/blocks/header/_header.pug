@@ -1,5 +1,40 @@
 mixin header()
 	// start header
 	+b.HEADER.header#header&attributes(attributes)
-		block
+		.container
+			.row
+				.col-lg-auto.col
+					a(href="/")
+						img(src="img/svg/logo-head.svg", alt="") 
+				.col.d-none.d-lg-block
+					+b.city-link(href="#modal-search-list").link-modal-js 
+						+icon("compass")
+						| Набережные Челны
+				+e.col.col-auto.d-none.d-lg-block
+					.row
+						.col-auto.order-xl-0.order-last
+							+e.link-email(href="mailto:zapchasty-kama@yandex.ru") zapchasty-kama@yandex.ru
+						+e.tel-block.col-auto
+							+e.link-tel(href="tel:8(800)700-85-72") 8 (800) 700-85-72
+						+e.tel-block.col-auto
+							+e.link-tel(href="tel:8(960)079-95-44") 8 (960) 079-95-44
+						.col-12.d-xl-none
+						.col-auto.order-last
+							+tel-n-social
+				//- .col-auto
+				.col-12.d-none.d-lg-block
+				.col.d-none.d-lg-block
+					+mnu
+				.col-auto.d-none.d-lg-block
+					+search
+				.col-auto
+					+b.basket-btn(href="#")
+						+icon("basket")
+						+e.count 99
+				.col-auto.d-lg-none
+					+b.toggle-contact-mobile--js.btn.btn-primary
+						+icon("call")
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js.btn.btn-light
+						span
 	// end header
