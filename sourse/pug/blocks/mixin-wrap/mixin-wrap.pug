@@ -60,12 +60,12 @@ mixin tel-n-social(l, t)
 		if l
 			a.strong(href=`${l}`)!= t
 		+b.soc
-			+item-sos
+			+item-sos().--telegram
 				img(src="img/svg/telegtam.svg" alt="")
-			+item-sos
-				img(src="img/svg/viber.svg" alt="")
-			+item-sos
+			+item-sos().--viber
 				img(src="img/svg/whatsapp.svg" alt="")
+			+item-sos().--whatsapp
+				img(src="img/svg/viber.svg" alt="")
 
 mixin cb(type)
 	+e.LABEL.label-modal

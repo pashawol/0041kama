@@ -263,7 +263,8 @@ const JSCCommon = {
 		let catalogToggle = toggle;
 
 		$(document).on('click', catalogToggle, function () {
-			$(this).toggleClass('active').next().fadeToggle('fast', function () {
+			$(this).toggleClass('active')
+			$(catalogDrop).slideToggle('fast', function () {
 				$(this).toggleClass("active")
 			});
 		})
@@ -272,7 +273,7 @@ const JSCCommon = {
 			let container = event.target.closest(catalogDrop + ".active"); // (1)
 			let link = event.target.closest(catalogToggle); // (1)
 			if (!container || !catalogToggle) {
-				$(catalogDrop).removeClass('active').fadeOut();
+				$(catalogDrop).removeClass('active').slideUp();
 				$(catalogToggle).removeClass('active');
 			};
 		}, { passive: true });
@@ -284,11 +285,11 @@ function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall();
 	// JSCCommon.tabscostume('.tabs--js');
-	// JSCCommon.mobileMenu();
+	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	// JSCCommon.sendForm();
 	// JSCCommon.heightwindow();
-	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
+	JSCCommon.toggleShow(".toggle-contact-mobile--js", '.header__contact-dropdown--js');
 	// JSCCommon.animateScroll();
 	
 	// JSCCommon.CustomInputFile(); 

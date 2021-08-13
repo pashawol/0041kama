@@ -8,11 +8,26 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
+	+b.menu-mobile--js.d-lg-none 
 		+e.inner
+			+search
+			+b.city-link(href="#modal-search-list").link-modal-js 
+				+icon("compass")
+				| Набережные Челны
 			+mnu()
+			+b.header
+				+e.tel-block.col-lg-auto
+					+e.link-tel(href="tel:8(800)700-85-72") 8 (800) 700-85-72
+				+e.tel-block.col-lg-auto
+					+tel-n-social('8(960)079-95-44','8 (960) 079-95-44 ')
+				a.link-modal-js(href="#modal-request").fw-600 Заказать звонок
+				+e.link-email(href="mailto:zapchasty-kama@yandex.ru") zapchasty-kama@yandex.ru
+				+e.addr г. Набережные Челны, пр-т КАМАЗа, 22/3
+				+e.time Пн-пт: с 8:00 до 17:00 мск
+					br
+					| Сб: с 8:00 до 12:00 мск
+					br
+					| Вс: выходной
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
