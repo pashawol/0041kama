@@ -546,6 +546,9 @@
 		background-color: white;
 		width:rem(25);
 		height:rem(25);
+		@include media-breakpoint-down(md){
+			background-size: cover;
+		}
 	}
 	.pdf-btns{
 		color: $body-color;
@@ -579,16 +582,21 @@
 	}
 	margin-top: rem(20);
 	width:100%;
-	border:1px solid $light2;
+	border: 1px solid #E5E8EC;
 	border-radius: 5px;
 	padding-left: rem(18);
 	padding-right: rem(18);
+	&__div-close{
+		&:hover{
+			opacity:0.75;
+		}
+	}
 	table{
 		width: 100%;
 		tr{
 
 			@include media-breakpoint-down(md){
-				border-bottom: 1px dashed $light;
+				border-bottom: 2x dashed $light2;
 				position: relative;
 				display: flex;
 				flex-wrap: wrap;
@@ -601,7 +609,7 @@
 		}
 		td{
 			@include media-breakpoint-up(md){
-				border-bottom: 1px dashed $light;
+				border-bottom: 2px dashed $light2;
 				padding-top: rem(20);
 				padding-bottom: rem(20);
 			}
@@ -629,8 +637,15 @@
 	&__td-caption{
 		padding-left: rem(19);
 		@include media-breakpoint-down(md){
+			padding-top: 20px;
 			width: 100%;
 			padding-left: 0;
+		}
+		a{
+			color:$body-color;
+			&:hover{
+				color:$primary;
+			}
 		}
 		.title{
 			font-weight: 600;
@@ -642,6 +657,7 @@
 			text-align: center;
 			height: 24px;
 			border-width: 0px;
+			outline:none;
 		}
 		.row{
 			@include media-breakpoint-up(md){
@@ -679,10 +695,19 @@
 			height: rem(2);
 		}
 		&--minus{
+			@include media-breakpoint-down(md){
+				margin-left: 8px;
+			}
 			@extend .btn-light;
+			&:hover{
+				opacity: 0.5;
+			}
 		}
 		&--plus{
 			@extend .btn-light;
+			&:hover{
+				opacity: 0.5;
+			}
 			&::after{
 				transform: rotate(90deg);
 			}
@@ -704,26 +729,25 @@
 	.tr-price{
 		text-align: end;
 	}
-	.final-price{
-		font-weight: 600;
-		width:100%;
-	}
 	.td-final-price{
 		width:400px;
 	}
 	.final-price{
+		font-weight: 600;
+		width:100%;
 		text-align: end;
 		font-size: 24px;
 		padding-top:rem(40);
 		padding-bottom: rem(40);
 		@include media-breakpoint-up(md){
 			padding-top:rem(18);
-			padding-bottom: rem(12);
+			padding-bottom: rem(20);
 			font-size: rem(16);
 		}
 	}
 }
 .shop-form{
+	border-radius: 5px;
 	margin-top: 20px;
 	padding: 38px;
 	background-color: $light;
@@ -794,10 +818,14 @@
 			}
 			input{
 				width: 24px;
-				height: 24px;
-				@include media-breakpoint-up(md){
+				height: 30px;
+				@include media-breakpoint-up(sm){
 					width: 20px;
-					height: 20px;
+					height: 24px;
+				}
+				@include media-breakpoint-up(xxl){
+					width: 21px;
+					height: 26px;
 				}
 			}
 		}
