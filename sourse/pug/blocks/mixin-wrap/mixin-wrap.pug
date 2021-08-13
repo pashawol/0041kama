@@ -130,12 +130,15 @@ mixin page-body04(btns,t, ...items)
 				.col-xl-9.col-12.col--search
 					+page-head(btns,t, ...items)
 					+e.input-search
-						+input()#search
+						//- +input()#search
+						.page-body04__input-wrap.form-group
+							input.page-body04__input.form-control(name="text" type="text" value="Двигатель")
 							button(type="button")
 					+e.caption-search
 						+e.title!=`Вы искали:&nbsp;`
 							span двигатель
-						+e.count Найдено на сайте: 82
+						+e.count Найдено на сайте: 
+							span 82
 					+e.result
 						mixin str-search(t)
 							a(href="#")
