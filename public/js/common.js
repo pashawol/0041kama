@@ -427,14 +427,25 @@ function eventHandler() {
 		let th = $(this);
 		$(".sCard__row-item").slideDown();
 		th.hide();
-	});
+	}); // $(".sCard .btn-more").click(function () {
+	// 	let th = $(this);
+	// 	if (th.text() == "Показать еще") {
+	// 	$(".sCard__row-item").slideDown();
+	// 	th.text("Свернуть");
+	// 	} else {
+	// 		$(".sCard__row-item").slideUp();
+	// 		th.text("Показать еще");
+	// 	};
+	// });
+
 	$(function () {
 		$(".sReadMore__text").readall({
 			showheight: null,
 			showrows: 8,
 			btnTextShowmore: 'Показать еще',
+			btnTextShowless: 'Свернуть',
 			btnClassShowmore: 'btn-more',
-			btnClassShowless: 'd-none'
+			btnClassShowless: 'btn-more'
 		});
 	});
 	$(".btn-primary, .btn-js").each(function () {

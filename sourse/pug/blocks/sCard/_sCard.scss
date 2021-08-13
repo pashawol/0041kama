@@ -51,13 +51,14 @@
 		}
 		.swiper-slide {
 			opacity: 0.6;
-			&.swiper-slide-thumb-active {
+			&.swiper-slide-thumb-active,
+			&:hover {
 				opacity: 1;
 			}
 		}
 	}
 
-	&__slide {
+	&__img-wrap {
 		@include block;
 		@include mt;
 		@extend .picture-bg;
@@ -65,18 +66,23 @@
 		overflow: hidden;
 		background-color: $light;
 		cursor: pointer;
+		z-index: 5;
 		img {
 			@extend .object-fit-js;
 		}
 	}
 	&__table {
-		margin-bottom: rem(20);
 		margin-top: rem(20);
+		
 		@include media-breakpoint-up(md) {
+			margin-bottom: rem(5);
 			margin-top: 0;
 		}
 		@include media-breakpoint-up(xl) {
-			margin-bottom: rem(53);
+			margin-bottom: rem(55);
+		}
+		@include media-breakpoint-up(xxl) {
+			margin-bottom: rem(60);
 		}
 		.row {
 			--bs-gutter-y: 0;
@@ -102,19 +108,19 @@
 				display: none;
 			}
 		}
-		@include media-breakpoint-down(lg) {
+		// @include media-breakpoint-down(lg) {
+		// 	&:nth-child(n + 7) {
+		// 		display: none;
+		// 	}
+		// }
+
+		@include media-breakpoint-down(xl) {
 			&:nth-child(n + 7) {
 				display: none;
 			}
 		}
-
-		@include media-breakpoint-down(xl) {
-			&:nth-child(n + 8) {
-				display: none;
-			}
-		}
 		@include media-breakpoint-up(xl) {
-			&:nth-child(n + 8) {
+			&:nth-child(n + 7) {
 				display: block !important;
 			}
 		}
@@ -128,7 +134,8 @@
 	}
 	&__btn {
 		width: 100%;
-		padding: rem(14) rem(16);
+		padding: rem(12.5) rem(16);
+		border-width: 2px;
 		.icon {
 			font-size: rem(20);
 			margin-right: rem(12);
