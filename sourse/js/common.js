@@ -53,7 +53,7 @@ const JSCCommon = {
 		// });
 
 		$(".modal-close-js").click(function () {
-			fancybox.close();
+			Fancybox.close();
 		})
 		// fancybox.defaults.backFocus = false;
 		const linkModal = document.querySelectorAll(link);
@@ -432,9 +432,6 @@ function eventHandler() {
 			btnClassShowless: 'd-none'
 		});
 	});
-<<<<<<< HEAD
-	
-=======
 
 
 	$(".btn-primary, .btn-js").each(function () {
@@ -471,7 +468,6 @@ function eventHandler() {
 
 
 
->>>>>>> d811bfb8eb5a652b5d2d3f40946254dee0ea474d
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
