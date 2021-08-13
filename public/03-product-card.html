@@ -13,7 +13,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page">
+	<style>.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }</style>
+	<body class="loaded_hiding main-page">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none"> 
 				<div class="menu-mobile__inner">
@@ -501,7 +502,9 @@
 														</div>
 														<div class="card-item__price h5">385 000 ₽
 														</div>
-														<div class="card-item__btn">Подробнее
+														<div class="card-item__btn-wrap">
+															<div class="card-item__btn btn-js">Подробнее
+															</div>
 														</div>
 													</div>
 												</a>
@@ -520,7 +523,9 @@
 														</div>
 														<div class="card-item__price h5">385 000 ₽
 														</div>
-														<div class="card-item__btn">Подробнее
+														<div class="card-item__btn-wrap">
+															<div class="card-item__btn btn-js">Подробнее
+															</div>
 														</div>
 													</div>
 												</a>
@@ -539,7 +544,9 @@
 														</div>
 														<div class="card-item__price h5">385 000 ₽
 														</div>
-														<div class="card-item__btn">Подробнее
+														<div class="card-item__btn-wrap">
+															<div class="card-item__btn btn-js">Подробнее
+															</div>
 														</div>
 													</div>
 												</a>
@@ -558,7 +565,9 @@
 														</div>
 														<div class="card-item__price h5">385 000 ₽
 														</div>
-														<div class="card-item__btn">Подробнее
+														<div class="card-item__btn-wrap">
+															<div class="card-item__btn btn-js">Подробнее
+															</div>
 														</div>
 													</div>
 												</a>
@@ -997,7 +1006,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
-		<script src="js/libs.js"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>
