@@ -65,6 +65,14 @@ $output-bourbon-deprecation-warnings: false;
 
 
 .breadcrumb {
+	a{
+			@include media-breakpoint-up(lg) {
+
+				&:hover{
+					color: $body-color;
+				}
+			}
+	}
 	.active {
 		a {
 			// color: $breadcrumb-active-color;

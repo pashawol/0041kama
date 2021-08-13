@@ -275,7 +275,8 @@ const JSCCommon = {
 		let catalogDrop = drop;
 		let catalogToggle = toggle;
 		$(document).on('click', catalogToggle, function () {
-			$(this).toggleClass('active').next().fadeToggle('fast', function () {
+			$(this).toggleClass('active');
+			$(catalogDrop).slideToggle('fast', function () {
 				$(this).toggleClass("active");
 			});
 		});
@@ -285,7 +286,7 @@ const JSCCommon = {
 			let link = event.target.closest(catalogToggle); // (1)
 
 			if (!container || !catalogToggle) {
-				$(catalogDrop).removeClass('active').fadeOut();
+				$(catalogDrop).removeClass('active').slideUp();
 				$(catalogToggle).removeClass('active');
 			}
 
@@ -301,12 +302,12 @@ const $ = jQuery;
 function eventHandler() {
 	// JSCCommon.ifie();
 	JSCCommon.modalCall(); // JSCCommon.tabscostume('.tabs--js');
-	// JSCCommon.mobileMenu();
 
+	JSCCommon.mobileMenu();
 	JSCCommon.inputMask(); // JSCCommon.sendForm();
 	// JSCCommon.heightwindow();
-	// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
-	// JSCCommon.animateScroll();
+
+	JSCCommon.toggleShow(".toggle-contact-mobile--js", '.header__contact-dropdown--js'); // JSCCommon.animateScroll();
 	// JSCCommon.CustomInputFile(); 
 
 	var x = window.location.host;
@@ -447,6 +448,36 @@ function eventHandler() {
 			btnClassShowless: 'btn-more'
 		});
 	});
+	$(".btn-primary, .btn-js").each(function () {
+		var B = $(this);
+		var A, C, z, D;
+		setInterval(function () {
+			if (B.find(".animate-js").length === 0) {
+				B.prepend("<span class='animate-js'></span>");
+			}
+
+			A = B.find(".animate-js");
+			A.removeClass("btn_animate");
+
+			if (!A.height() && !A.width()) {
+				C = Math.max(B.outerWidth(), B.outerHeight());
+				A.css({
+					height: C,
+					width: C
+				});
+			}
+
+			z = Math.round(Math.random() * A.width() - A.width() / 2);
+			D = Math.round(Math.random() * A.height() - A.height() / 2);
+			A.css({
+				top: D + "px",
+				left: z + "px"
+			}).addClass("btn_animate");
+		}, 3000);
+	});
+	var Sticky = new hcSticky('.list-block', {
+		stickTo: '.container--main'
+	});
 }
 
 ;
@@ -455,10 +486,12 @@ if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
-} // window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }
+}
+
+window.onload = function () {
+	// document.body.classList.add('loaded_hiding');
+	window.setTimeout(function () {
+		document.body.classList.add('loaded');
+		document.body.classList.remove('loaded_hiding');
+	}, 500);
+};

@@ -38,7 +38,8 @@ mixin card-item(bg,t)
 			+e.caption
 				+e.title!= (t || "Сборочный комплект двигателя 740.31 ЯЗДА Р0 (740.31-1000600-08)")
 				+e.price.h5='385 000 ₽'
-				+e.btn Подробнее
+				+e.btn-wrap
+					+e.btn.btn-js Подробнее
 
 mixin card-item2(bg,c,t)
 	div(class=(c || "col-6 col-md-4 col-lg-3"))
@@ -47,7 +48,8 @@ mixin card-item2(bg,c,t)
 			+e.caption
 				+e.title!= (t || "Сборочный комплект двигателя 740.31 ЯЗДА Р0 (740.31-1000600-08)")
 				+e.price.h5='385 000 ₽'
-				+e.btn Подробнее
+				+e.btn-wrap
+					+e.btn.btn-js Подробнее
 
 mixin agreement
 	+b.agreement
@@ -57,14 +59,15 @@ mixin agreement
 
 mixin tel-n-social(l, t)
 	+b.tel-n-social
-		a.strong(href=`${l}`)!= t
+		if l
+			a.strong(href=`${l}`)!= t
 		+b.soc
-			+item-sos
+			+item-sos().--telegram
 				img(src="img/svg/telegtam.svg" alt="")
-			+item-sos
-				img(src="img/svg/viber.svg" alt="")
-			+item-sos
+			+item-sos().--viber
 				img(src="img/svg/whatsapp.svg" alt="")
+			+item-sos().--whatsapp
+				img(src="img/svg/viber.svg" alt="")
 
 mixin cb(type)
 	+e.LABEL.label-modal
@@ -256,4 +259,12 @@ mixin page404(t)
 			h1 Страница не найдена
 			+e.caption Неправильно набран адрес, или такой страницы не&nbsp;существует.
 			.row.row-btn
-				+e.btn.btn.btn-primary Вернуться на главную
+				+e.btn.btn.btn-primary(href="#") Вернуться на главную
+
+
+mixin search()
+	+b.search-block
+		form
+			button 
+				+icon("search")
+			input(type="text" placeholder="Поиск по артикулу и названию")

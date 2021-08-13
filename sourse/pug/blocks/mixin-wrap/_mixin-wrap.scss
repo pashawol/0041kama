@@ -7,9 +7,12 @@
 		@include mt;
 		display: grid;
 		place-items: center;
-		&:hover {
-			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			opacity: .7 ;
+		@include media-breakpoint-up(lg){
+
+			&:hover {
+				// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+				opacity: .85;
+			}
 		}
 		img {
 			width: rem(30);
@@ -143,14 +146,21 @@
 		overflow: hidden;
 		width: 100%;
 		padding: 0;
-		height: var(--btn-h,#{rem(1)});
-		margin-top: var(--btn-mt,0);
-		opacity: var(--btn-o,0);
+		height: var(--btn-h,#{rem(50)});
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		@extend .btn; 
 		@extend .btn-primary;
+	}
+	&__btn-wrap{
+		position: relative;
+		overflow: hidden;
+		height: var(--btn-h,#{rem(1)});
+		margin-top: var(--btn-mt,0);
+		opacity: var(--btn-o,0);
+		@include mt;
+
 	}
 	&:hover{
 		--btn-h:#{rem(50)};
@@ -234,6 +244,7 @@
 }
 .list-block {
 	display: none;
+	margin-bottom: var(--sPB);
 	@include media-breakpoint-up(lg) {
 		display: block;
 	}
@@ -539,10 +550,16 @@
 	.pdf-btns{
 		color: $body-color;
 		display: flex;
+		&:hover{
+			color:$primary;
+		}
 	}
 	.print-btns{
 		color: $body-color;
 		display: none;
+		&:hover{
+			color:$primary;
+		}
 		@include media-breakpoint-up(lg){
 			display: flex;
 		}
@@ -838,4 +855,33 @@
 			max-width: 240px;
 		}
 	}
+}
+
+
+.search-block{
+	form{
+		position: relative;
+		display: flex;
+		align-items: center;
+	}
+	button{
+		flex:  0 0 auto;
+		@extend .btn;
+		padding: 0;
+		// padding-left: rem(10);
+		padding-right: rem(10);
+		.icon{
+			fill:transparent;
+			stroke-width: 2px;
+			stroke: currentColor;
+			font-size: rem(18);
+		}
+	}
+	input{
+		outline: none !important;
+		border: none;
+		display: block;
+		min-width: rem(265);
+		font-size: rem(16);
+	}	
 }

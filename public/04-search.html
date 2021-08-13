@@ -13,8 +13,151 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<body class="main-page" data-bg="04-search.jpg">
+	<style>.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }</style>
+	<body class="loaded_hiding main-page" data-bg="04-search.jpg">
 		<div class="main-wrapper">
+			<div class="menu-mobile menu-mobile--js d-lg-none"> 
+				<div class="menu-mobile__inner">
+					<div class="search-block">
+						<form>
+							<button> 
+								<svg class="icon icon-search ">
+									<use xlink:href="img/svg/sprite.svg#search"></use>
+								</svg>
+							</button>
+							<input type="text" placeholder="Поиск по артикулу и названию"/>
+						</form>
+					</div>
+					<a class="city-link link-modal-js" href="#modal-search-list"> 
+						<svg class="icon icon-compass ">
+							<use xlink:href="img/svg/sprite.svg#compass"></use>
+						</svg>Набережные Челны
+					</a>
+					<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог товаров</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка и оплата</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+						<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+					</ul>
+					<div class="header">
+						<div class="header__tel-block col-lg-auto">
+							<a class="header__link-tel" href="tel:8(800)700-85-72">8 (800) 700-85-72
+							</a>
+						</div>
+						<div class="header__tel-block col-lg-auto">
+							<div class="tel-n-social"><a class="strong" href="8(960)079-95-44">8 (960) 079-95-44 </a>
+								<div class="soc">
+									<a class="soc__item soc__item--telegram" href="#" target="_blank"><img src="img/svg/telegtam.svg" alt=""/>
+									</a>
+									<a class="soc__item soc__item--viber" href="#" target="_blank"><img src="img/svg/whatsapp.svg" alt=""/>
+									</a>
+									<a class="soc__item soc__item--whatsapp" href="#" target="_blank"><img src="img/svg/viber.svg" alt=""/>
+									</a>
+								</div>
+							</div>
+						</div><a class="link-modal-js fw-600" href="#modal-request">Заказать звонок</a>
+						<a class="header__link-email" href="mailto:zapchasty-kama@yandex.ru">zapchasty-kama@yandex.ru
+						</a>
+						<div class="header__addr">г. Набережные Челны, пр-т КАМАЗа, 22/3
+						</div>
+						<div class="header__time">Пн-пт: с 8:00 до 17:00 мск<br/>Сб: с 8:00 до 12:00 мск<br/>Вс: выходной
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--  мобильное меню-->
+			<!-- start header-->
+			<header class="header" id="header">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-auto col"><a href="/"><img src="img/svg/logo-head.svg" alt=""/></a></div>
+						<div class="col d-none d-lg-block">
+							<a class="city-link link-modal-js" href="#modal-search-list"> 
+								<svg class="icon icon-compass ">
+									<use xlink:href="img/svg/sprite.svg#compass"></use>
+								</svg>Набережные Челны
+							</a>
+						</div>
+						<div class="header__col col-lg-auto order-lg-0 order-last">
+							<div class="header__contact-dropdown header__contact-dropdown--js d-lg-block">
+								<div class="container">
+									<div class="row">
+										<div class="col-auto order-xl-0 order-last d-none d-lg-block">
+											<a class="header__link-email" href="mailto:zapchasty-kama@yandex.ru">zapchasty-kama@yandex.ru
+											</a>
+										</div>
+										<div class="header__tel-block col-lg-auto">
+											<a class="header__link-tel" href="tel:8(800)700-85-72">8 (800) 700-85-72
+											</a>
+										</div>
+										<div class="header__tel-block col-lg-auto">
+											<a class="header__link-tel" href="tel:8(960)079-95-44">8 (960) 079-95-44
+											</a>
+										</div>
+										<div class="col-12 d-xl-none"></div>
+										<div class="col-lg-auto order-last">
+											<div class="tel-n-social">
+												<div class="soc">
+													<a class="soc__item soc__item--telegram" href="#" target="_blank"><img src="img/svg/telegtam.svg" alt=""/>
+													</a>
+													<a class="soc__item soc__item--viber" href="#" target="_blank"><img src="img/svg/whatsapp.svg" alt=""/>
+													</a>
+													<a class="soc__item soc__item--whatsapp" href="#" target="_blank"><img src="img/svg/viber.svg" alt=""/>
+													</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 d-none d-lg-block"></div>
+						<div class="col d-none d-lg-block">
+							<ul class="menu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Главная</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Каталог товаров</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Доставка и оплата</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">О компании</a></li>
+								<li class="menu-item" itemprop="item"><a href="#" itemprop="url">Контакты</a></li>
+							</ul>
+						</div>
+						<div class="col-auto d-none d-lg-block">
+							<div class="search-block">
+								<form>
+									<button> 
+										<svg class="icon icon-search ">
+											<use xlink:href="img/svg/sprite.svg#search"></use>
+										</svg>
+									</button>
+									<input type="text" placeholder="Поиск по артикулу и названию"/>
+								</form>
+							</div>
+						</div>
+						<div class="col-auto">
+							<a class="basket-btn" href="#">
+								<svg class="icon icon-basket ">
+									<use xlink:href="img/svg/sprite.svg#basket"></use>
+								</svg>
+								<div class="basket-btn__count">99
+								</div>
+							</a>
+						</div>
+						<div class="col-auto d-lg-none">
+							<div class="toggle-contact-mobile toggle-contact-mobile--js btn btn-primary">
+								<svg class="icon icon-call ">
+									<use xlink:href="img/svg/sprite.svg#call"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="col-auto d-lg-none">
+							<div class="toggle-menu-mobile toggle-menu-mobile--js btn btn-light"><span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- end header-->
 			<div class="page-body04 section" id="page-body04">
 				<div class="container">
 					<div class="row row--search">
@@ -149,11 +292,11 @@
 									<li><a class="link-white" href="tel:+78007008572">8 (800) 700-85-72</a></li>
 									<li class="tel-n-social"><a class="strong" href="tel:+79600799544">8 (960) 079-95-44</a>
 										<div class="soc">
-											<a class="soc__item" href="#" target="_blank"><img src="img/svg/telegtam.svg" alt=""/>
+											<a class="soc__item soc__item--telegram" href="#" target="_blank"><img src="img/svg/telegtam.svg" alt=""/>
 											</a>
-											<a class="soc__item" href="#" target="_blank"><img src="img/svg/viber.svg" alt=""/>
+											<a class="soc__item soc__item--viber" href="#" target="_blank"><img src="img/svg/whatsapp.svg" alt=""/>
 											</a>
-											<a class="soc__item" href="#" target="_blank"><img src="img/svg/whatsapp.svg" alt=""/>
+											<a class="soc__item soc__item--whatsapp" href="#" target="_blank"><img src="img/svg/viber.svg" alt=""/>
 											</a>
 										</div>
 									</li>
@@ -227,8 +370,8 @@
 			<div class="form-wrap">
 				<form>
 					<h2>Выберите город</h2>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control input-search" name="text" type="text" placeholder="Ваш город"/>
-						<button class="btn btn--input">
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control input-search" name="text" type="text" placeholder="Ваш город" id="input-search-list"/>
+						<button class="btn btn--input" type="button">
 							<svg class="icon icon-close ">
 								<use xlink:href="img/svg/sprite.svg#close"></use>
 							</svg>
@@ -236,28 +379,27 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__scroll-list">
-						<ul>
-							<li class="active">Барнаул</li>
-							<li>Волгоград</li>
-							<li>Воронеж</li>
-							<li>Екатеринбург</li>
-							<li>Иркутск</li>
-							<li>Кемерово</li>
-							<li>Красноярск</li>
-							<li>Новосибирск</li>
-							<li>Омск</li>
-							<li>Оренбург</li>
-							<li>Пермь</li>
-							<li>Ростов-на-Дону</li>
-							<li>Самара</li>
-							<li>Саратов</li>
-							<li>Томск</li>
-							<li>Тула</li>
-							<li>Тюмень</li>
-							<li>Улан-Удэ</li>
-							<li>Хабаровск</li>
-							<li>Якутск</li>
-						</ul>
+						<ul><a href="#">
+								<li class="active">Барнаул</li></a><a href="#">
+								<li>Волгоград</li></a><a href="#">
+								<li>Воронеж</li></a><a href="#">
+								<li>Екатеринбург</li></a><a href="#">
+								<li>Иркутск</li></a><a href="#">
+								<li>Кемерово</li></a><a href="#">
+								<li>Красноярск</li></a><a href="#">
+								<li>Новосибирск</li></a><a href="#">
+								<li>Омск</li></a><a href="#">
+								<li>Оренбург</li></a><a href="#">
+								<li>Пермь</li></a><a href="#">
+								<li>Ростов-на-Дону</li></a><a href="#">
+								<li>Самара</li></a><a href="#">
+								<li>Саратов</li></a><a href="#">
+								<li>Томск</li></a><a href="#">
+								<li>Тула</li></a><a href="#">
+								<li>Тюмень</li></a><a href="#">
+								<li>Улан-Удэ</li></a><a href="#">
+								<li>Хабаровск</li></a><a href="#">
+								<li>Якутск</li></a></ul>
 					</div>
 				</form>
 			</div>
@@ -268,7 +410,7 @@
 				<form>
 					<h2>Выберите город</h2>
 					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control input-search" name="text" type="text" placeholder="Ваш город"/>
-						<button class="btn btn--input">
+						<button class="btn btn--input loading">
 							<svg class="icon icon-loading ">
 								<use xlink:href="img/svg/sprite.svg#loading"></use>
 							</svg>
@@ -276,9 +418,8 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__scroll-list">
-						<ul>
-							<li>Набережные Челны</li>
-						</ul>
+						<ul><a href="#">
+								<li>Набережные Челны</li></a></ul>
 					</div>
 				</form>
 			</div>
@@ -290,7 +431,7 @@
 					<h2>Спасибо за обращение!</h2>
 					<div class="form-wrap__caption">Наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей заказа
 					</div>
-					<div class="form-wrap__btn btn btn-primary">Закрыть
+					<div class="form-wrap__btn btn btn-primary modal-close-js">Закрыть
 					</div>
 				</form>
 			</div>
@@ -345,7 +486,7 @@
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<!-- /slider libs-->
 		<script src="libs/inputmask/inputmask.min.js"></script>
-		<script src="js/libs.js"></script>
+		<script src="libs/hc-sticky/hc-sticky.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>
