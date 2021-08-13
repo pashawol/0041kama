@@ -62,7 +62,6 @@
 	&__img-wrap {
 		@include block;
 		@include mt;
-		@extend .picture-bg;
 		border-radius: $border-radius;
 		overflow: hidden;
 		background-color: $light;
@@ -70,6 +69,9 @@
 		z-index: 5;
 		img {
 			@extend .object-fit-js;
+			position: absolute;
+			left: 0;
+			top: 0;
 		}
 	}
 	&__table {

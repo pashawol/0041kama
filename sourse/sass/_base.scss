@@ -596,3 +596,9 @@ h2 {
 	a.list-group-item{
 		cursor: pointer;
 	}
+
+	.link-secondary2 {
+		&:hover {
+			color: $white;
+		}
+	}
