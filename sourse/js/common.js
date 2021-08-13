@@ -432,7 +432,7 @@ function eventHandler() {
 			btnClassShowless: 'd-none'
 		});
 	});
-
+	
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

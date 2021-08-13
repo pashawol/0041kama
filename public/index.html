@@ -779,8 +779,8 @@
 			<div class="form-wrap">
 				<form>
 					<h2>Выберите город</h2>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control input-search" name="text" type="text" placeholder="Ваш город"/>
-						<button class="btn btn--input">
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control input-search" name="text" type="text" placeholder="Ваш город" id="input-search-list"/>
+						<button class="btn btn--input" type="button">
 							<svg class="icon icon-close ">
 								<use xlink:href="img/svg/sprite.svg#close"></use>
 							</svg>
@@ -788,28 +788,27 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__scroll-list">
-						<ul>
-							<li class="active">Барнаул</li>
-							<li>Волгоград</li>
-							<li>Воронеж</li>
-							<li>Екатеринбург</li>
-							<li>Иркутск</li>
-							<li>Кемерово</li>
-							<li>Красноярск</li>
-							<li>Новосибирск</li>
-							<li>Омск</li>
-							<li>Оренбург</li>
-							<li>Пермь</li>
-							<li>Ростов-на-Дону</li>
-							<li>Самара</li>
-							<li>Саратов</li>
-							<li>Томск</li>
-							<li>Тула</li>
-							<li>Тюмень</li>
-							<li>Улан-Удэ</li>
-							<li>Хабаровск</li>
-							<li>Якутск</li>
-						</ul>
+						<ul><a href="#">
+								<li class="active">Барнаул</li></a><a href="#">
+								<li>Волгоград</li></a><a href="#">
+								<li>Воронеж</li></a><a href="#">
+								<li>Екатеринбург</li></a><a href="#">
+								<li>Иркутск</li></a><a href="#">
+								<li>Кемерово</li></a><a href="#">
+								<li>Красноярск</li></a><a href="#">
+								<li>Новосибирск</li></a><a href="#">
+								<li>Омск</li></a><a href="#">
+								<li>Оренбург</li></a><a href="#">
+								<li>Пермь</li></a><a href="#">
+								<li>Ростов-на-Дону</li></a><a href="#">
+								<li>Самара</li></a><a href="#">
+								<li>Саратов</li></a><a href="#">
+								<li>Томск</li></a><a href="#">
+								<li>Тула</li></a><a href="#">
+								<li>Тюмень</li></a><a href="#">
+								<li>Улан-Удэ</li></a><a href="#">
+								<li>Хабаровск</li></a><a href="#">
+								<li>Якутск</li></a></ul>
 					</div>
 				</form>
 			</div>
@@ -820,7 +819,7 @@
 				<form>
 					<h2>Выберите город</h2>
 					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control input-search" name="text" type="text" placeholder="Ваш город"/>
-						<button class="btn btn--input">
+						<button class="btn btn--input loading">
 							<svg class="icon icon-loading ">
 								<use xlink:href="img/svg/sprite.svg#loading"></use>
 							</svg>
@@ -828,9 +827,8 @@
 					</div>
 					<!-- +e.input-wrap-->
 					<div class="form-wrap__scroll-list">
-						<ul>
-							<li>Набережные Челны</li>
-						</ul>
+						<ul><a href="#">
+								<li>Набережные Челны</li></a></ul>
 					</div>
 				</form>
 			</div>
@@ -842,7 +840,7 @@
 					<h2>Спасибо за обращение!</h2>
 					<div class="form-wrap__caption">Наш менеджер свяжется с&nbsp;Вами в&nbsp;ближайшее время для уточнения деталей заказа
 					</div>
-					<div class="form-wrap__btn btn btn-primary">Закрыть
+					<div class="form-wrap__btn btn btn-primary modal-close-js">Закрыть
 					</div>
 				</form>
 			</div>

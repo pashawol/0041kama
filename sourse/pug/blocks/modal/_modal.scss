@@ -161,6 +161,9 @@ a {
 	}
 }
 .city-choose{
+	@include media-breakpoint-up(md){
+		border-radius: 5px;
+	}
 	flex-grow: 1;
 	scrollbar-color: #CACFD6 $light;
 	::-webkit-scrollbar {
@@ -210,6 +213,10 @@ a {
 			filter: none;
 			width:24px;
 			height: 24px;
+			@include media-breakpoint-down(md){
+				width: 30px;
+				height: 30px;
+			}
 		}
 	}
 	.form-wrap{
@@ -236,6 +243,9 @@ a {
 			@include media-breakpoint-up(xxl){
 				margin-top: 20px;
 				max-height: 436px;
+			}
+			a{
+				color:$body-color;
 			}
 			li{
 				&.active{
@@ -292,7 +302,15 @@ a {
 		}
 	}
 }
-
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+.loading{
+		svg{
+			animation: spin 0.7s linear 0s infinite;
+		}
+}
 .short-modal{
 	padding: 40px;
 	@include media-breakpoint-down(md){
@@ -305,6 +323,10 @@ a {
 	}
 	@include media-breakpoint-up(md){
 		min-width: 580px;
+		border-radius: 5px;
+	}
+	.btn-outline-primary{
+		border-width: 2px;
 	}
 	h2{
 		@include media-breakpoint-down(md){
@@ -315,6 +337,9 @@ a {
 		font-size: rem(32);
 	}
 	.is-close{
+		&:hover{
+			opacity:0.75;
+		}
 		position: absolute;
 		top:11px !important;
 		right:11px !important;
@@ -325,6 +350,10 @@ a {
 			filter: none;
 			width:24px;
 			height: 24px;
+			@include media-breakpoint-down(md){
+				width: 30px;
+				height: 30px;
+			}
 		}
 	}
 	.form-wrap{
@@ -387,6 +416,9 @@ a {
 }
 
 .request{
+	@include media-breakpoint-up(md){
+		border-radius: 5px;
+	}
 	@include media-breakpoint-down(md){
 		flex-grow: 1;
 	}
@@ -418,6 +450,10 @@ a {
 			filter: none;
 			width:24px;
 			height: 24px;
+			@include media-breakpoint-down(md){
+				width: 30px;
+				height: 30px;
+			}
 		}
 	}
 	.form-wrap{
