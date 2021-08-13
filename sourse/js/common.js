@@ -444,9 +444,6 @@ function eventHandler() {
 			btnClassShowless: 'btn-more'
 		});
 	});
-<<<<<<< HEAD
-	
-=======
 
 
 	$(".btn-primary, .btn-js").each(function () {
@@ -483,7 +480,6 @@ function eventHandler() {
 
 
 
->>>>>>> d811bfb8eb5a652b5d2d3f40946254dee0ea474d
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

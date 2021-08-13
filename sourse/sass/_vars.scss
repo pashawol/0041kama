@@ -671,7 +671,8 @@ $form-check-input-bg: $input-bg !default;
 $form-check-input-border: 1px solid #D3D6DB;
 $form-check-input-border-radius: 3px;
 $form-check-radio-border-radius: 50% !default;
-$form-check-input-focus-border: $input-focus-border-color !default;
+$form-check-input-focus-border: 1px solid #D3D6DB !default;
+// $form-check-input-focus-border: $input-focus-border-color !default;
 $form-check-input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
 $form-check-input-checked-color: $component-active-color !default;

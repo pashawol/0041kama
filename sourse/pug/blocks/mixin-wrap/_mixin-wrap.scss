@@ -196,6 +196,9 @@
 			margin-right: 10px;
 			background-size: 65%;
 			background-position: 58% 51%;
+			&:active {
+				filter: none;
+			}
 		}
 		.form-check-label {
 			font-size: rem(14);
@@ -213,9 +216,9 @@
 		font-size: rem(20);
 		line-height: (24 / 20);
 		margin-right: rem(20);
-		&:hover {
-			color: #226ebb;
-		}
+		// &:hover {
+		// 	color: #226ebb;
+		// }
 	}
 }
 
