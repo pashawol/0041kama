@@ -420,8 +420,12 @@ function eventHandler() {
 			loadPrevNext: true
 		},
 		thumbs: {
-			swiper: sCardSliderThumbs
+			swiper: sCardSliderThumbs,
+			watchOverflow: true
 		}
+	});
+	var breadcrumbSlider = new Swiper(".breadcrumb-slider--js", {
+		slidesPerView: 'auto'
 	});
 	$(".sCard .btn-more").click(function () {
 		let th = $(this);

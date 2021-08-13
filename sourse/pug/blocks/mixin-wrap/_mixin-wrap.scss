@@ -156,10 +156,12 @@
 		@include mt;
 
 	}
+	@include media-breakpoint-up(lg) {
 	&:hover{
 		--btn-h:#{rem(50)};
 		--btn-mt:#{rem(20)};
 		--btn-o:1;
+	}
 	}
 	@include media-breakpoint-up(md) {
 		min-height: 262px;

@@ -65,6 +65,15 @@ $output-bourbon-deprecation-warnings: false;
 
 
 .breadcrumb {
+	flex-wrap: nowrap;
+	@include media-breakpoint-up(xl) {
+		.swiper-wrapper{
+			transform: none !important;
+		}
+	}
+	li{
+		width: auto;
+	}
 	a{
 			@include media-breakpoint-up(lg) {
 

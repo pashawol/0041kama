@@ -9,7 +9,9 @@ mixin sCard(data)
 							.swiper-wrapper
 								mixin slide2(i)
 									+e.slide.swiper-slide
-										img(src=`img/@2x/card-${i}.jpg` alt='' data-fancybox)
+										a(href=`img/@2x/card-${i}.jpg`   data-fancybox="card") 
+											+pic(`card-${i}.jpg`,'',0)
+											//- img(src=`img/@2x/card-${i}.jpg` alt=''  )
 								+slide2(1)
 								+slide2(2)
 								+slide2(3)
@@ -21,6 +23,7 @@ mixin sCard(data)
 							.swiper-wrapper
 								mixin slide(i)
 									+e.slide.swiper-slide
+									
 										img(src=`img/@1x/card-${i}.jpg` alt='')
 								+slide(1)
 								+slide(2)

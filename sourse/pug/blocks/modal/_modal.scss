@@ -154,7 +154,7 @@ a {
 	@include media-breakpoint-down(md){
 		padding: 0;
 	}
-	&::before{
+	&:not(.has-image):before {
 		@include media-breakpoint-down(md){
 			margin:0;
 		}
