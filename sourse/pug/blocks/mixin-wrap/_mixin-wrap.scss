@@ -546,10 +546,16 @@
 	.pdf-btns{
 		color: $body-color;
 		display: flex;
+		&:hover{
+			color:$primary;
+		}
 	}
 	.print-btns{
 		color: $body-color;
 		display: none;
+		&:hover{
+			color:$primary;
+		}
 		@include media-breakpoint-up(lg){
 			display: flex;
 		}
