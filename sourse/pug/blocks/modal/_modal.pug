@@ -4,8 +4,8 @@ mixin modal()
 	+b.modal-win.city-choose(id="modal-search-list" class=" " style="display: none" )
 		+form-wrap
 			h2 Выберите город
-			+input("Ваш город",'text').input-search#input-search-list
-				button.btn.btn--input(type="button")
+			+input("Ваш город",'text').input-search
+				button.btn.btn--input.btn-close-js(type="button")
 					+icon('close')
 			+e.scroll-list
 				ul

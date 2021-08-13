@@ -478,6 +478,9 @@ function eventHandler() {
 	var Sticky = new hcSticky('.list-block', {
 		stickTo: '.container--main'
 	});
+	$('.btn-close-js').click(function () {
+		$(this).parent().find('.input-search').val(" ");
+	});
 }
 
 ;

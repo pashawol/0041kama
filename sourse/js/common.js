@@ -478,8 +478,9 @@ function eventHandler() {
 		stickTo: '.container--main'
 	});
 
-
-
+	$('.btn-close-js').click(function(){
+		$(this).parent().find('.input-search').val(" ");
+	});
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
