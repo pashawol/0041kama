@@ -554,7 +554,45 @@ h2 {
 
 .btn-light{
 	&:hover{
-		background-color: #dfdfdf;
-		border-color: #dfdfdf;
+		background-color: #fbfbfb;
+		border-color: #fbfbfb;
 	}
 }
+.animate-js {
+	display: block;
+	background: rgba(255, 255, 255, .3);
+	border-radius: 100%;
+	-webkit-transform: scale(0);
+	-ms-transform: scale(0);
+	transform: scale(0);
+	z-index: 2 !important;
+	position: absolute !important;
+}
+	@include media-breakpoint-up(lg) {
+
+		.btn_animate {
+			-webkit-animation: .65s linear ripple;
+			animation: .65s linear ripple;
+		}
+		.btn-primary{
+			position: relative;
+			overflow: hidden;
+		}
+		
+		
+		@keyframes ripple {
+			100% {
+				opacity: 0;
+				-webkit-transform: scale(2.5);
+				transform: scale(2.5)
+			}
+		}
+	}
+
+	.btn{
+		box-shadow: none !important;
+	}
+
+	a.list-group-item{
+		cursor: pointer;
+	}
