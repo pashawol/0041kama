@@ -141,11 +141,9 @@ mixin page-body04(btns,t, ...items)
 							span 82
 					+e.result
 						mixin str-search(t)
-							a(href="#")
-								.row
-									span!=t
-									button(type="button")
-										+icon('arrow')
+							+e.item(href="#")
+								span!=t
+								+icon('arrow')
 						+str-search('Двигатель 740.31 (740.31-1000400)')
 						+str-search('Двигатель 740.11 (740.11-1000400)')
 						+str-search('Двигатель 740.31 (740.31-1000400)')
