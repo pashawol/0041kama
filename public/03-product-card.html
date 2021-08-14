@@ -8,6 +8,23 @@
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no">
+		<script>
+			let viewport = document.querySelector("meta[name=viewport]");
+			var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			if (is_safari) {
+				//- alert(navigator.userAgent);
+				function w() {
+					this.outerWidth > 575 
+						? viewport.content = "width=device-width, initial-scale=1.0,  maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" 
+						:  viewport.content = "width=575,   maximum-scale=1 , user-scalable=0, shrink-to-fit=no" 
+					//- alert(this.outerWidth + ', '+  viewport.content);
+				}
+				 w();
+				window.addEventListener('resize', () => { 
+				 w();
+				}, { passive: true });
+			}
+		</script>
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -229,15 +246,15 @@
 					<div class="col-9 col--ph">
 						<div class="page-head">
 							<div class="container">
-								<nav aria-label="breadcrumb">
-									<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
-										<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
+								<nav class="swiper-container breadcrumb-slider--js" aria-label="breadcrumb">
+									<ol class="breadcrumb swiper-wrapper" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
+										<li class="swiper-slide breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="/" itemprop="item"><span itemprop="name">Главная</span>
 												<meta itemprop="position" content="1"/></a></li>
-										<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Каталог товаров</span>
+										<li class="swiper-slide breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Каталог товаров</span>
 												<meta itemprop="position" content="2"/></a></li>
-										<li class="breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Двигатели</span>
+										<li class="swiper-slide breadcrumb-item" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Двигатели</span>
 												<meta itemprop="position" content="3"/></a></li>
-										<li class="breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Двигатель 740.11 (740.11-1000400)</span>
+										<li class="swiper-slide breadcrumb-item active" itemprop="itemListElement" itemscope="itemscope" itemtype="http://schema.org/ListItem"><a href="#" itemprop="item"><span itemprop="name">Двигатель 740.11 (740.11-1000400)</span>
 												<meta itemprop="position" content="4"/></a></li>
 									</ol>
 								</nav>
@@ -256,6 +273,56 @@
 										<div class="sCard__slider-wrap">
 											<div class="sCard__slider sCard__slider--js swiper-container">
 												<div class="swiper-wrapper">
+<<<<<<< HEAD
+														<div class="sCard__slide swiper-slide"><a href="img/@2x/card-1.jpg" data-fslightbox="data-fslightbox"> 
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/card-1.webp"/><img src="img/@2x/card-1.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture--></a>
+														</div>
+														<div class="sCard__slide swiper-slide"><a href="img/@2x/card-2.jpg" data-fslightbox="data-fslightbox"> 
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/card-2.webp"/><img src="img/@2x/card-2.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture--></a>
+														</div>
+														<div class="sCard__slide swiper-slide"><a href="img/@2x/card-3.jpg" data-fslightbox="data-fslightbox"> 
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/card-3.webp"/><img src="img/@2x/card-3.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture--></a>
+														</div>
+														<div class="sCard__slide swiper-slide"><a href="img/@2x/card-4.jpg" data-fslightbox="data-fslightbox"> 
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/card-4.webp"/><img src="img/@2x/card-4.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture--></a>
+														</div>
+														<div class="sCard__slide swiper-slide"><a href="img/@2x/card-3.jpg" data-fslightbox="data-fslightbox"> 
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/card-3.webp"/><img src="img/@2x/card-3.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture--></a>
+														</div>
+														<div class="sCard__slide swiper-slide"><a href="img/@2x/card-2.jpg" data-fslightbox="data-fslightbox"> 
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/card-2.webp"/><img src="img/@2x/card-2.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture--></a>
+														</div>
+														<div class="sCard__slide swiper-slide"><a href="img/@2x/card-4.jpg" data-fslightbox="data-fslightbox"> 
+																<!-- picture-->
+																<picture> 
+																	<source type="image/webp" srcset="img/@2x/webp/card-4.webp"/><img src="img/@2x/card-4.jpg" alt="" loading="lazy"/>
+																</picture>
+																<!-- /picture--></a>
+=======
 														<div class="sCard__slide swiper-slide">
 															<a class="sCard__img-wrap" href="img/@2x/card-1.jpg" data-fancybox="sCard-gallery"><img src="img/@1x/card-1.jpg" alt=""/>
 															</a>
@@ -283,6 +350,7 @@
 														<div class="sCard__slide swiper-slide">
 															<a class="sCard__img-wrap" href="img/@2x/card-4.jpg" data-fancybox="sCard-gallery"><img src="img/@1x/card-4.jpg" alt=""/>
 															</a>
+>>>>>>> 5c0eda84d0ffe2d6cdde256d615b693c3b3f1521
 														</div>
 												</div>
 											</div>
@@ -1028,6 +1096,7 @@
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/ui/fancybox.umd.js"></script>
+		<script src="libs/fslightbox/index.js"></script>
 		<script src="js/jquery.readall.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->

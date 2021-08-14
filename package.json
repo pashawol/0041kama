@@ -24,7 +24,6 @@
     "colors": "^1.4.0",
     "cssnano": "^4.1.11",
     "del": "^5.1.0",
-    "fslightbox": "^3.3.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.1",
     "gulp-babel": "^8.0.0",
@@ -62,6 +61,7 @@
     "inputmask": "^5.0.6",
     "jquery": "^3.5.1",
     "loading-attribute-polyfill": "^1.5.4",
+    "fslightbox": "^3.3.0",
     "swiper": "^6.8.0"
   }
 }

@@ -9,8 +9,14 @@ mixin sCard(data)
 							.swiper-wrapper
 								mixin slide2(i)
 									+e.slide.swiper-slide
+<<<<<<< HEAD
+										a(href=`img/@2x/card-${i}.jpg`   data-fslightbox) 
+											+pic(`card-${i}.jpg`,'',0)
+											//- img(src=`img/@2x/card-${i}.jpg` alt=''  )
+=======
 										+e.img-wrap(href=`img/@2x/card-${i}.jpg` data-fancybox= "sCard-gallery")
 											img(src=`img/@1x/card-${i}.jpg` alt='')
+>>>>>>> 5c0eda84d0ffe2d6cdde256d615b693c3b3f1521
 								+slide2(1)
 								+slide2(2)
 								+slide2(3)
@@ -22,8 +28,13 @@ mixin sCard(data)
 							.swiper-wrapper
 								mixin slide(i)
 									+e.slide.swiper-slide
+<<<<<<< HEAD
+
+										img(src=`img/@1x/card-${i}.jpg` alt='')
+=======
 										+e.img-wrap
 											img(src=`img/@1x/card-${i}.jpg` alt='')
+>>>>>>> 5c0eda84d0ffe2d6cdde256d615b693c3b3f1521
 								+slide(1)
 								+slide(2)
 								+slide(3)
