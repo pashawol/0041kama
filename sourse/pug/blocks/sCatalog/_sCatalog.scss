@@ -26,6 +26,12 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
+	&__btn{
+		&:hover{
+			background-color: #f6f6f6;
+			border-color: #f6f6f6;
+		}
+	}
 	picture {
 		img {
 			height: 80% !important;
