@@ -483,6 +483,11 @@ iframe {
 	&:focus {
 		color: $white;
 	}
+	@include media-breakpoint-down(lg){
+		color: $white !important;
+		background-color: $primary !important;
+		border-color: $primary !important;
+	}
 }
 .btn-outline-primary {
 	font-weight: 600;
@@ -491,8 +496,17 @@ iframe {
 	&:focus {
 		color: $white;
 	}
+	@include media-breakpoint-down(lg){
+		color: $primary !important;
+		background-color: $white !important;
+		border-color: $primary !important;
+	}
 }
-
+a{
+	@include media-breakpoint-down(lg){
+		color:$body-color !important;
+	}
+}
 h2 {
 	@include media-breakpoint-only(lg) {
 		font-size: 32px !important;
@@ -624,9 +638,15 @@ h2 {
 	}
 
 	.animation-rotate {
-		&:hover {
-			.icon {
-				animation: 1.35s linear 0s normal none infinite running rotate;
+		@include media-breakpoint-down(lg){
+			background-color: $light !important;
+			border-color: $light !important;
+		}
+		@include media-breakpoint-up(lg){
+			&:hover {
+				.icon {
+					animation: 1.35s linear 0s normal none infinite running rotate;
+				}
 			}
 		}
 	}
