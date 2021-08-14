@@ -621,7 +621,7 @@
 		tr{
 
 			@include media-breakpoint-down(md){
-				border-bottom: 1x dashed #d9d9d9;
+				border-bottom: 1px dashed #d9d9d9;
 				position: relative;
 				display: flex;
 				flex-wrap: wrap;
@@ -716,8 +716,9 @@
 			width: 8px;
 			@include media-breakpoint-down(md){
 				width: 10px;
+				height: 2.5px;
 			}
-			height: rem(3);
+			height: 2px;
 		}
 		&--minus{
 			@include media-breakpoint-down(md){
@@ -845,18 +846,6 @@
 			}
 			@include media-breakpoint-down(md){
 				margin-top: 30px;
-			}
-			input{
-				width: 24px;
-				height: 30px;
-				@include media-breakpoint-up(sm){
-					width: 20px;
-					height: 24px;
-				}
-				@include media-breakpoint-up(xxl){
-					width: 21px;
-					height: 26px;
-				}
 			}
 		}
 	}
