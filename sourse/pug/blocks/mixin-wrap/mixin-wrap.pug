@@ -133,7 +133,8 @@ mixin page-body04(btns,t, ...items)
 						//- +input()#search
 						.page-body04__input-wrap.form-group
 							input.page-body04__input.form-control(name="text" type="text" value="Двигатель")
-							button(type="button")
+							button
+								+icon("search-icon")
 					+e.caption-search
 						+e.title!=`Вы искали:&nbsp;`
 							span двигатель

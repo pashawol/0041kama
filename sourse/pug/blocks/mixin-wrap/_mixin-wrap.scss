@@ -356,15 +356,17 @@
 	padding-left: 0;
 }
 .breadcrumb-item + .breadcrumb-item {
-	padding-left: 0.54rem;
+	padding-left: 1.1rem;
+	position: relative;
 }
 .breadcrumb-item + .breadcrumb-item:before {
 	content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNSIgaGVpZ2h0PSI1IiB2aWV3Qm94PSIwIDAgNSA1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8Y2lyY2xlIGN4PSIyLjUiIGN5PSIyLjUiIHI9IjIuNSIgZmlsbD0iI0U1RThFQyIvPgo8L3N2Zz4K");
+	position: absolute;
 	color: $light2;
 	width: 5px;
-	padding-right: 1rem;
+	top: -2.5px;
+	left:-7px;
 	position: relative;
-	top: -12%;
 }
 .page-body04{
 	padding-top: 32px;
@@ -386,25 +388,30 @@
 		position: relative;
 	}
 	&__input-wrap{
+		position: relative;
 		input{
 			padding-right: rem(48);
 		}
 		button{
 			position: absolute;
-			background-image: url(../img/svg/search.svg);
-			width: rem(19.8);
-			height:rem(19.8);
-			// @include media-breakpoint-down(md){
-			// 	height: 50%;
-			// }
-			top:rem(15.4);
-			right: rem(20);
-			border-width: 0;
-			background-color: white;
-			background-size: cover;
+			flex:  0 0 auto;
+			top: rem(13);
+			right: rem(10);
+			@extend .btn;
+			padding: 0;
+			// padding-left: rem(10);
+			padding-right: rem(10);
+			.icon{
+				color: $primary;
+				// fill:transparent;
+				// stroke-width: 2px;
+				// stroke: currentColor;
+				font-size: rem(20);
+			}
 		}
 
 	}
+	
 	&__caption-search{
 		margin-top: rem(16);
 		font-size:rem(24);
@@ -451,6 +458,10 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 40px;
+		&:hover{
+			background-color: #f6f6f6;
+			border-color: #f6f6f6;
+		}
 		.icon{
 			font-size: rem(20);
 			margin-right: 10px;
@@ -616,7 +627,7 @@
 		tr{
 
 			@include media-breakpoint-down(md){
-				border-bottom: 1x dashed #d9d9d9;
+				border-bottom: 1px dashed #d9d9d9;
 				position: relative;
 				display: flex;
 				flex-wrap: wrap;
@@ -711,8 +722,9 @@
 			width: 8px;
 			@include media-breakpoint-down(md){
 				width: 10px;
+				height: 2.5px;
 			}
-			height: rem(3);
+			height: 2px;
 		}
 		&--minus{
 			@include media-breakpoint-down(md){
@@ -840,18 +852,6 @@
 			}
 			@include media-breakpoint-down(md){
 				margin-top: 30px;
-			}
-			input{
-				width: 24px;
-				height: 30px;
-				@include media-breakpoint-up(sm){
-					width: 20px;
-					height: 24px;
-				}
-				@include media-breakpoint-up(xxl){
-					width: 21px;
-					height: 26px;
-				}
 			}
 		}
 	}
