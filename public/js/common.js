@@ -24,31 +24,13 @@ const JSCCommon = {
 	modalCall() {
 		const link = ".link-modal-js";
 		Fancybox.bind(link, {
-			arrows: false,
-			infobar: false,
-			touch: false,
-			infinite: false,
-			dragToClose: false,
-			type: 'inline',
 			autoFocus: false,
-			l10n: {
-				Escape: "Закрыть",
-				NEXT: "Вперед",
-				PREV: "Назад" // PLAY_START: "Start slideshow",
-				// PLAY_STOP: "Pause slideshow",
-				// FULL_SCREEN: "Full screen",
-				// THUMBS: "Thumbnails",
-				// DOWNLOAD: "Download",
-				// SHARE: "Share",
-				// ZOOM: "Zoom"
-
-			} // beforeLoad: function () {
-			// 	root.style.setProperty('--spacing-end', scrollWidth + 'px');
-			// },
-			// afterClose: function () {
-			// 	root.style.setProperty('--spacing-end', null);
-			// },
-
+			// arrows: false,
+			// infobar: false,
+			// touch: false,
+			// infinite: false,
+			// dragToClose: false,
+			type: 'inline'
 		}); // $(link).fancybox({
 		// });
 
@@ -189,51 +171,6 @@ const JSCCommon = {
 		}
 	},
 
-	sendForm() {
-		var gets = function () {
-			var a = window.location.search;
-			var b = new Object();
-			var c;
-			a = a.substring(1).split("&");
-
-			for (var i = 0; i < a.length; i++) {
-				c = a[i].split("=");
-				b[c[0]] = c[1];
-			}
-
-			return b;
-		}(); // form
-
-
-		$(document).on('submit', "form", function (e) {
-			e.preventDefault();
-			const th = $(this);
-			var data = th.serialize();
-			th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-			th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-			th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-			th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-			$.ajax({
-				url: 'action.php',
-				type: 'POST',
-				data: data
-			}).done(function (data) {
-				fancybox.close();
-				Fancybox.show([{
-					src: "#modal-thanks",
-					type: "inline"
-				}]); // window.location.replace("/thanks.html");
-
-				setTimeout(function () {
-					// Done Functions
-					th.trigger("reset"); // $.magnificPopup.close();
-					// ym(53383120, 'reachGoal', 'zakaz');
-					// yaCounter55828534.reachGoal('zakaz');
-				}, 4000);
-			}).fail(function () {});
-		});
-	},
-
 	heightwindow() {
 		// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 		let vh = window.innerHeight * 0.01; // Then we set the value in the --vh custom property to the root of the document
@@ -276,8 +213,8 @@ const JSCCommon = {
 		let catalogToggle = toggle;
 		$(document).on('click', catalogToggle, function () {
 			$(this).toggleClass('active');
-			$(catalogDrop).slideToggle('fast', function () {
-				$(this).toggleClass("active");
+			$(catalogDrop).slideDown('fast', function () {
+				$(this).addClass("active");
 			});
 		});
 		document.addEventListener('mouseup', event => {
@@ -285,7 +222,7 @@ const JSCCommon = {
 
 			let link = event.target.closest(catalogToggle); // (1)
 
-			if (!container || !catalogToggle) {
+			if (!container && $(catalogDrop).hasClass('active')) {
 				$(catalogDrop).removeClass('active').slideUp();
 				$(catalogToggle).removeClass('active');
 			}
@@ -420,8 +357,12 @@ function eventHandler() {
 			loadPrevNext: true
 		},
 		thumbs: {
-			swiper: sCardSliderThumbs
+			swiper: sCardSliderThumbs,
+			watchOverflow: true
 		}
+	});
+	var breadcrumbSlider = new Swiper(".breadcrumb-slider--js", {
+		slidesPerView: 'auto'
 	});
 	$(".sCard .btn-more").click(function () {
 		let th = $(this);
