@@ -602,3 +602,20 @@ h2 {
 			color: $white;
 		}
 	}
+
+	@keyframes rotate {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	.animation-rotate {
+		&:hover {
+			.icon {
+				animation: 1.35s linear 0s normal none infinite running rotate;
+			}
+		}
+	}

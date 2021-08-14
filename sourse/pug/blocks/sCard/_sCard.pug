@@ -9,7 +9,7 @@ mixin sCard(data)
 							.swiper-wrapper
 								mixin slide2(i)
 									+e.slide.swiper-slide
-										+e.img-wrap(href=`img/@2x/card-${i}.jpg` data-fancybox= "sCard-gallery")
+										+e.img-wrap(href=`img/@2x/card-${i}.jpg` data-fslightbox= "sCard-gallery")
 											img(src=`img/@1x/card-${i}.jpg` alt='')
 								+slide2(1)
 								+slide2(2)
