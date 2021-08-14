@@ -386,25 +386,30 @@
 		position: relative;
 	}
 	&__input-wrap{
+		position: relative;
 		input{
 			padding-right: rem(48);
 		}
 		button{
 			position: absolute;
-			background-image: url(../img/svg/search.svg);
-			width: rem(19.8);
-			height:rem(19.8);
-			// @include media-breakpoint-down(md){
-			// 	height: 50%;
-			// }
-			top:rem(15.4);
-			right: rem(20);
-			border-width: 0;
-			background-color: white;
-			background-size: cover;
+			flex:  0 0 auto;
+			top: rem(13);
+			right: rem(10);
+			@extend .btn;
+			padding: 0;
+			// padding-left: rem(10);
+			padding-right: rem(10);
+			.icon{
+				color: $primary;
+				fill:transparent;
+				stroke-width: 2px;
+				stroke: currentColor;
+				font-size: rem(20);
+			}
 		}
 
 	}
+	
 	&__caption-search{
 		margin-top: rem(16);
 		font-size:rem(24);
