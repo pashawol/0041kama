@@ -104,7 +104,7 @@ mixin page-body(btns,t, ...items)
 					.list-group
 						mixin item(i, t, a)
 							a(class!= ('list-group-item list-group-item-action '+ a || 'list-group-item list-group-item-action' ))
-								+pic(`categories-${i}.png`, '', 0)
+								+pic(`list-group-${i}.png`, '', 0)
 								span!= t
 						+item(1,'Двигатели','active')
 						+item(2,`Сборочные комплекты&nbsp;двигателя`, ``)
@@ -181,7 +181,7 @@ mixin page-body05(btns,t, ...items)
 					.list-group
 						mixin item(i, t, a)
 							a(class!= ('list-group-item list-group-item-action '+ a || 'list-group-item list-group-item-action' ))
-								+pic(`categories-${i}.png`, '', 0)
+								+pic(`list-group-${i}.png`, '', 0)
 								span!= t
 						+item(1,'Двигатели','')
 						+item(2,`Сборочные комплекты&nbsp;двигателя`, ``)
