@@ -483,6 +483,11 @@ iframe {
 	&:focus {
 		color: $white;
 	}
+	@include media-breakpoint-down(lg){
+		color: $white !important;
+		background-color: $primary !important;
+		border-color: $primary !important;
+	}
 }
 .btn-outline-primary {
 	font-weight: 600;
@@ -490,6 +495,11 @@ iframe {
 	&:active,
 	&:focus {
 		color: $white;
+	}
+	@include media-breakpoint-down(lg){
+		color: $primary !important;
+		background-color: $white !important;
+		border-color: $primary !important;
 	}
 }
 
