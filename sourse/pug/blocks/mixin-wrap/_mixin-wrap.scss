@@ -489,6 +489,7 @@
 		padding-right: 40px;
 		padding-bottom: 40px;
 		background-color: $light;
+		// margin-bottom: var(--sPB);
 		
 		@include media-breakpoint-up(sm){
 			padding-top: rem(20);

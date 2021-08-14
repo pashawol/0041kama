@@ -421,6 +421,11 @@ function eventHandler() {
 		top:20
 	});
 
+	var Sticky2 = new hcSticky('.page-body04__help', {
+		stickTo: '.page-body04 .col--help',
+		top:20,
+	});
+
 	$('.btn-close-js').click(function(){
 		$(this).parent().find('.input-search').val(" ");
 	});
