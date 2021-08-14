@@ -164,9 +164,14 @@
 	}
 	@include media-breakpoint-up(lg) {
 	&:hover{
-		--btn-h:#{rem(50)};
-		--btn-mt:#{rem(20)};
-		--btn-o:1;
+		@include media-breakpoint-up(lg){
+			--btn-h:#{rem(50)};
+			--btn-mt:#{rem(20)};
+			--btn-o:1;
+		}
+		// --btn-h:#{rem(50)};
+		// --btn-mt:#{rem(20)};
+		// --btn-o:1;
 	}
 	}
 	@include media-breakpoint-up(md) {
@@ -230,7 +235,7 @@
 	}
 }
 .row--main {
-	margin-top: 20px;
+	margin-top: 15px;
 	flex-direction: column;
 	@include media-breakpoint-up(lg) {
 		flex-direction: row;
@@ -238,12 +243,12 @@
 	.col-3 {
 		margin-top: 20px;
 		@include media-breakpoint-up(md) {
-			margin-top: 40px;
+			margin-top: 21px;
 		}
 	}
 	.col-9 {
 		@include media-breakpoint-up(md) {
-			margin-top: 37px;
+			
 		}
 	}
 }
@@ -295,6 +300,9 @@
 					margin-right: 10px;
 					display: block;
 				}
+				img{
+					max-width: none;
+				}
 			}
 		}
 	}
@@ -333,6 +341,9 @@
 			color: $secondary;
 			font-size: rem(14);
 			line-height: rem(17);
+			&:hover{
+				color:$primary;
+			}
 		}
 	}
 	h1 {
@@ -355,7 +366,7 @@
 	top: -12%;
 }
 .page-body04{
-	padding-top: 40px;
+	padding-top: 32px;
 	a{
 		color:$body-color;
 	}
@@ -609,6 +620,7 @@
 	padding-right: rem(18);
 	&__div-close{
 		&:hover{
+			@include mt;
 			opacity:0.75;
 		}
 	}
@@ -721,12 +733,14 @@
 			}
 			@extend .btn-light;
 			&:hover{
+				@include mt;
 				opacity: 0.5;
 			}
 		}
 		&--plus{
 			@extend .btn-light;
 			&:hover{
+				@include mt;
 				opacity: 0.5;
 			}
 			&::after{
@@ -770,7 +784,10 @@
 .shop-form{
 	border-radius: 5px;
 	margin-top: 20px;
-	padding: 38px;
+	padding-left: 38px;
+	padding-right: 38px;
+	padding-bottom: 38px;
+	padding-top: 30px;
 	background-color: $light;
 	margin-bottom: rem(120);
 	h2{
