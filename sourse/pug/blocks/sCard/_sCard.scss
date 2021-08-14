@@ -79,7 +79,7 @@
 	}
 	&__table {
 		margin-top: rem(20);
-		
+
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(5);
 			margin-top: 0;
@@ -212,8 +212,10 @@
 	color: $primary;
 	border-radius: $border-radius;
 	font-size: rem(14);
-	
+
 	&:hover {
-		color: shift-color($primary, 20%);
+		@include media-breakpoint-up(lg) {
+			color: shift-color($primary, 20%);
+		}
 	}
 }

@@ -26,8 +26,8 @@
 	// --sPT: ;
 	// --sPB: ;
 	// --sTPB: ;
-	&__btn{
-		&:hover{
+	&__btn {
+		&:hover {
 			background-color: #f6f6f6;
 			border-color: #f6f6f6;
 		}
@@ -98,19 +98,26 @@
 				}
 				&:active,
 				&:hover {
-					background-color: $primary !important;
-					border-color: $primary !important;
-					color: $white !important;
+					@include media-breakpoint-up(lg) {
+						background-color: $primary !important;
+						border-color: $primary !important;
+						color: $white !important;
+					}
 				}
+			}
+			input[type="checkbox"]:checked + .btn-info-modal {
+				background-color: $primary !important;
+				border-color: $primary !important;
+				color: $white !important;
 			}
 		}
 	}
-	
+
 	&__btn {
 		@extend .btn;
 		width: 100%;
 		margin-top: 21px;
-		
+
 		.icon {
 			font-size: rem(20);
 			margin-right: 10px;

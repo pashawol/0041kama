@@ -23,9 +23,14 @@
 	--swiperColorDef: var(--bs-primary);
 	--swiperBgDef: var(--bs-light);
 
-	--swiperBorderColorDefHover: transparent;
+	--swiperBorderColorDefHover: var(--swiperBorderColorDef);
 	--swiperColorDefHover: var(--bs-primary);
-	--swiperBgDefHover: rgba(243, 244, 246, 0.5);
+	--swiperBgDefHover: var(--bs-light);
+	@include media-breakpoint-up(lg) {
+		--swiperBorderColorDefHover: transparent;
+		--swiperColorDefHover: var(--bs-primary);
+		--swiperBgDefHover: rgba(243, 244, 246, 0.5);
+	}
 
 	--fancybox-bg: rgba(50, 58, 66, 0.6);
 

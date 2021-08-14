@@ -71,14 +71,14 @@ mixin tel-n-social(l, t)
 
 mixin cb(type)
 	+e.LABEL.label-modal
-		input(type="checkbox" name="btn").btn-check.btn-check-modal
+		input(type="checkbox" name="btn").btn-check.btn-check-modal&attributes(attributes)
 		span.btn.btn-info.btn-info-modal.btn-sm=type
 
 mixin CheckButtons(label)
 	+e.input-wrap.form-group
 		.row
 			+cb('Евро-1')
-			+cb('Евро-2')
+			+cb('Евро-2')(checked)
 			+cb('Евро-3')
 			+cb('Евро-4')
 			+cb('Евро-5')
