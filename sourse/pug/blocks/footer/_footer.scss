@@ -231,6 +231,9 @@
 }
 
 .link-white {
+	@include media-breakpoint-down(lg) {
+		color: $white !important;
+	}
 	&:hover {
 		@include media-breakpoint-up(lg) {
 			color: #226ebb;
