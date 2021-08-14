@@ -131,6 +131,11 @@
 		@include media-breakpoint-up(md) {
 			text-align: right;
 		}
+		.link-white {
+			&:hover {
+				color: $white;
+			}
+		}
 
 		.tel-n-social {
 			justify-content: center;
@@ -147,9 +152,9 @@
 				font-weight: 600;
 				font-size: rem(16);
 				line-height: (20 / 16);
-				&:hover {
-					color: #226ebb;
-				}
+				// &:hover {
+				// 	color: #226ebb;
+				// }
 			}
 		}
 	}
@@ -225,5 +230,10 @@
 .link-white {
 	&:hover {
 		color: #226ebb;
+	}
+}
+.link-secondary2 {
+	&:hover {
+		color: $white;
 	}
 }
