@@ -98,7 +98,9 @@ const JSCCommon = {
 
 			let link = event.target.closest(".menu-mobile .menu a"); // (1)
 
-			if (!container || link) this.closeMenu();
+			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
+
+			if (!container && !toggle) this.closeMenu();
 		}, {
 			passive: true
 		});
@@ -213,8 +215,8 @@ const JSCCommon = {
 		let catalogToggle = toggle;
 		$(document).on('click', catalogToggle, function () {
 			$(this).toggleClass('active');
-			$(catalogDrop).slideDown('fast', function () {
-				$(this).addClass("active");
+			$(catalogDrop).slideToggle('fast', function () {
+				$(this).toggleClass("active");
 			});
 		});
 		document.addEventListener('mouseup', event => {
@@ -222,8 +224,8 @@ const JSCCommon = {
 
 			let link = event.target.closest(catalogToggle); // (1)
 
-			if (!container && $(catalogDrop)[0].classList.contains('active')) {
-				console.log(catalogDrop);
+			if (!container && $(catalogDrop)[0].classList.contains('active') && !link) {
+				// console.log(catalogDrop);
 				$(catalogDrop).removeClass('active').slideUp();
 				$(catalogToggle).removeClass('active');
 			}
@@ -414,7 +416,8 @@ function eventHandler() {
 		}, 3000);
 	});
 	var Sticky = new hcSticky('.list-block', {
-		stickTo: '.container--main'
+		stickTo: '.container--main',
+		top: 20
 	});
 	$('.btn-close-js').click(function () {
 		$(this).parent().find('.input-search').val(" ");

@@ -97,7 +97,6 @@ body {
 		}
 	}
 }
-
 .main-wrapper {
 	// display: flex;
 	// flex-direction: row;
@@ -106,7 +105,12 @@ body {
 	overflow: hidden;
 	// height: 100vh;
 	// height: calc(var(--vh, 1vh) * 100);
-
+	@include media-breakpoint-down(lg){
+		padding-top: var(--header-height);
+	}
+}
+.page-404 .main-wrapper {
+	padding-top: 0;
 }
 // .main-wrapper__inner{
 // 	// overflow-x: hidden;
@@ -562,8 +566,10 @@ h2 {
 
 .btn-light{
 	&:hover{
-		background-color: #fbfbfb;
-		border-color: #fbfbfb;
+		// background-color: #fbfbfb;
+		// border-color: #fbfbfb;
+		background-color: #f7f7f7;
+		border-color: #f7f7f7;
 	}
 }
 .animate-js {
@@ -574,7 +580,7 @@ h2 {
 	z-index: 2 !important;
 	position: absolute !important;
 }
-	@include media-breakpoint-up(lg) {
+	// @include media-breakpoint-up(lg) {
 
 		.btn_animate { 
 			animation: .65s linear ripple;
@@ -592,7 +598,7 @@ h2 {
 				transform: scale(2.5)
 			}
 		}
-	}
+	// }
 
 	.btn{
 		box-shadow: none !important;
@@ -623,4 +629,13 @@ h2 {
 				animation: 1.35s linear 0s normal none infinite running rotate;
 			}
 		}
+	}
+
+
+	.form-check-input[type=checkbox] {
+		background-size: 100%;
+	}
+
+	img{
+		image-rendering:  crisp-edges
 	}

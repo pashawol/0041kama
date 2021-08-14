@@ -78,7 +78,7 @@ const JSCCommon = {
 	closeMenu() {
 		let menu = this.menuMobile;
 		if (!menu) return;
-		if (menu.classList.contains("active")) {
+		if (menu.classList.contains("active") ) {
 			this.btnToggleMenuMobile.forEach(element => element.classList.remove("on"));
 			this.menuMobile.classList.remove("active");
 			[document.body, document.querySelector('html')].forEach(el => el.classList.remove("fixed")); 
@@ -91,7 +91,8 @@ const JSCCommon = {
 		document.addEventListener('mouseup', (event) => {
 			let container = event.target.closest(".menu-mobile--js.active"); // (1)
 			let link = event.target.closest(".menu-mobile .menu a"); // (1)
-			if (!container || link) this.closeMenu();
+			let toggle = event.target.closest('.toggle-menu-mobile--js.on'); // (1)
+			if (!container && !toggle ) this.closeMenu();
 		}, { passive: true });
 
 		window.addEventListener('resize', () => {
@@ -206,16 +207,16 @@ const JSCCommon = {
 
 		$(document).on('click', catalogToggle, function () {
 			$(this).toggleClass('active')
-			$(catalogDrop).slideDown('fast', function () {
-				$(this).addClass("active")
+			$(catalogDrop).slideToggle('fast', function () {
+				$(this).toggleClass("active")
 			});
 		})
 
 		document.addEventListener('mouseup', (event) => {
 			let container = event.target.closest(catalogDrop + ".active"); // (1)
 			let link = event.target.closest(catalogToggle); // (1)
-			if (!container && $(catalogDrop)[0].classList.contains('active')) {
-				console.log(catalogDrop);
+			if (!container && $(catalogDrop)[0].classList.contains('active') && !link) {
+				// console.log(catalogDrop);
 				$(catalogDrop).removeClass('active').slideUp();
 				$(catalogToggle).removeClass('active');
 			};
@@ -416,7 +417,8 @@ function eventHandler() {
 	});
 
 	var Sticky = new hcSticky('.list-block', {
-		stickTo: '.container--main'
+		stickTo: '.container--main',
+		top:20
 	});
 
 	$('.btn-close-js').click(function(){

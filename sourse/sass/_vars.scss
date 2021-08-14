@@ -678,7 +678,7 @@ $form-check-input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 $form-check-input-checked-color: $component-active-color !default;
 $form-check-input-checked-bg-color: $white;
 $form-check-input-checked-border-color: #D3D6DB;
-$form-check-input-checked-bg-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.87768 0.431918L4.71918 6.62176L2.04813 3.95132C1.58016 3.48274 0.819403 3.48274 0.35143 3.95132C-0.117143 4.41989 -0.117143 5.17945 0.35143 5.64802L3.95122 9.24781C4.17741 9.4734 4.48279 9.59939 4.80017 9.59939C4.81817 9.59939 4.83677 9.59939 4.85477 9.59819C5.19135 9.58319 5.50633 9.4266 5.72232 9.16741L11.722 1.96783C12.1461 1.45846 12.0772 0.702503 11.5684 0.277727C11.059 -0.145848 10.3019 -0.0774523 9.87768 0.431918Z' fill='#{$primary}'/%3E%3C/svg%3E%0A") !default;
+$form-check-input-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'><path fill='none' stroke='#{$primary}' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/></svg>") !default;
 $form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>") !default;
 
 $form-check-input-indeterminate-color: $component-active-color !default;
