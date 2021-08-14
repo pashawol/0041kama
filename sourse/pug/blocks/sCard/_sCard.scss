@@ -53,9 +53,13 @@
 		.swiper-slide {
 			@include mt;
 			opacity: 0.6;
-			&.swiper-slide-thumb-active,
-			&:hover {
+			&.swiper-slide-thumb-active {
 				opacity: 1;
+			}
+			&:hover {
+				@include media-breakpoint-up(lg) {
+					opacity: 1;
+				}
 			}
 		}
 	}

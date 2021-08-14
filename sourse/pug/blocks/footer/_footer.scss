@@ -240,7 +240,7 @@
 		}
 	}
 }
-.link-secondary2 {
+a.link-secondary2 {
 	@include media-breakpoint-down(lg) {
 		color: $secondary2 !important;
 	}
