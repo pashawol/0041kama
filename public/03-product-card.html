@@ -30,7 +30,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
-	<style>.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }</style>
+	<style>body.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding:not(.loaded)::before { display: none; }</style>
 	<body class="loaded_hiding main-page">
 		<div class="main-wrapper">
 			<div class="menu-mobile menu-mobile--js d-lg-none"> 
@@ -38,8 +38,8 @@
 					<div class="search-block">
 						<form>
 							<button> 
-								<svg class="icon icon-search ">
-									<use xlink:href="img/svg/sprite.svg#search"></use>
+								<svg class="icon icon-search-icon ">
+									<use xlink:href="img/svg/sprite.svg#search-icon"></use>
 								</svg>
 							</button>
 							<input type="text" placeholder="Поиск по артикулу и названию"/>
@@ -143,8 +143,8 @@
 							<div class="search-block">
 								<form>
 									<button> 
-										<svg class="icon icon-search ">
-											<use xlink:href="img/svg/sprite.svg#search"></use>
+										<svg class="icon icon-search-icon ">
+											<use xlink:href="img/svg/sprite.svg#search-icon"></use>
 										</svg>
 									</button>
 									<input type="text" placeholder="Поиск по артикулу и названию"/>
@@ -168,7 +168,7 @@
 							</div>
 						</div>
 						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js btn btn-light"><span></span>
+							<div class="toggle-menu-mobile toggle-menu-mobile--js btn"><span></span>
 							</div>
 						</div>
 					</div>

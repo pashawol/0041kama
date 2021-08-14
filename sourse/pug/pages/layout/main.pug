@@ -47,7 +47,7 @@ html(lang="ru")
 		+allcss()
 	block variables
 	style.
-		.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding::before { display: none; }
+		body.loaded_hiding {  opacity: 0; pointer-events: none;  } .loaded_hiding:not(.loaded)::before { display: none; }
 	//- body.loaded_hiding(class= mainPage) 
 	body.loaded_hiding(class= mainPage data-bg= bg  )
 		.main-wrapper

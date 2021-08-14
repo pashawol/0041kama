@@ -38,19 +38,27 @@ body {
 	overflow-x: hidden;
 
 	&.loaded_hiding {
-		@include mt;
-
-		opacity: 0;
-		pointer-events: none;
-
-		&::before {
-			display: none;
-		}
+	// 	// @include mt(1s);
+		transition: opacity 1s;
 	}
+	// &:not(.loaded) {
+	
+	// 	opacity: 0;
+	// 	pointer-events: none;
+	
+	// 	&::before {
+	// 		display: none;
+	// 	}
 
+	// }
+	
 	&.loaded {
-		pointer-events: visible;
-		opacity: 1;
+		pointer-events: visible !important;
+		opacity: 1 !important;
+		&::before {
+			display: block;
+		}
+		// transition: none;
 	}
 
 	&::before {
@@ -561,18 +569,16 @@ h2 {
 .animate-js {
 	display: block;
 	background: rgba(255, 255, 255, .3);
-	border-radius: 100%;
-	-webkit-transform: scale(0);
-	-ms-transform: scale(0);
+	border-radius: 100%; 
 	transform: scale(0);
 	z-index: 2 !important;
 	position: absolute !important;
 }
 	@include media-breakpoint-up(lg) {
 
-		.btn_animate {
-			-webkit-animation: .65s linear ripple;
+		.btn_animate { 
 			animation: .65s linear ripple;
+			animation-delay: 2s;
 		}
 		.btn-primary{
 			position: relative;
@@ -582,8 +588,7 @@ h2 {
 		
 		@keyframes ripple {
 			100% {
-				opacity: 0;
-				-webkit-transform: scale(2.5);
+				opacity: 0; 
 				transform: scale(2.5)
 			}
 		}

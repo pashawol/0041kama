@@ -214,7 +214,8 @@ const JSCCommon = {
 		document.addEventListener('mouseup', (event) => {
 			let container = event.target.closest(catalogDrop + ".active"); // (1)
 			let link = event.target.closest(catalogToggle); // (1)
-			if (!container && $(catalogDrop).hasClass('active')) {
+			if (!container && $(catalogDrop)[0].classList.contains('active')) {
+				console.log(catalogDrop);
 				$(catalogDrop).removeClass('active').slideUp();
 				$(catalogToggle).removeClass('active');
 			};
@@ -432,6 +433,6 @@ window.onload = function () {
 	// document.body.classList.add('loaded_hiding');
 	window.setTimeout(function () {
 		document.body.classList.add('loaded');
-		document.body.classList.remove('loaded_hiding');
+		// document.body.classList.remove('loaded_hiding');
 	}, 500);
 }

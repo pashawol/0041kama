@@ -17,6 +17,8 @@ $h: 2px;
 }
 .toggle-menu-mobile {
 	display: block;
+	background-color: $light;
+	border-color: $light;
 	// height: $h* 12;
 	position: relative; 
 	font-size: 20px;
@@ -66,6 +68,9 @@ $h: 2px;
 	// 	// opacity: 0;
 	// }
 
+	&.on  {
+		pointer-events: none;
+	}
 	&.on span {
 		background-color: transparent;
 	}
@@ -106,7 +111,7 @@ $h: 2px;
 		--opacity: 0;
 
 	}
-	@include mt(.6s);
+	@include mt(.3s);
 	will-change: transform;
 
 	&__inner {
@@ -116,8 +121,8 @@ $h: 2px;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
 		height: 100%;
-		@include mt(.3s);
-		transition-delay: .4s;
+		@include mt(.1s);
+		transition-delay: .2s;
 		opacity: var(--opacity);
 	}
 
@@ -214,7 +219,7 @@ $h: 2px;
 			flex-direction: row-reverse;
 		}
 		.icon{
-			font-size: 24px;
+			font-size: 18px;
 		}
 		input{
 			padding-left: 15px;
