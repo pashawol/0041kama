@@ -624,7 +624,9 @@
 		cursor: pointer;
 		&:hover{
 			@include mt;
-			opacity:0.75;
+			@include media-breakpoint-up(lg){
+				opacity:0.75;
+			}
 		}
 	}
 	table{
@@ -719,6 +721,12 @@
 		}
 		flex:  0 0 auto;
 		position: relative;
+		@include media-breakpoint-down(lg){
+			&:hover{
+				background-color: $light !important;
+				opacity: 1 !important;
+			}
+		}
 		&::before,
 		&::after{
 			content: '';
