@@ -61,6 +61,10 @@
 	@include media-breakpoint-up(xxl) {
 		min-height: 364px;
 	}
+	@include media-breakpoint-down(lg){
+		box-shadow: none !important;
+		border: 1px solid $light2 !important;
+	}
 	&:hover {
 		box-shadow: 0 4px 8px rgba(38, 39, 40, 0.15);
 		border-color: transparent;
@@ -102,7 +106,7 @@
 
 .card-item{
 	position: relative;
-	color:white;
+	color: white !important;
 	background: #323A42;
 	border-radius: 5px;
 	overflow: hidden;
