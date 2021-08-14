@@ -19,7 +19,8 @@
 	}
 	&__col {
 		@include media-breakpoint-up(lg) {
-			width: 55%;
+			width: 54.6%;
+			// width: 55%;
 		}
 	}
 
@@ -68,10 +69,12 @@
 		cursor: pointer;
 		z-index: 5;
 		img {
-			@extend .object-fit-js;
+			// @extend .object-fit-js;
 			position: absolute;
 			left: 0;
 			top: 0;
+			max-width: 100%;
+			height: auto;
 		}
 	}
 	&__table {
