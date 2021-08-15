@@ -202,10 +202,10 @@ mixin page-body05(btns,t, ...items)
 mixin shop-btns()
 	+b.shop-btns
 		a.print-btns(href="#")
-				+e.BUTTON.print(type="button")
-				span Распечатать
+			img(src="img/svg/print.svg")
+			span Распечатать
 		a.pdf-btns(href="#")
-			+e.BUTTON.pdf(type="button")
+			img(src="img/svg/pdf.svg")
 			span Скачать PDF
 
 mixin tr-product()
@@ -268,6 +268,123 @@ mixin page404(t)
 mixin search()
 	+b.search-block
 		form
-			button 
+			button
 				+icon("search-icon")
 			input(type="text" placeholder="Поиск по артикулу и названию")
+
+mixin page-body06(btns,t, ...items)
+	.container.container--main
+		.row.row--main
+			.col-3
+				.list-block
+					.list-group
+						mixin item(i, t, a)
+							a(class!= ('list-group-item list-group-item-action '+ a || 'list-group-item list-group-item-action' ))
+								+pic(`list-group-${i}.png`, '', 0)
+								span!= t
+						+item(1,'Двигатели','')
+						+item(2,`Сборочные комплекты&nbsp;двигателя`, ``)
+						+item(1,'Блоки цилиндров', ``)
+						+item(1,'Валы коленчатые', ``)
+						+item(1,'Цилиндропоршневая группа', ``)
+						+item(1,'Запчасти двигателей', ``)
+						+item(1,'Топливная система', ``)
+						+item(1,'Двигатели Cummins', ``)
+						+item(3,'Long/Short Block Cummins', ``)
+						+item(4,'Коробки передач', ``)
+						+item(1,'Главные передачи', ``)
+						+item(1,'Коробки<br />раздаточные', ``)
+			.col-9.col--ph
+				+page-head(btns,t, ...items)
+				block
+
+mixin sContactInfo(data)
+	// start sContactInfo
+	+b.sContactInfo.section#sContactInfo&attributes(attributes)
+		.container
+			.row
+				mixin item(i, t)
+					.col-6.col-xl-3
+						+e.item
+							+e.img-wrap
+								img(src=`img/svg/contact-info-${i}.svg`, loading='lazy' alt="")
+							+e.caption
+								+e.title!=t
+								ul
+									block
+								//- ul
+								//- 	each item in items
+								//- 		li!= item
+				+item('1',`Телефоны для заказа`)
+					li #[a(href='tel:+78007008572') 8 (800) 700-85-72]
+					li #[a(href='tel:+79600799544') 8 (960) 079-95-44]
+				+item('2',`Электронная почта`)
+					li #[a(href='mailto:zapchasty-kama@yandex.ru') zapchasty-kama@yandex.ru]
+				+item('3',`Адрес`)
+					li г. Набережные Челны, пр&minus;т&nbsp;КАМАЗа, 22/3
+				+item('4',`Режим работы`)
+					li Пн-пт: с 8:00 до 17:00 мск <br> Сб: с 8:00 до 12:00 мск <br> Вс: выходной
+				
+
+mixin contacts-page()
+	+b.contacts-page&attributes(attributes)
+		.container
+			+e.title Основная информация
+			+sContactInfo()
+			+e.appeal
+				.row
+					.col-auto
+						+e.appeal-logo
+							+icon('logo-icon')
+					.col
+						+e.appeal-title Наша команда готова решить любые Ваши задачи связанные с&nbsp;поставкой высококачественных запасных частей.
+						+e.appeal-respect С&nbsp;уважением, команда ООО ТД&nbsp;&laquo;КамаТехЦентр&raquo;
+			+e.map
+				+e.map-title Расположение на карте
+				+e.map-widget(style='position:relative;overflow:hidden;')
+					a(href='https://yandex.ru/maps/236/naberezhnie-chelny/?utm_medium=mapframe&utm_source=maps' style='color:#eee;font-size:12px;position:absolute;top:0px;') &Ncy;&acy;&bcy;&iecy;&rcy;&iecy;&zhcy;&ncy;&ycy;&iecy; &CHcy;&iecy;&lcy;&ncy;&ycy;
+					a(href='https://yandex.ru/maps/236/naberezhnie-chelny/house/prospekt_kamaza_22_3/YUsYcgNkT0QBQFtvfXtzdXlmYQ==/?ll=52.449018%2C55.721461&utm_medium=mapframe&utm_source=maps&z=15.81' style='color:#eee;font-size:12px;position:absolute;top:14px;') &Pcy;&rcy;&ocy;&scy;&pcy;&iecy;&kcy;&tcy; &Kcy;&Acy;&Mcy;&Acy;&Zcy;&acy;, 22/3 &mdash; &YAcy;&ncy;&dcy;&iecy;&kcy;&scy;.&Kcy;&acy;&rcy;&tcy;&ycy;
+					iframe(src='https://yandex.ru/map-widget/v1/-/CCUinJh6OA' width='560' height='400' frameborder='1' allowfullscreen='true' style='position:relative;')
+			+e.requisites
+				+e.requisites-head
+					.title Реквизиты организации
+					a.pdf-btns(href="#")
+						img(src="img/svg/pdf.svg")
+						span Скачать PDF
+				+e.requisites-table
+					table
+						mixin tr-string(f,s)
+							tr
+								td.first!=f
+								td.second!=s
+						+tr-string(`Название организации`,`ООО ТД&nbsp;&laquo;КАМАТЕХЦЕНТР&raquo;`)
+						+tr-string(`ОГРН`,`1171690042347`)
+						+tr-string(`ИНН`,`1650348340`)
+						+tr-string(`КПП`,`165001001`)
+						+tr-string(`Юридический адрес`,`423809, РТ, г. Набережные&nbsp;Челны, пр-т. Мира, д.&nbsp;38, оф.&nbsp;57`)
+						+tr-string(`Почтовый адрес`,`423824, г. Набережные Челны, а/я 24021`)
+						+tr-string(`Расчетный счет`,`40702810629140002978`)
+						+tr-string(`Корреспондентский счет`,`30101810200000000824`)
+						+tr-string(`Банк`,`ФИЛИАЛ &laquo;НИЖЕГОРОДСКИЙ&raquo; АО&nbsp;&laquo;АЛЬФА-БАНК&raquo;`)
+						+tr-string(`БИК`,`042202824`)
+						+tr-string(`Директор`,`Широнин Иван Константинович (на&nbsp;основании устава)`)
+						+tr-string(`Телефон`,`8 (800) 700-85-72`)
+
+mixin shop-form2()
+	+b.shop-form.contacts-form
+		h2 Форма обратной связи
+		+e.caption Если вы&nbsp;хотите обратиться с&nbsp;предложением, оставить отзыв или у&nbsp;вас есть вопросы, воспользуйтесь формой ниже:
+		+form-wrap()
+			.row
+				.col-12.col-md-4
+					+input('Ваше имя')
+				.col-12.col-md-4
+					+input(`Ваш телефон`, 'tel')
+				.col-12.col-md-4
+					+input(`Ваш e-mail`, 'email')
+				.col-12
+					+input(`Ваше сообщение`, 'textarea')
+				.col-md-auto.col-12
+					+e.btn.btn.btn-primary Отправить
+				.col-md.col-12
+					+agreement
