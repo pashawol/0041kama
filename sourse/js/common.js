@@ -364,6 +364,10 @@ function eventHandler() {
 	var breadcrumbSlider = new Swiper(".breadcrumb-slider--js", {
 		slidesPerView: 'auto',
 	});
+	var tabsSlider = new Swiper(".tabs__slider--js", {
+		slidesPerView: 'auto',
+		spaceBetween:20,
+	});
 
 
 

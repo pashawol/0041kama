@@ -573,6 +573,10 @@
 		&:hover{
 			color:$primary;
 		}
+		span{
+			font-size: rem(14);
+			font-weight: 500;
+		}
 		img{
 			width:rem(25);
 			height:rem(25);
@@ -1121,11 +1125,13 @@
 							width: 45%;
 							padding-top: rem(10);
 							padding-bottom: rem(10);
+							border-width: 0px;
 						}
 						.second{
 							width: 55%;
 							padding-top: rem(10);
 							padding-bottom: rem(10);
+							border-width: 0px;
 						}
 					}
 					.first{
@@ -1148,4 +1154,218 @@
 .contacts-form{
 	padding-top: 40px;
 	margin-bottom: rem(97);
+}
+
+.delivery-page{
+	position: relative;
+	&__map{
+		margin-left: rem(19);
+		margin-top: rem(-20);
+		@include media-breakpoint-up(xl){
+			margin-top: rem(-94);
+		}
+		@include media-breakpoint-up(md){
+			margin-top: rem(-60);
+		}
+		//margin-top: rem(-94);
+		position: relative;
+		max-width: rem(920.7);
+		&-russia{
+			max-width: 100%;
+		}
+		&-point{
+			position: absolute;
+			width:2.4%;
+			height: 5.61%;
+		}
+		#point1{
+			top:49.9%;
+			left: 8.8%;
+		}
+		#point2{
+			top:75.1%;
+			left: 6%;
+		}
+		#point3{
+			top:61.1%;
+			left: 11.4%;
+		}
+		#point4{
+			top:49.9%;
+			left: 15.1%;
+		}
+		#point5{
+			top:66.7%;
+			left: 15.7%;
+		}
+		#point6{
+			top:55.5%;
+			left: 19.4%;
+		}
+		#point7{
+			top:74.4%;
+			left: 20.6%;
+		}
+		#point8{
+			top:44.7%;
+			left: 22.1%;
+		}
+		#point9{
+			top:88.6%;
+			left: 48%;
+		}
+		#point10{
+			top:37.9%;
+			left: 51.1%;
+		}
+		#point11{
+			top:77.4%;
+			left: 51.6%;
+		}
+		#point12{
+			top:75.7%;
+			left: 62.5%;
+		}
+		#point13{
+			top:62.2%;
+			left: 74.9%;
+		}
+		#point14{
+			top:49.7%;
+			left: 74.2%;
+		}
+		#point15{
+			top:35.1%;
+			left: 82.7%;
+		}
+
+	}
+	.map-truck{
+		width:46.3%;
+		position: absolute;
+		top: 43.2%;
+		left: 24.8%;
+		img{
+			width:100%;
+		}
+	}
+	.map-plane{
+		width:21.6%;
+		position: absolute;
+		top: 29%;
+		left: 56.1%;
+		img{
+			width:100%;
+		}
+	}
+	&__description{
+		padding-top: rem(16);
+		&-title{
+			font-size: rem(24);
+			font-weight: 700;
+			padding-bottom: rem(19);
+		}
+		&-list{
+			padding-left: rem(11);
+			padding-top: rem(13);
+			ul{
+				li{
+					margin-bottom: rem(3);
+					&::marker{
+						color:$primary;
+					}
+					color:$body-color;
+				}
+			}
+		}
+	}
+	&__methods{
+		padding-top: rem(24);
+		padding-bottom: rem(46);
+		&-title{
+			font-size: rem(24);
+			font-weight: 700;
+			padding-bottom: rem(19);
+		}
+		.pdf-btns{
+			padding-top: rem(20);
+			color: $body-color;
+			display: flex;
+			&:hover{
+				color:$primary;
+			}
+			span{
+				font-weight: 500;
+				padding-left: rem(9);
+			}
+			img{
+				width:rem(20);
+				height:rem(20);
+			}
+		}
+	}
+	&__benefit{
+		border-radius: 5px;
+		border:2px solid $primary;
+		padding: rem(20);
+		padding-bottom: rem(14);
+		.row{
+			align-items: center;
+		}
+		&-title{
+			font-weight: 600;
+			padding-bottom: 10px;
+		}
+	}
+	&__calc{
+		&--track{
+			padding-bottom: rem(100);
+		}
+		padding-top: rem(34);
+		&-title{
+			font-weight: 700;
+			font-size: rem(24);
+			padding-bottom: 30px;
+		}
+		.swiper-wrapper{
+			justify-content: space-between;
+			padding-bottom: rem(20);
+			.swiper-slide{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width:rem(178);
+				height: rem(80);
+				border-radius: 5px;
+				border:1px solid $light2;
+				picture{
+					width:auto;
+				}
+			}
+			.active{
+				position: relative;
+				border:2px solid $primary;
+				&::after{
+						content: '';
+						width:rem(16.8);
+						height: rem(16.8);
+						position: absolute;
+						transform: rotate(45deg);
+						border-right: 2px solid $primary;
+						border-bottom: 2px solid $primary;
+						border-radius: 2px;
+						top:rem(68.78);
+						background-color: white;
+				}
+			}
+		}
+		.active:not(.swiper-slide){
+			background-color: $light;
+			width: 100%;
+			padding-top: rem(20);
+			padding-bottom: rem(20);
+			display: flex !important;
+			justify-content: center;
+		}
+	}
 }

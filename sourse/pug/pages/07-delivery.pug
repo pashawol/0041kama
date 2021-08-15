@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAdvantages/_sAdvantages.pug
+include ../blocks/sQ/_sQ.pug
+
+block variables
+	- let  mainPage= 'main-page' 
+	- let  bg= '07-delivery.jpg'
+
+block title
+	- let  title= 'Доставка и оплата'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	//- +header()
+	//- 	+topLine()
+	//- 	+top-nav()
+	//- +headerBlock()
+	+mob-mnu()
+	+header()
+	+page-body06('btns',title, title)
+		+delivery-page
+	//- +sContact()
+	+footer()
+

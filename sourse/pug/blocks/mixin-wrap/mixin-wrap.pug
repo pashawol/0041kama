@@ -388,3 +388,94 @@ mixin shop-form2()
 					+e.btn.btn.btn-primary Отправить
 				.col-md.col-12
 					+agreement
+
+mixin delivery-page()
+	+b.delivery-page&attributes(attributes)
+		.container
+			+e.map
+				+e.IMG.map-russia(src='img/svg/map-russia.svg')
+				+pic('map-truck.png','',0).map-truck
+				+pic('map-plane.png','',0).map-plane
+				- for (var x=1; x<16; x++)
+					+e.IMG.map-point(src='img/svg/map-point.svg' id=`point${x}`)
+			+e.description
+				+e.description-title Доставка
+				+e.description-text Осуществляем доставку по&nbsp;всей России от&nbsp;2&nbsp;дней без предоплаты через транспортные компании:
+				+e.description-list
+					ul
+						li Байкал Сервис
+						li ПЭК
+						li Деловые линии
+						li GTD
+						li Энергия
+			+e.methods
+				+e.methods-title Способы оплаты
+				+e.methods-text Оплата осуществляется наличным или безналичным расчетом с&nbsp;НДС.
+				a.pdf-btns(href="#")
+						img(src="img/svg/pdf.svg")
+						span Реквизиты организации
+			+e.benefit
+				.row
+					.col-auto
+						+pic('benefit-1.png','',0)
+					.col
+						+e.benefit-title Каждый двигатель отправляется в&nbsp;жесткой упаковке.
+						+e.benefit-text Мы&nbsp;используем обрешетку для упаковки двигателя, чтобы исключить возможность повреждения двигателя во&nbsp;время транспортировки.
+			+e.calc
+				+e.calc-title Рассчитать стоимость доставки
+				.tabs
+					.tabs__slider.tabs__slider--js.swiper-container
+						.tabs__caption.swiper-wrapper
+							.tabs__btn.swiper-slide
+								+pic(`calc-1.png`,'',0)
+							.tabs__btn.swiper-slide.active
+								+pic(`calc-2.png`,'',0)
+							.tabs__btn.swiper-slide
+								+pic(`calc-3.png`,'',0)
+							.tabs__btn.swiper-slide
+								+pic(`calc-4.png`,'',0)
+							.tabs__btn.swiper-slide
+								+pic(`calc-5.png`,'',0)
+							.tabs__btn.swiper-slide
+								+pic(`calc-5.png`,'',0)
+						.tabs__content.active
+							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+						.tabs__content
+							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+						.tabs__content
+							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+						.tabs__content
+							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+						.tabs__content
+							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+						.tabs__content
+							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+			+e.calc.--track
+				+e.calc-title Отследить заказ по&nbsp;трек-номеру (накладной)
+				.tabs
+					.tabs__slider.tabs__slider--js.swiper-container
+						.tabs__caption.swiper-wrapper
+							.tabs__btn.swiper-slide
+								+pic(`calc-1.png`,'',0)
+							.tabs__btn.swiper-slide.active
+								+pic(`calc-2.png`,'',0)
+							.tabs__btn.swiper-slide
+								+pic(`calc-3.png`,'',0)
+							.tabs__btn.swiper-slide
+								+pic(`calc-4.png`,'',0)
+							.tabs__btn.swiper-slide
+								+pic(`calc-5.png`,'',0)
+							.tabs__btn.swiper-slide
+								+pic(`calc-5.png`,'',0)
+						.tabs__content.active
+							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0')
+						.tabs__content
+							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0')
+						.tabs__content
+							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0')
+						.tabs__content
+							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0')
+						.tabs__content
+							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0')
+						.tabs__content
+							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0')
