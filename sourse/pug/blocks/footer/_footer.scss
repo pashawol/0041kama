@@ -6,7 +6,7 @@
 		list-style: none;
 		margin-bottom: rem(40);
 		@include media-breakpoint-up(md) {
-		margin-bottom: 0;
+			margin-bottom: 0;
 		}
 	}
 	li {
@@ -36,8 +36,8 @@
 		padding-top: rem(40);
 		padding-bottom: rem(40);
 		@include media-breakpoint-up(lg) {
-		padding-top: rem(60);
-		padding-bottom: rem(60);
+			padding-top: rem(60);
+			padding-bottom: rem(60);
 		}
 		border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.1);
 	}
@@ -131,10 +131,13 @@
 		@include media-breakpoint-up(md) {
 			text-align: right;
 		}
-		.link-white {
-			&:hover {
-				color: $white;
+		a {
+			@include media-breakpoint-down(lg) {
+				color: $primary !important;
 			}
+		}
+		.link-white {
+			color: $white !important;
 		}
 
 		.tel-n-social {
@@ -148,7 +151,7 @@
 				order: 6;
 				margin-right: 0;
 				margin-left: rem(10);
-				color: $white;
+				color: $white !important;
 				font-weight: 600;
 				font-size: rem(16);
 				line-height: (20 / 16);
@@ -228,12 +231,22 @@
 }
 
 .link-white {
+	@include media-breakpoint-down(lg) {
+		color: $white !important;
+	}
 	&:hover {
-		color: #226ebb;
+		@include media-breakpoint-up(lg) {
+			color: #226ebb;
+		}
 	}
 }
-.link-secondary2 {
+a.link-secondary2 {
+	@include media-breakpoint-down(lg) {
+		color: $secondary2 !important;
+	}
 	&:hover {
-		color: $white;
+		@include media-breakpoint-up(lg) {
+			color: $white;
+		}
 	}
 }

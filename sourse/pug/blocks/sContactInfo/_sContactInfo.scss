@@ -52,8 +52,10 @@
 			padding: rem(20);
 		}
 		&:hover {
-			border-color: transparent;
-			box-shadow: 0 4px 8px rgba(38, 39, 40, 0.15);
+			@include media-breakpoint-up(lg) {
+				border-color: transparent;
+				box-shadow: 0 4px 8px rgba(38, 39, 40, 0.15);
+			}
 		}
 	}
 	&__caption {

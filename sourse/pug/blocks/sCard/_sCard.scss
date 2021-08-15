@@ -53,9 +53,13 @@
 		.swiper-slide {
 			@include mt;
 			opacity: 0.6;
-			&.swiper-slide-thumb-active,
-			&:hover {
+			&.swiper-slide-thumb-active {
 				opacity: 1;
+			}
+			&:hover {
+				@include media-breakpoint-up(lg) {
+					opacity: 1;
+				}
 			}
 		}
 	}
@@ -79,7 +83,7 @@
 	}
 	&__table {
 		margin-top: rem(20);
-		
+
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(5);
 			margin-top: 0;
@@ -212,8 +216,10 @@
 	color: $primary;
 	border-radius: $border-radius;
 	font-size: rem(14);
-	
+
 	&:hover {
-		color: shift-color($primary, 20%);
+		@include media-breakpoint-up(lg) {
+			color: shift-color($primary, 20%);
+		}
 	}
 }
