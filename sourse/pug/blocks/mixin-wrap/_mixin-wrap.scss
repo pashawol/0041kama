@@ -741,14 +741,14 @@
 			@extend .btn-light;
 			&:hover{
 				@include mt;
-				opacity: 0.5;
+				background-color: #f7f7f7;
 			}
 		}
 		&--plus{
 			@extend .btn-light;
 			&:hover{
 				@include mt;
-				opacity: 0.5;
+				background-color: #f7f7f7;
 			}
 			&::after{
 				transform: rotate(90deg);

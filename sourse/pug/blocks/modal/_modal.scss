@@ -209,6 +209,9 @@ a {
 		color: #CACFD6 !important;
 		border-width: 0px !important;
 		box-shadow: none !important;
+		&:hover{
+			opacity:0.75;
+		}
 		svg{
 			filter: none;
 			width:24px;
@@ -446,6 +449,9 @@ a {
 		color: #CACFD6 !important;
 		border-width: 0px !important;
 		box-shadow: none !important;
+		&:hover{
+			opacity:0.75;
+		}
 		svg{
 			filter: none;
 			width:24px;
