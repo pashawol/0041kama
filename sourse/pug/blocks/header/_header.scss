@@ -93,7 +93,16 @@
 			background-color: $primary !important;
 		}
 		&__contact-dropdown{
-			
+			&::before{
+				content:'';
+				background-color: white;
+				position: absolute;
+				top:-2px;
+				left: 0;
+				z-index: -1;
+				height: 5px;
+				width: 100%;
+			}
 			&:not(.active) {
 				display: none;
 			}
