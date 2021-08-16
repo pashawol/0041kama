@@ -1171,11 +1171,10 @@
 		position: relative;
 		max-width: rem(920.7);
 		&-russia{
-			animation-name:bounceInLeft;
 			max-width: 100%;
 		}
 		&-point{
-			animation-name:bounceInDown;
+			animation-name:fadeIn;
 			position: absolute;
 			width:2.4%;
 			height: 5.61%;
@@ -1243,7 +1242,7 @@
 
 	}
 	.map-truck{
-		animation-name:bounceInUp;
+		animation-name:fadeIn;
 		width:46.3%;
 		position: absolute;
 		top: 43.2%;
@@ -1253,7 +1252,7 @@
 		}
 	}
 	.map-plane{
-		animation-name:bounceInRight;
+		animation-name:fadeIn;
 		width:21.6%;
 		position: absolute;
 		top: 29%;

@@ -393,11 +393,11 @@ mixin delivery-page()
 	+b.delivery-page&attributes(attributes)
 		.container
 			+e.map()
-				+e.IMG.map-russia.wow.bounceInLeft(src='img/svg/map-russia.svg' data-wow-duration="2s")
-				+pic('map-truck.png','',0).map-truck.wow.bounceInUp(data-wow-delay="1s" data-wow-duration="2s")
-				+pic('map-plane.png','',0).map-plane.wow.bounceInRight(data-wow-delay="2s" data-wow-duration="2s")
+				+e.IMG.map-russia.wow(src='img/svg/map-russia.svg')
+				+pic('map-truck.png','',0).map-truck.wow.fadeIn(data-wow-delay="1s" data-wow-duration="2s")
+				+pic('map-plane.png','',0).map-plane.wow.fadeIn(data-wow-delay="2s" data-wow-duration="2s")
 				- for (var x=1; x<16; x++)
-					+e.IMG.map-point.wow.bounceInDown(src='img/svg/map-point.svg' id=`point${x}` data-wow-delay="3s" )
+					+e.IMG.map-point.wow.fadeIn(src='img/svg/map-point.svg' id=`point${x}` data-wow-delay="3s" )
 			+e.description
 				+e.description-title Доставка
 				+e.description-text Осуществляем доставку по&nbsp;всей России от&nbsp;2&nbsp;дней без предоплаты через транспортные компании:
