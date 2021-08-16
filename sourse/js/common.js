@@ -366,7 +366,7 @@ function eventHandler() {
 	});
 	var tabsSlider = new Swiper(".tabs__slider--js", {
 		slidesPerView: 'auto',
-		spaceBetween:20,
+		spaceBetween:18,
 	});
 
 

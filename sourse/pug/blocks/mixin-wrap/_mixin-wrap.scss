@@ -1331,6 +1331,9 @@
 			padding-bottom: 30px;
 		}
 		.swiper-wrapper{
+			@include media-breakpoint-up(xxl){
+				transform: none !important;
+			}
 			justify-content: space-between;
 			padding-bottom: rem(20);
 			.swiper-slide{
