@@ -392,12 +392,12 @@ mixin shop-form2()
 mixin delivery-page()
 	+b.delivery-page&attributes(attributes)
 		.container
-			+e.map
-				+e.IMG.map-russia(src='img/svg/map-russia.svg')
-				+pic('map-truck.png','',0).map-truck
-				+pic('map-plane.png','',0).map-plane
+			+e.map()
+				+e.IMG.map-russia.wow.bounceInLeft(src='img/svg/map-russia.svg' data-wow-duration="2s")
+				+pic('map-truck.png','',0).map-truck.wow.bounceInUp(data-wow-delay="1s" data-wow-duration="2s")
+				+pic('map-plane.png','',0).map-plane.wow.bounceInRight(data-wow-delay="2s" data-wow-duration="2s")
 				- for (var x=1; x<16; x++)
-					+e.IMG.map-point(src='img/svg/map-point.svg' id=`point${x}`)
+					+e.IMG.map-point.wow.bounceInDown(src='img/svg/map-point.svg' id=`point${x}` data-wow-delay="3s" )
 			+e.description
 				+e.description-title Доставка
 				+e.description-text Осуществляем доставку по&nbsp;всей России от&nbsp;2&nbsp;дней без предоплаты через транспортные компании:
@@ -439,17 +439,17 @@ mixin delivery-page()
 							.tabs__btn.swiper-slide
 								+pic(`calc-5.png`,'',0)
 						.tabs__content.active
-							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+							//iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
 						.tabs__content
-							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+							//iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
 						.tabs__content
-							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+							//iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
 						.tabs__content
-							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+							//iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
 						.tabs__content
-							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+							//iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
 						.tabs__content
-							iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
+							//iframe(src='https://api.baikalsr.ru/widget/calculator?' width='310' height='525' scrolling='no' frameborder='0')
 			+e.calc.--track
 				+e.calc-title Отследить заказ по&nbsp;трек-номеру (накладной)
 				.tabs
@@ -468,14 +468,14 @@ mixin delivery-page()
 							.tabs__btn.swiper-slide
 								+pic(`calc-5.png`,'',0)
 						.tabs__content.active
-							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
+							//iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
 						.tabs__content
-							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
+							//iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
 						.tabs__content
-							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
+							//iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
 						.tabs__content
-							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
+							//iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
 						.tabs__content
-							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
+							//iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
 						.tabs__content
-							iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")
+							//iframe(src='https://pecom.ru/business/developers/tracker/tracker.php' width='327px' height='184px' scrolling='no' frameborder='0' loading="lazy")

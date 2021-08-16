@@ -444,6 +444,10 @@ window.onload = function () {
 	// document.body.classList.add('loaded_hiding');
 	window.setTimeout(function () {
 		document.body.classList.add('loaded');
-		// document.body.classList.remove('loaded_hiding');
+		var wow = new WOW({
+			mobile: false,
+			animateClass: 'animate__animated',
+		});
+		wow.init();
 	}, 500);
 }
