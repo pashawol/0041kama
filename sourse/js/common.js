@@ -381,7 +381,7 @@ function eventHandler() {
 	$(".sReadMore__text").readall({
 		showheight: null,
 		showrows: 8,
-		btnTextShowmore: 'Показать еще', 
+		btnTextShowmore: 'Показать еще',
 		btnTextShowless: 'Свернуть', 
 		btnClassShowmore: 'btn-more',
 		btnClassShowless: 'btn-more'
