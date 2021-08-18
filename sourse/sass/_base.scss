@@ -259,11 +259,11 @@ ul {
 	}
 
 	&__content {
-		opacity: 0;
-		@include mt;
+		// opacity: 0;
+		// @include mt;
 		&.active {
 			display: block;
-			opacity: 1;
+			// opacity: 1;
 		}
 
 		display: none;
@@ -653,7 +653,7 @@ h2 {
 
 
 	.form-check-input[type=checkbox] {
-		background-size: 100%;
+		background-size: 70%;
 	}
 
 	img{
