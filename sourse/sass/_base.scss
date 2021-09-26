@@ -659,3 +659,32 @@ h2 {
 	img{
 		image-rendering:  crisp-edges
 	}
+	.container--main{
+		margin-bottom: rem(66);
+	}
+	.shop-form .form-wrap__btn{
+		text-align: center;
+	}
+
+	.order-cart .form-wrap .btns{
+		@include media-breakpoint-up(md){
+			display: flex;
+			width: 28.75rem;
+			margin-top: 30px;
+			justify-content: space-between;
+		}
+		@include media-breakpoint-down(md){
+			flex-direction: column;
+			width: 448px;
+		}
+	}
+	.order-cart .form-wrap .btns .btn-outline-primary{
+		@include media-breakpoint-down(md){
+			margin-top: 20px;
+		}
+	}
+	// .sCard__slider-thumbs--js .swiper-slide{
+	// 	@include media-breakpoint-down(md){
+	// 		margin-bottom: 10px !important;
+	// 	}
+	// }
