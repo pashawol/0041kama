@@ -1,0 +1,23 @@
+mixin sPrint(data)
+	// start sPrint
+	+b.SECTION.sPrint.section#sPrint&attributes(attributes)
+		.container
+			h4 Корзина
+			+e.string
+				+pic('print','',0)
+				+e.caption
+					p Двигатель 740.11 (740.11-1000400)
+					p Цена: 540 000 ₽
+			+e.string
+				+pic('print','',0)
+				+e.caption
+					p Двигатель 740.11 (740.11-1000400)
+					p Цена: 540 000 ₽
+			+e.string
+				+pic('print','',0)
+				+e.caption
+					p Двигатель 740.11 (740.11-1000400)
+					p Цена: 540 000 ₽
+			.h4 Итого: 540 000 ₽ 
+			+e.page 1
+	// end sPrint

@@ -1,0 +1,67 @@
+// start .sPrint
+.sPrint {
+	--sPT: #{rem(40)};
+	flex-grow: 1;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	.container{
+		position: relative;
+		flex-grow: 1;
+	}
+	h4 {
+		font-weight: bold;
+		color: #323a42;
+		padding-bottom: rem(15);
+	}
+	&__string {
+		padding-top: rem(25);
+		padding-bottom: rem(25);
+		align-items: center;
+		display: flex;
+		border-bottom: 1px dashed #e5e8ec;
+	}
+	picture {
+		width: rem(70);
+		height: rem(70);
+		border-radius: 5px;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__caption {
+		padding-left: rem(20);
+		p {
+			margin-bottom: 0;
+			color: #323a42;
+			font-size: rem(16);
+			line-height: rem(20);
+			&:nth-child(1) {
+				font-weight: 600;
+				margin-bottom: 5px;
+			}
+		}
+	}
+	.h4{
+		padding-bottom:0;
+		padding-top: rem(40);
+		font-weight: 600;
+		color: #323a42;
+	}
+	&__page{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		color: #888C94;
+		font-size: rem(16);
+		line-height: 125%;
+		@include media-breakpoint-down(sm){
+			bottom: 40px;
+			right: 40px;
+		}
+	}
+	// --sPB: 0;
+	// --sTPB: ;
+} // end.sPrint
