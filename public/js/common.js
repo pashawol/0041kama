@@ -392,6 +392,9 @@ function eventHandler() {
 		btnClassShowmore: 'btn-more',
 		btnClassShowless: 'btn-more'
 	});
+	$(".modal-cookies__is-close").click(function () {
+		$(this).parent().hide();
+	});
 	$(".btn-primary, .btn-js").each(function () {
 		var B = $(this);
 		var A, C, z, D;

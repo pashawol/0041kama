@@ -88,7 +88,7 @@ mixin modal()
 				+e.btn.btn.btn-primary Отправить заявку
 			+agreement()
 	
-	+b.modal-win.modal-cookies(id="modal-cookies" class=" " style="display: none" )
-		.modal-cookies__caption!=`Мы используем файлы cookie. Подробнее - в нашей <a href='#'>политике об обработке персональных данных</a>`
-		a.modal-cookies__btn(href="#") Понятно
+	+b.modal-cookies(id="modal-cookies" class=" " style="display: none" )
+		+e.caption!=`Мы используем файлы cookie. Подробнее - в нашей <a href='#'>политике об обработке персональных данных</a>`
+		+e.btn(href="#") Понятно
 	// end modals

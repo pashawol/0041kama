@@ -89,6 +89,8 @@ a {
 	}
 }
 .modal-cookies {
+	box-shadow: 0px 0px 25px rgba(50, 58, 66, 0.15);
+	background-color: $white;
 	@include media-breakpoint-up(md) {
 		max-width: rem(345);
 		padding-top: rem(20);
@@ -96,27 +98,42 @@ a {
 		padding-bottom: rem(20);
 		padding-right: rem(15);
 	}
-	position: absolute;
-	bottom: 18px;
-	@include media-breakpoint-up(md){
+	position: fixed;
+	z-index: 5;
+	@include media-breakpoint-down(md) {
+		bottom: 18px;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	@include media-breakpoint-up(md) {
 		bottom: rem(60);
 		left: rem(55);
 	}
+	width: 100%;
 	padding: 20px;
 	max-width: 540px;
-	.is-close {
+	&__is-close {
+		@include mt;
+		position: absolute;
 		top: rem(11) !important;
 		right: rem(11) !important;
-		color: #cacfd6 !important;
 		border-width: 0px !important;
 		box-shadow: none !important;
+		background-color: transparent;
+		outline: 0 !important;
 		&:hover {
 			opacity: 0.75;
 		}
 		svg {
+			outline: 0!important;
 			filter: none;
 			width: 20px;
 			height: 20px;
+			stroke: #cacfd6;
+			fill: none;
+			stroke-width: var(--carousel-button-svg-stroke-width, 1.5);
+			stroke-linejoin: bevel;
+			stroke-linecap: round;
 			@include media-breakpoint-up(md) {
 				width: rem(20);
 				height: rem(20);
