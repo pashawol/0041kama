@@ -1,29 +1,33 @@
 // start .sPrint
 .sPrint {
 	--sPT: #{rem(40)};
-	flex-grow: 1;
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	.container{
+	.shop-content {
+		max-width: 595px;
+		height: 842px;
 		position: relative;
-		flex-grow: 1;
+		padding-left: 0;
+		padding-right: 0;
 	}
 	h4 {
 		font-weight: bold;
 		color: #323a42;
-		padding-bottom: rem(15);
+		padding-bottom: 15px;
 	}
 	&__string {
-		padding-top: rem(25);
-		padding-bottom: rem(25);
+		padding-top: 25px;
+		padding-bottom: 25px;
 		align-items: center;
 		display: flex;
 		border-bottom: 1px dashed #e5e8ec;
 	}
+	.print-body {
+		padding-left: 44px;
+		padding-right: 44px;
+		padding-top: 40px;
+	}
 	picture {
-		width: rem(70);
-		height: rem(70);
+		width: 70px;
+		height: 70px;
 		border-radius: 5px;
 		img {
 			width: 100%;
@@ -32,36 +36,67 @@
 		}
 	}
 	&__caption {
-		padding-left: rem(20);
+		padding-left: 20px;
 		p {
 			margin-bottom: 0;
 			color: #323a42;
-			font-size: rem(16);
-			line-height: rem(20);
+			font-size: 16px;
+			line-height: 20px;
 			&:nth-child(1) {
 				font-weight: 600;
 				margin-bottom: 5px;
 			}
 		}
 	}
-	.h4{
-		padding-bottom:0;
-		padding-top: rem(40);
+	.h4 {
+		padding-bottom: 0;
+		padding-top: 40px;
 		font-weight: 600;
 		color: #323a42;
 	}
-	&__page{
+	&__page {
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		color: #888C94;
-		font-size: rem(16);
+		color: #888c94;
+		font-size: 16px;
 		line-height: 125%;
-		@include media-breakpoint-down(sm){
-			bottom: 40px;
-			right: 40px;
+		right: 40px;
+		bottom: 40px;
+	}
+	.head-row {
+		padding-bottom: 18px;
+		padding-top: 18px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #e5e6e9;
+		padding-left: 44px;
+		padding-right: 44px;
+		img {
+			max-width: 200px;
+		}
+		p {
+			max-width: 116px;
+			margin-bottom: 0;
+			color: #323a42;
+			font-size: 16px;
+			line-height: 125%;
+			padding: 0;
 		}
 	}
 	// --sPB: 0;
 	// --sTPB: ;
 } // end.sPrint
+@media print {
+	body {
+		visibility: hidden;
+	}
+	.shop-content {
+		visibility: visible;
+	}
+	.btn-quanity-input,
+	.product-remove {
+		visibility: hidden;
+	}
+}
