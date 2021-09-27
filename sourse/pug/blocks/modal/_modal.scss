@@ -96,6 +96,12 @@ a {
 		padding-bottom: rem(20);
 		padding-right: rem(15);
 	}
+	position: absolute;
+	bottom: 18px;
+	@include media-breakpoint-up(md){
+		bottom: rem(60);
+		left: rem(55);
+	}
 	padding: 20px;
 	max-width: 540px;
 	.is-close {
