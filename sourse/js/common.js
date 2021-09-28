@@ -441,20 +441,36 @@ if (document.readyState !== 'loading') {
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
+sessionStorage.setItem('key', 1);
+// Получение данных из sessionStorage
+var data = sessionStorage.getItem('key'); 
+// document.body.classList.add('loaded_hiding');
 
 window.onload = function () {
-	// document.body.classList.add('loaded_hiding');
-	window.setTimeout(function () {
-		document.body.classList.add('loaded');
+
+	if (!data == 1) {
+		window.setTimeout(function () {
+			document.body.classList.add('loaded');
+			var wow = new WOW({
+				mobile: false,
+				animateClass: 'animate__animated',
+			});
+			wow.init();
+		}, 500); 
+	}
+	else{
+		document.body.classList.remove('loaded_hiding');
 		var wow = new WOW({
 			mobile: false,
 			animateClass: 'animate__animated',
 		});
-		wow.init();
-	}, 500);
+		wow.init(); 
+	}
 }
 
 
+if (document.querySelector("#map")) {
+	
 
 ymaps.ready(function () {
 	var myMap = new ymaps.Map('map', {
@@ -493,3 +509,5 @@ ymaps.ready(function () {
 	myMap.geoObjects
 			.add(myPlacemark);
 });
+
+}

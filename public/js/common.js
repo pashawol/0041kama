@@ -443,50 +443,64 @@ if (document.readyState !== 'loading') {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
 
+sessionStorage.setItem('key', 1); // Получение данных из sessionStorage
+
+var data = sessionStorage.getItem('key'); // document.body.classList.add('loaded_hiding');
+
 window.onload = function () {
-	// document.body.classList.add('loaded_hiding');
-	window.setTimeout(function () {
-		document.body.classList.add('loaded');
+	if (!data == 1) {
+		window.setTimeout(function () {
+			document.body.classList.add('loaded');
+			var wow = new WOW({
+				mobile: false,
+				animateClass: 'animate__animated'
+			});
+			wow.init();
+		}, 500);
+	} else {
+		document.body.classList.remove('loaded_hiding');
 		var wow = new WOW({
 			mobile: false,
 			animateClass: 'animate__animated'
 		});
 		wow.init();
-	}, 500);
+	}
 };
 
-ymaps.ready(function () {
-	var myMap = new ymaps.Map('map', {
-		center: [55.724555, 52.444616],
-		zoom: 14,
-		controls: ['zoomControl']
-	}, {//searchControlProvider: 'yandex#search'
-	}),
-			// Создаём макет содержимого.
-	// MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-	// 		'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-	// ),
-	myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-		hintContent: 'Собственный значок метки',
-		balloonContent: 'Это красивая метка'
-	}, {
-		// Опции.
-		// Необходимо указать данный тип макета.
-		iconLayout: 'default#image',
-		// Своё изображение иконки метки.
-		iconImageHref: 'img/svg/mark.svg',
-		// Размеры метки.
-		iconImageSize: [30, 42],
-		// Смещение левого верхнего угла иконки относительно
-		// её "ножки" (точки привязки).
-		iconImageOffset: [-5, -38]
+if (document.querySelector("#map")) {
+	ymaps.ready(function () {
+		var myMap = new ymaps.Map('map', {
+			center: [55.724555, 52.444616],
+			zoom: 14,
+			controls: ['zoomControl']
+		}, {//searchControlProvider: 'yandex#search'
+		}),
+				// Создаём макет содержимого.
+		// MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+		// 		'<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+		// ),
+		myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+			hintContent: 'Собственный значок метки',
+			balloonContent: 'Это красивая метка'
+		}, {
+			// Опции.
+			// Необходимо указать данный тип макета.
+			iconLayout: 'default#image',
+			// Своё изображение иконки метки.
+			iconImageHref: 'img/svg/mark.svg',
+			// Размеры метки.
+			iconImageSize: [30, 42],
+			// Смещение левого верхнего угла иконки относительно
+			// её "ножки" (точки привязки).
+			iconImageOffset: [-5, -38]
+		});
+		myMap.behaviors.disable('scrollZoom'); //на мобильных устройствах... (проверяем по userAgent браузера)
+
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+			//... отключаем перетаскивание карты
+			myMap.behaviors.disable('drag');
+		}
+
+		myMap.geoObjects.add(myPlacemark);
 	});
-	myMap.behaviors.disable('scrollZoom'); //на мобильных устройствах... (проверяем по userAgent браузера)
-
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-		//... отключаем перетаскивание карты
-		myMap.behaviors.disable('drag');
-	}
-
-	myMap.geoObjects.add(myPlacemark);
-});
+}
