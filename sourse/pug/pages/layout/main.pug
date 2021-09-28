@@ -53,6 +53,12 @@ html(lang="ru")
 		.main-wrapper
 			block pagecontent
 				h3 content
+		+b.modal-cookies(id="modal-cookies" class=" " )
+			+e.BUTTON.is-close(type='button')
+				svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' tabindex='-1')
+					path(d='M20 20L4 4m16 0L4 20')
+			+e.caption!=`Мы используем файлы cookie. Подробнее - в нашей <a href='#'>политике об обработке персональных данных</a>`
+			+e.btn(href="#") Понятно
 		+modal()
 		+allcjs()
 		
