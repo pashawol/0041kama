@@ -41,14 +41,15 @@
 	&__slider-thumbs--js {
 		width: 15%;
 		margin-left: var(--bs-gutter-x);
-		max-height: 453px;
+		height: 453px;
 		@include media-breakpoint-up(sm) {
-			max-height: 431px;
+		height: 431px;
 		}
 		@include media-breakpoint-up(md) {
 			margin-left: 0;
 			width: 100%;
 			margin-top: 10px;
+			height: inherit;
 		}
 		.swiper-slide {
 			@include mt;
@@ -116,11 +117,11 @@
 		&:last-child {
 			border-bottom: none;
 		}
-		@include media-breakpoint-down(md) {
-			&:nth-child(n + 5) {
-				display: none;
-			}
-		}
+		// @include media-breakpoint-down(md) {
+		// 	&:nth-child(n + 7) {
+		// 		display: none;
+		// 	}
+		// }
 		// @include media-breakpoint-down(lg) {
 		// 	&:nth-child(n + 7) {
 		// 		display: none;

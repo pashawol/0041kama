@@ -259,7 +259,7 @@
 }
 .list-block {
 	display: none;
-	margin-bottom: var(--sPB);
+	margin-bottom: calc(var(--sPB) / 2);
 	@include media-breakpoint-up(lg) {
 		display: block;
 	}
