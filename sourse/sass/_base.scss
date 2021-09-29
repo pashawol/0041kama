@@ -719,3 +719,48 @@ h2 {
 	.cart-empty.woocommerce-info{
 		margin-top: rem(40);
 	}
+.only-for-print{
+	// display: none;
+}
+
+	@media print {
+		.modal-cookies,
+		.page-head,
+		.footer,
+		.shop-form,
+		.col-3,
+		.header{
+			display: none !important;
+		}
+		.only-for-print{
+			display: block;
+		}
+		.shop-content{
+			padding-left: 0;
+			padding-right: 0;
+		}
+		.print-body {
+		padding-left: 44px;
+		padding-right: 44px;
+		padding-top: 40px;
+	}
+			body {
+		visibility: hidden;
+	}
+	.shop-content__td-close,
+	.shop-content__td-count{
+		display: none !important;
+	}
+	.shop-content {
+		visibility: visible;
+
+	}
+	.btn-quanity-input,
+	.product-remove {
+		visibility: hidden;
+		display: none !important;
+	}
+	.final-price{
+		text-align: left !important;
+	}
+	}

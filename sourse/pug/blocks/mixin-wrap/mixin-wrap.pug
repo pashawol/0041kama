@@ -228,11 +228,17 @@ mixin tr-product()
 
 mixin shop-content()
 	+b.shop-content
-		table
-			+tr-product
-			+tr-product
-			+tr-product
-		.final-price() Итого: 540 000 ₽
+		.only-for-print
+			.head-row
+				img(src='img/svg/logo-head.svg' alt='')
+				p www.td-ktc.ru
+		.print-body
+			h4.only-for-print Корзина
+			table
+				+tr-product
+				+tr-product
+				+tr-product
+			.final-price() Итого: 540 000 ₽
 
 mixin shop-form(t)
 	+b.shop-form
