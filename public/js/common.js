@@ -441,14 +441,14 @@ if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
-}
+} // Получение данных из sessionStorage
+// document.body.classList.add('loaded_hiding');
+// // var data;
+// sessionStorage.getItem('key');
 
-sessionStorage.setItem('key', 1); // Получение данных из sessionStorage
-
-var data = sessionStorage.getItem('key'); // document.body.classList.add('loaded_hiding');
 
 window.onload = function () {
-	if (!data == 1) {
+	if (!sessionStorage.getItem('key') == 1) {
 		window.setTimeout(function () {
 			document.body.classList.add('loaded');
 			var wow = new WOW({
@@ -457,15 +457,15 @@ window.onload = function () {
 			});
 			wow.init();
 		}, 500);
-	} else {
-		document.body.classList.remove('loaded_hiding');
-		var wow = new WOW({
-			mobile: false,
-			animateClass: 'animate__animated'
-		});
-		wow.init();
+		sessionStorage.setItem('key', 1);
+		console.log(1);
 	}
 };
+
+if (sessionStorage.getItem('key') == 1) {
+	document.body.classList.remove('loaded_hiding');
+	console.log(0);
+}
 
 if (document.querySelector("#map")) {
 	ymaps.ready(function () {
@@ -487,7 +487,7 @@ if (document.querySelector("#map")) {
 			// Необходимо указать данный тип макета.
 			iconLayout: 'default#image',
 			// Своё изображение иконки метки.
-			iconImageHref: 'img/svg/mark.svg',
+			iconImageHref: '../img/svg/mark.svg',
 			// Размеры метки.
 			iconImageSize: [30, 42],
 			// Смещение левого верхнего угла иконки относительно

@@ -698,6 +698,9 @@ h2 {
 	}
 
 	.sCardLink{
+		h4{
+			margin-bottom: rem(20);
+		}
 		padding-bottom: rem(20);
 		.list-group-item{
 			padding-top: rem(15);
@@ -717,10 +720,11 @@ h2 {
 	}
 
 	.cart-empty.woocommerce-info{
-		margin-top: rem(40);
+		margin-top: rem(30);
+		margin-bottom: rem(20);
 	}
 .only-for-print{
-	// display: none;
+	display: none;
 }
 
 	@media print {
