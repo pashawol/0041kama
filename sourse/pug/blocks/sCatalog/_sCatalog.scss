@@ -96,6 +96,7 @@
 					width: rem(100);
 					height: rem(40);
 				}
+				&.active,
 				&:active,
 				&:hover {
 					@include media-breakpoint-up(lg) {
@@ -105,10 +106,16 @@
 					}
 				}
 			}
-			input[type="checkbox"]:checked + .btn-info-modal {
-				background-color: $primary !important;
-				border-color: $primary !important;
-				color: $white !important;
+			&__label-modal{
+				&.active,
+				&:active,
+				&:hover {
+				.btn-info-modal {
+					background-color: $primary !important;
+					border-color: $primary !important;
+					color: $white !important;
+				}
+			}
 			}
 		}
 	}
