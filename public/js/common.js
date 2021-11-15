@@ -362,6 +362,19 @@ function eventHandler() {
 		thumbs: {
 			swiper: sCardSliderThumbs,
 			watchOverflow: true
+		},
+		on: {
+			slideChange: function (swiper) {
+				let curent = document.querySelector(".sCard__slider--js .swiper-slide:nth-child(".concat(swiper.realIndex + 1, ")"));
+				console.log(curent);
+				let video = curent.querySelector("video");
+				console.log(video);
+
+				if (video) {
+					video.play();
+				} // console.log('swiper initialized');
+
+			}
 		}
 	});
 	var breadcrumbSlider = new Swiper(".breadcrumb-slider--js", {

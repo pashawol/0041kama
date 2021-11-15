@@ -52,19 +52,28 @@
 			height: inherit;
 		}
 		.swiper-slide {
-			@include mt;
-			opacity: 0.6;
+			img, video {
+				@include mt;
+
+				opacity: 0.6;
+			}
 			&.swiper-slide-thumb-active {
-				opacity: 1;
+				img, video {
+					
+					opacity: 1;
+				}
 			}
 			&:hover {
 				@include media-breakpoint-up(lg) {
+						* {
+					
 					opacity: 1;
+				}
 				}
 			}
 		}
 	}
-
+	&__video-wrap,
 	&__img-wrap {
 		@include block;
 		@include mt;
@@ -73,6 +82,19 @@
 		background-color: $light;
 		cursor: pointer;
 		z-index: 5;
+		.icon{
+			@include a-cent1;
+			width: rem(40);
+			opacity: 1 !important;
+		}
+		iframe,
+		video{
+			object-fit: cover;
+			width: 100% !important;
+			height: 100% !important;
+		
+		}
+		*,
 		img {
 			// @extend .object-fit-js;
 			position: absolute;
