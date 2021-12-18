@@ -1,4 +1,6 @@
 // start .sSimilar
+@use "sass:math";
+
 .sSimilar {
 	--sPT: #{rem(20)};
 	--sPB: #{rem(40)};
@@ -11,7 +13,7 @@
 		align-items: center;
 		h4 {
 			font-weight: bold;
-			line-height: (24 / 29);
+			line-height: math.div(24, 29);
 		}
 		&__arrows {
 			display: flex;

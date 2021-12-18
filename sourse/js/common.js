@@ -448,6 +448,22 @@ function eventHandler() {
 	$('.btn-close-js').click(function(){
 		$(this).parent().find('.input-search').val(" ");
 	});
+
+
+
+	$(".sCardLink__btn-more").click(function(){
+		let link = $(".sCardLink .list-group-item-wrap");
+		if(link.hasClass("show")) {
+			$(".sCardLink .list-group-item-wrap.show").removeClass("show").slideUp()
+		}
+		
+		if(link.is(":hidden")) {
+			$(".sCardLink .list-group-item-wrap:hidden").addClass("show").slideDown()
+		}
+
+		$(this).toggleClass("active");
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

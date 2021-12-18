@@ -34,9 +34,10 @@ block pagecontent
 			h4.strong  Дополнительные модификации
 			.list-group
 				mixin item(t)
-					a.list-group-item(href="#") 
-						+icon("chevron-right")
-						span!= t
+					.list-group-item-wrap
+						a.list-group-item(href="#") 
+							+icon("chevron-right")
+							span!= t 
 				+item("Двигатель 740.10 (740.1000400-20) 220 л/с ЕВРО-0")
 				+item("Двигатель 740.10 (740.1000410) 210 л/с ЕВРО-0")
 				+item("Двигатель 740.10 (740.1000410-20) 220 л/с ЕВРО-0")
@@ -52,6 +53,9 @@ block pagecontent
 				+item("Двигатель 74009.10-400 210 л/с ЕВРО-0")
 				+item("Двигатель 74009.10-450 210 л/с ЕВРО-0")
 				+item("Двигатель 74009.10-412 210 л/с ЕВРО-0")
+			+e.btn-more
+				span Показать еще
+				span Свернуть
 		+sContactInfo()
 		+sReadMore()
 		+sSimilar()

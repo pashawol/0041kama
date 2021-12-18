@@ -1,4 +1,6 @@
 // start .sCard
+@use "sass:math";
+
 .sCard {
 	--sPT: #{rem(30)};
 	--sPB: #{rem(40)};
@@ -180,7 +182,7 @@
 	&__price {
 		font-weight: bold;
 		font-size: rem(32);
-		line-height: (39 / 32);
+		line-height: math.div(39, 32);
 		font-weight: bold;
 		margin-bottom: rem(20);
 	}

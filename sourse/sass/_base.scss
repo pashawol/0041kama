@@ -706,6 +706,16 @@ h2 {
 			padding-top: rem(15);
 			padding-bottom: rem(15);
 			padding-left: rem(22);
+			transition: none;
+			&-wrap{
+				&:not(:first-child){
+
+					margin-top: -1px;
+				}
+				&:nth-child(n + 4) {
+					display: none;
+				}
+			}
 			.icon{
 				color: $primary;
 				font-size: 12px;
@@ -715,6 +725,26 @@ h2 {
 			}
 			&:hover{
 				background: rgba($color: #F3F4F6, $alpha: .5);
+			}
+		}
+		&__btn-more{
+			display: inline-block;
+			span{
+				&:nth-child(1) {
+					display: var(--d, ' ');
+				}
+				&:nth-child(2) {
+					display: var(--d2, none);
+				}
+			}
+			font-weight: 500;
+			color: $primary;
+			cursor: pointer;
+			font-size: rem(18);
+			padding: rem(20) 0 rem(10);
+			&.active{
+				--d: none;
+				--d2: ' ';
 			}
 		}
 	}

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .footer {
 	color: $secondary2;
 	margin-top: auto;
@@ -15,7 +17,7 @@
 		a {
 			font-weight: 600;
 			font-size: rem(16);
-			line-height: (20 / 16);
+			line-height: math.div(20, 16);
 		}
 		.link-secondary2 {
 			font-weight: normal;
@@ -119,7 +121,7 @@
 		li {
 			margin-bottom: rem(10);
 			font-size: rem(14);
-			line-height: (17 / 14);
+			line-height: math.div(17, 14);
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -154,7 +156,7 @@
 				color: $white !important;
 				font-weight: 600;
 				font-size: rem(16);
-				line-height: (20 / 16);
+				line-height: math.div(20, 16);
 				// &:hover {
 				// 	color: #226ebb;
 				// }

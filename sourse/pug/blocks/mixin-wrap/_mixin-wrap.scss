@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .soc {
 	@include roww(6px, m);
 	display: flex;
@@ -99,7 +101,7 @@
 	}
 	&__amount {
 		display: block;
-		line-height: (17 / 14);
+		line-height: math.div(17, 14);
 		font-size: rem(14);
 	}
 }
@@ -225,7 +227,7 @@
 		color: $body-color;
 		font-weight: bold;
 		font-size: rem(20);
-		line-height: (24 / 20);
+		line-height: (24 * 0.05);
 		margin-right: rem(20);
 		// &:hover {
 		// 	color: #226ebb;
@@ -633,10 +635,10 @@
 				position: relative;
 				display: flex;
 				flex-wrap: wrap;
-				padding-left: calc(var(--img-size)+20px);
+				padding-left: calc(var(--img-size) + 20px);
 				padding-top: rem(20);
 				padding-bottom: rem(20);
-				min-height: calc(var(--img-size)+#{rem(40)});
+				min-height: calc(var(--img-size)+ #{rem(40)});
 				justify-content: space-between;
 			}
 		}
@@ -1018,7 +1020,7 @@
 	&__title {
 		font-weight: 600;
 		font-size: rem(16);
-		line-height: (20 / 16);
+		line-height: math.div(20, 16);
 		margin-bottom: rem(12);
 		@include media-breakpoint-between(md, xl) {
 			margin-bottom: rem(6);

@@ -75,25 +75,30 @@
 	// --sPB: ;
 	// --sTPB: ;
 	.form-wrap {
+		.row{
+			@include roww(10px);
+		}
 		&__label-modal {
 			@include media-breakpoint-between(sm, md) {
 				padding-left: 5px;
 			}
 			width: auto !important;
 			margin-bottom: rem(40);
-			padding-left: 10px;
-			padding-right: 0;
+			// padding-left: 5px;
+			// padding-right: 5px;
 			.btn-info-modal {
 				z-index: 2;
 				padding-top: 10px;
-				width: 100px;
+				min-width: 100px;
 				height: 40px;
 				background-color: $light;
 				border-color: $light;
 				border-radius: 60px;
 				color: $body-color;
+				padding-left: 1rem;
+				padding-right: 1rem;
 				@include media-breakpoint-up(md) {
-					width: rem(100);
+					min-width: rem(100);
 					height: rem(40);
 				}
 				&.active,

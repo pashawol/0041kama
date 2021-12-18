@@ -1,4 +1,6 @@
 // start .sReadMore
+@use "sass:math";
+
 .sReadMore {
 	--sPT: #{rem(20)};
 	--sPB: #{rem(20)};
@@ -6,7 +8,7 @@
 	.section-title {
 		h4 {
 			font-weight: bold;
-			line-height: (29 / 24);
+			line-height: math.div(29, 24);
 		}
 	}
 	&__text {
