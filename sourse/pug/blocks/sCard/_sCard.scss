@@ -212,8 +212,8 @@
 	.btn-more {
 		padding: rem(6) 0;
 		margin-bottom: rem(10);
+		
 		@include media-breakpoint-only(sm) {
-			font-size: rem(16);
 		}
 	}
 
