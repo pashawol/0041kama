@@ -77,13 +77,14 @@
 	.form-wrap {
 		.row{
 			@include roww(10px);
+			margin-bottom: rem(40);
 		}
 		&__label-modal {
 			@include media-breakpoint-between(sm, md) {
 				padding-left: 5px;
 			}
+			margin-bottom: rem(10);
 			width: auto !important;
-			margin-bottom: rem(40);
 			// padding-left: 5px;
 			// padding-right: 5px;
 			.btn-info-modal {
