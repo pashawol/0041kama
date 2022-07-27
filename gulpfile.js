@@ -1,5 +1,5 @@
 'use strict';
-let  publicPath = 'public',
+let  publicPath = 'wordpress/assets',
     sourse = 'sourse',
     destSprite = '../_sprite.scss'
 

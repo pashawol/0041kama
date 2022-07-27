@@ -1,0 +1,44 @@
+.footer__menu a {
+    color:#fff !important;
+}
+
+.footer__menu a:hover {
+    color:#2a8aea !important;
+}
+
+.ajax-loader {
+    height: 0 !important;
+    display: none !important;
+}
+
+.request .form-input {
+    padding-bottom: 0px !important;
+}
+
+.wpcf7-not-valid-tip, .wc-proceed-to-checkout {
+    display: none;
+}
+
+.wpcf7-not-valid {
+    background: #faf0f0;
+    border-color: #f2d5d5;
+}
+
+.woocommerce-message {
+    display: none;
+}
+
+@media print { /* Стиль для печати */
+    body{
+        visibility: hidden;
+    }
+    /* Блок который нужно отобразить */
+    .shop-content {
+        visibility: visible;
+     }
+    .btn-quanity-input, .product-remove {
+        visibility: hidden;
+    }
+}
+
+::-webkit-validation-bubble-message { display: none !important; }

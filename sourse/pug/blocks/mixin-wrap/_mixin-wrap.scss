@@ -70,6 +70,7 @@
 	&:hover {
 		box-shadow: 0 4px 8px rgba(38, 39, 40, 0.15);
 		border-color: transparent;
+		color: $primary;
 	}
 
 	picture {
@@ -109,7 +110,7 @@
 .card-item{
 	position: relative;
 	color: white !important;
-	background: #323A42;
+	// background: #323A42;
 	border-radius: 5px;
 	overflow: hidden;
 	text-align: center;
@@ -355,7 +356,9 @@
 	}
 	h1 {
 		font-weight: 700;
-		font-size: $h1-font-size;
+		@include media-breakpoint-up(sm) {
+			font-size: $h1-font-size;
+		}
 	}
 }
 .breadcrumb-item {

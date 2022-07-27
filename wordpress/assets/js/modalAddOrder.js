@@ -1,0 +1,1 @@
+Fancybox.show([{ src: "#modal-order-cart", type: "inline" }]);

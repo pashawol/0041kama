@@ -105,8 +105,8 @@ body {
 	overflow: hidden;
 	// height: 100vh;
 	// height: calc(var(--vh, 1vh) * 100);
+	padding-top: var(--header-height);
 	@include media-breakpoint-down(lg){
-		padding-top: var(--header-height);
 	}
 }
 .page-404 .main-wrapper {
@@ -797,4 +797,8 @@ h2 {
 	.final-price{
 		text-align: left !important;
 	}
+	}
+
+	.search-block input{
+		background-color: transparent;
 	}
