@@ -30,7 +30,8 @@
 				}
 				&.fixed{
 					transform: translateY(-100%);
-					padding-top: 0;
+					padding-top: .875rem;
+					// padding-top: 0;
 					.menu a{
 						padding-top: .875rem;
 						padding-bottom: .875rem;

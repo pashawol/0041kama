@@ -538,11 +538,11 @@ if (document.querySelector("#map")) {
 
 var Sticky = new hcSticky('.list-block', {
 	stickTo: '.container--main',
-	top: 20
+	top: 125
 });
 var Sticky2 = new hcSticky('.page-body04__help', {
 	stickTo: '.page-body04 .col--help',
-	top: 20
+	top: 125
 });
 
 
